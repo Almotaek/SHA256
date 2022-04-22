@@ -1,0 +1,17 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../test.c in debug mode
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'almotaek' on host 'ece419-92qt0q2' (Windows NT_amd64 version 6.2) on Fri Apr 22 18:44:21 -0400 2022
+INFO: [HLS 200-10] In directory 'C:/Users/almotaek/Desktop/ECE/SHA256/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_almotaek/95004155854369
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../main.c in debug mode
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'almotaek' on host 'ece419-92qt0q2' (Windows NT_amd64 version 6.2) on Fri Apr 22 18:44:29 -0400 2022
+INFO: [HLS 200-10] In directory 'C:/Users/almotaek/Desktop/ECE/SHA256/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_almotaek/53764163570608
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+INFO: [SIM 1] CSim file generation done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

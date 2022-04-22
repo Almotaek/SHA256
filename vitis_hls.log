@@ -1,0 +1,41 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'almotaek' on host 'ece419-92qt0q2' (Windows NT_amd64 version 6.2) on Fri Apr 22 18:44:13 -0400 2022
+INFO: [HLS 200-10] In directory 'C:/Users/almotaek/Desktop/ECE'
+Sourcing Tcl script 'C:/Users/almotaek/Desktop/ECE/SHA256/solution1/csim.tcl'
+INFO: [HLS 200-1510] Running: open_project SHA256 
+INFO: [HLS 200-10] Opening project 'C:/Users/almotaek/Desktop/ECE/SHA256'.
+INFO: [HLS 200-1510] Running: set_top SHA256 
+INFO: [HLS 200-1510] Running: add_files main.c 
+INFO: [HLS 200-10] Adding design file 'main.c' to the project
+INFO: [HLS 200-1510] Running: add_files main.h 
+INFO: [HLS 200-10] Adding design file 'main.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb test.c 
+INFO: [HLS 200-10] Adding test bench file 'test.c' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/almotaek/Desktop/ECE/SHA256/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design -setup -clean -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../test.c in debug mode
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'almotaek' on host 'ece419-92qt0q2' (Windows NT_amd64 version 6.2) on Fri Apr 22 18:44:21 -0400 2022
+INFO: [HLS 200-10] In directory 'C:/Users/almotaek/Desktop/ECE/SHA256/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_almotaek/95004155854369
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../main.c in debug mode
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'almotaek' on host 'ece419-92qt0q2' (Windows NT_amd64 version 6.2) on Fri Apr 22 18:44:29 -0400 2022
+INFO: [HLS 200-10] In directory 'C:/Users/almotaek/Desktop/ECE/SHA256/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_almotaek/53764163570608
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 17.008 seconds; current allocated memory: 162.380 MB.

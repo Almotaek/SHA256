@@ -1,0 +1,37 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../test.c in debug mode
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'almotaek' on host 'ece419-92qt0q2' (Windows NT_amd64 version 6.2) on Fri Apr 22 13:31:56 -0400 2022
+INFO: [HLS 200-10] In directory 'C:/Users/almotaek/Desktop/ECE/SHA256/solution1/csim/build'
+../../../../test.c:8:45: warning: format specifies type 'int' but the argument has type 'unsigned long' [-Wformat]
+    printf("initialized variables: a=%d, p=%d \n", a, p);
+                                           ~^         ~
+                                           %ld
+../../../../test.c:10:43: warning: format specifies type 'int' but the argument has type 'unsigned long' [-Wformat]
+    printf("testing hls_factorial: %d! = %d \n", a, p);
+                                         ~^         ~
+                                         %ld
+2 warnings generated.
+../../../../test.c:8:45: warning: format specifies type 'int' but the argument has type 'unsigned long' [-Wformat]
+    printf("initialized variables: a=%d, p=%d \n", a, p);
+                                           ~^         ~
+                                           %ld
+../../../../test.c:10:43: warning: format specifies type 'int' but the argument has type 'unsigned long' [-Wformat]
+    printf("testing hls_factorial: %d! = %d \n", a, p);
+                                         ~^         ~
+                                         %ld
+2 warnings generated.
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_almotaek/38762590677895
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../main.c in debug mode
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'almotaek' on host 'ece419-92qt0q2' (Windows NT_amd64 version 6.2) on Fri Apr 22 13:32:05 -0400 2022
+INFO: [HLS 200-10] In directory 'C:/Users/almotaek/Desktop/ECE/SHA256/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_almotaek/83362599769656
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+initialized variables: a=8, p=0 
+testing hls_factorial: 8! = 40320 
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
