@@ -1,15 +1,15 @@
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'almotaek' on host 'ece419-92qt0q2' (Windows NT_amd64 version 6.2) on Fri Apr 22 18:44:13 -0400 2022
+INFO: [HLS 200-10] For user 'almotaek' on host 'ece419-92qt0q2' (Windows NT_amd64 version 6.2) on Sat Apr 23 18:59:24 -0400 2022
 INFO: [HLS 200-10] In directory 'C:/Users/almotaek/Desktop/ECE'
-Sourcing Tcl script 'C:/Users/almotaek/Desktop/ECE/SHA256/solution1/csim.tcl'
+Sourcing Tcl script 'C:/Users/almotaek/Desktop/ECE/SHA256/solution1/csynth.tcl'
 INFO: [HLS 200-1510] Running: open_project SHA256 
 INFO: [HLS 200-10] Opening project 'C:/Users/almotaek/Desktop/ECE/SHA256'.
 INFO: [HLS 200-1510] Running: set_top SHA256 
-INFO: [HLS 200-1510] Running: add_files main.c 
-INFO: [HLS 200-10] Adding design file 'main.c' to the project
 INFO: [HLS 200-1510] Running: add_files main.h 
 INFO: [HLS 200-10] Adding design file 'main.h' to the project
-INFO: [HLS 200-1510] Running: add_files -tb test.c 
+INFO: [HLS 200-1510] Running: add_files main.c 
+INFO: [HLS 200-10] Adding design file 'main.c' to the project
+INFO: [HLS 200-1510] Running: add_files -tb test.c -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'test.c' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
 INFO: [HLS 200-10] Opening solution 'C:/Users/almotaek/Desktop/ECE/SHA256/solution1'.
@@ -17,25 +17,185 @@ INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] Setting target device to 'xc7a100t-csg324-1'
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
-INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
+INFO: [HLS 200-1510] Running: set_part xc7a100t-csg324-1 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-INFO: [HLS 200-1510] Running: csim_design -setup -clean -quiet 
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-   Compiling(apcc) ../../../../test.c in debug mode
-INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'almotaek' on host 'ece419-92qt0q2' (Windows NT_amd64 version 6.2) on Fri Apr 22 18:44:21 -0400 2022
-INFO: [HLS 200-10] In directory 'C:/Users/almotaek/Desktop/ECE/SHA256/solution1/csim/build'
-INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_almotaek/95004155854369
-INFO: [APCC 202-1] APCC is done.
-   Compiling(apcc) ../../../../main.c in debug mode
-INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'almotaek' on host 'ece419-92qt0q2' (Windows NT_amd64 version 6.2) on Fri Apr 22 18:44:29 -0400 2022
-INFO: [HLS 200-10] In directory 'C:/Users/almotaek/Desktop/ECE/SHA256/solution1/csim/build'
-INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_almotaek/53764163570608
-INFO: [APCC 202-1] APCC is done.
-   Generating csim.exe
-INFO: [SIM 211-1] CSim file generation done with 0 errors.
-INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 17.008 seconds; current allocated memory: 162.380 MB.
+INFO: [HLS 200-1510] Running: set_directive_top -name SHA256 SHA256 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 162.389 MB.
+INFO: [HLS 200-10] Analyzing design file 'main.c' ... 
+WARNING: [HLS 207-5301] unused parameter 'string': main.c:269:26
+WARNING: [HLS 207-5301] unused parameter 'bitArray': main.c:383:57
+WARNING: [HLS 207-5301] unused parameter 'string': main.c:416:22
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.225 seconds; current allocated memory: 163.752 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'cpy' into 'textToBinary' (main.c:269:0)
+INFO: [HLS 214-178] Inlining function 'len' into 'cat' (main.c:456:0)
+INFO: [HLS 214-178] Inlining function 'hToB' into 'hexToBin' (main.c:316:0)
+INFO: [HLS 214-178] Inlining function 'cat' into 'hexToBin' (main.c:316:0)
+INFO: [HLS 214-178] Inlining function 'textToBinary' into 'SHA256' (main.c:4:0)
+INFO: [HLS 214-178] Inlining function 'cpy' into 'SHA256' (main.c:4:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 5.302 seconds; current allocated memory: 165.216 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.093 seconds; current allocated memory: 165.217 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.161 seconds; current allocated memory: 166.783 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.159 seconds; current allocated memory: 165.885 MB.
+WARNING: [XFORM 203-803] Dropped interface mode 'ap_auto' on 'input' (main.c:4) as it is incompatible with its interface mode 's_axilite'.
+WARNING: [XFORM 203-803] Dropped interface mode 'ap_auto' on 'hash' (main.c:4) as it is incompatible with its interface mode 's_axilite'.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_449_1' (main.c:450) in function 'hexToBin' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_460_1' (main.c:458) in function 'hexToBin' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_441_1' (main.c:442) in function 'SHA256' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'SHA256' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-4' in function 'SHA256' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-5' in function 'SHA256' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-6' in function 'SHA256' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-7' in function 'SHA256' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-8' in function 'SHA256' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-9' in function 'SHA256' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-10' in function 'SHA256' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_441_1' (main.c:442) in function 'SHA256' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.494 seconds; current allocated memory: 186.653 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_318_1' (main.c:319:13) in function 'hexToBin' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html
+INFO: [HLS 200-472] Inferring partial write operation for 'bits' (main.c:461:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'h0' 
+INFO: [HLS 200-472] Inferring partial write operation for 'h1' 
+INFO: [HLS 200-472] Inferring partial write operation for 'h2' 
+INFO: [HLS 200-472] Inferring partial write operation for 'h3' 
+INFO: [HLS 200-472] Inferring partial write operation for 'h4' 
+INFO: [HLS 200-472] Inferring partial write operation for 'h5' 
+INFO: [HLS 200-472] Inferring partial write operation for 'h6' 
+INFO: [HLS 200-472] Inferring partial write operation for 'h7' 
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.58 seconds; current allocated memory: 210.205 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'SHA256' ...
+WARNING: [SYN 201-107] Renaming port name 'SHA256/input' to 'SHA256/input_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hexToBin' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_449_1'.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln449', main.c:449)) in the first pipeline iteration (II = 1 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-878.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_449_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_460_1'.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln460', main.c:460)) in the first pipeline iteration (II = 1 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-878.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 3, loop 'VITIS_LOOP_460_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.315 seconds; current allocated memory: 210.921 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.453 seconds; current allocated memory: 212.711 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'SHA256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_441_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_441_1'
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Loop 2'
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Loop 3'
+INFO: [SCHED 204-61] Pipelining loop 'Loop 4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Loop 4'
+INFO: [SCHED 204-61] Pipelining loop 'Loop 5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Loop 5'
+INFO: [SCHED 204-61] Pipelining loop 'Loop 6'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Loop 6'
+INFO: [SCHED 204-61] Pipelining loop 'Loop 7'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Loop 7'
+INFO: [SCHED 204-61] Pipelining loop 'Loop 8'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Loop 8'
+INFO: [SCHED 204-61] Pipelining loop 'Loop 9'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Loop 9'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_441_1'.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln441_1', main.c:441)) in the first pipeline iteration (II = 1 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-878.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 3, loop 'VITIS_LOOP_441_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.719 seconds; current allocated memory: 213.092 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.532 seconds; current allocated memory: 213.707 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hexToBin' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hexToBin'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.846 seconds; current allocated memory: 214.921 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'SHA256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'SHA256/input_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'SHA256/hash' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'SHA256' to 's_axilite & ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Global array 'p_str_8' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_25' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_24' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_23' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_22' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_21' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_20' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_19' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_18' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_17' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_16' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_15' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_14' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_13' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_12' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_11' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_10' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_9' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_1' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_2' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_3' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_4' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_5' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_6' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_7' will not be exposed as RTL port.
+INFO: [RTGEN 206-100] Bundling port 'return', 'input_r' and 'hash' to AXI-Lite port CRTLS.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'SHA256'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 1.409 seconds; current allocated memory: 219.290 MB.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_25_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_24_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_23_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_22_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_21_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_20_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_19_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_18_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_17_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_16_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_15_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_14_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_13_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_12_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_11_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_10_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_9_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_p_str_8_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_p_str_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_p_str_1_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_p_str_2_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_p_str_3_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_p_str_4_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_p_str_5_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_p_str_6_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'SHA256_p_str_7_rom' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'SHA256_h0_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 7 seconds. CPU system time: 3 seconds. Elapsed time: 12.004 seconds; current allocated memory: 228.182 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for SHA256.
+INFO: [VLOG 209-307] Generating Verilog RTL for SHA256.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 150.42 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 12 seconds. CPU system time: 4 seconds. Elapsed time: 26.806 seconds; current allocated memory: 228.475 MB.
+INFO: [HLS 200-112] Total CPU user time: 17 seconds. Total CPU system time: 7 seconds. Total elapsed time: 31.292 seconds; peak allocated memory: 228.182 MB.

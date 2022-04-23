@@ -1,0 +1,55 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'SHA256'" level="0">
+<item name = "Date">Sat Apr 23 18:59:40 2022
+</item>
+<item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)</item>
+<item name = "Project">SHA256</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a100t-csg324-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.648 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_441_1">34, 34, 2, 1, 1, 34, yes</column>
+<column name="- Loop 2">12, 12, 1, 1, 1, 12, yes</column>
+<column name="- Loop 3">12, 12, 1, 1, 1, 12, yes</column>
+<column name="- Loop 4">12, 12, 1, 1, 1, 12, yes</column>
+<column name="- Loop 5">12, 12, 1, 1, 1, 12, yes</column>
+<column name="- Loop 6">12, 12, 1, 1, 1, 12, yes</column>
+<column name="- Loop 7">12, 12, 1, 1, 1, 12, yes</column>
+<column name="- Loop 8">12, 12, 1, 1, 1, 12, yes</column>
+<column name="- Loop 9">12, 12, 1, 1, 1, 12, yes</column>
+<column name="- VITIS_LOOP_441_1">?, ?, 3, 2, 1, ?, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

@@ -5,6 +5,11 @@
                 <option name="name" value="SHA256"/>
             </pragma>
         </directive>
+        <directive functionName="SHA256" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="SHA256"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

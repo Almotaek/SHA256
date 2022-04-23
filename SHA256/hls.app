@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="SHA256" name="SHA256">
+<project xmlns="com.autoesl.autopilot.project" name="SHA256" top="SHA256">
     <includePaths/>
     <libraryPaths/>
     <Simulation>
@@ -6,8 +6,8 @@
     </Simulation>
     <files xmlns="">
         <file name="../../test.c" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" csimflags=" -Wno-unknown-pragmas" blackbox="false"/>
-        <file name="main.h" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="main.c" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
+        <file name="main.h" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
     </files>
     <solutions xmlns="">
         <solution name="solution1" status="active"/>

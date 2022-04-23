@@ -9,8 +9,8 @@ use ieee.std_logic_unsigned.all;
 entity SHA256_p_str_rom is 
     generic(
              DWIDTH     : integer := 8; 
-             AWIDTH     : integer := 6; 
-             MEM_SIZE    : integer := 35
+             AWIDTH     : integer := 4; 
+             MEM_SIZE    : integer := 11
     ); 
     port (
           addr0      : in std_logic_vector(AWIDTH-1 downto 0); 
@@ -26,14 +26,9 @@ architecture rtl of SHA256_p_str_rom is
 signal addr0_tmp : std_logic_vector(AWIDTH-1 downto 0); 
 type mem_array is array (0 to MEM_SIZE-1) of std_logic_vector (DWIDTH-1 downto 0); 
 signal mem : mem_array := (
-    0 to 1=> "00110000", 2 => "00110001", 3 => "00110000", 4 => "00110001", 
-    5 to 6=> "00110000", 7 => "00110001", 8 => "00110000", 9 => "00110001", 
-    10 => "00110000", 11 => "00110001", 12 => "00110000", 13 to 14=> "00110001", 
-    15 to 17=> "00110000", 18 => "00110001", 19 => "00110000", 20 => "00110001", 
-    21 => "00110000", 22 => "00110001", 23 => "00110000", 24 => "00110001", 
-    25 => "00110000", 26 => "00110001", 27 => "00110000", 28 => "00110001", 
-    29 => "00110000", 30 => "00110001", 31 => "00110000", 32 to 33=> "00110001", 
-    34 => "00000000" );
+    0 => "00110000", 1 => "01111000", 2 => "00110110", 3 => "01100001", 
+    4 => "00110000", 5 => "00111001", 6 => "01100101", 7 to 8=> "00110110", 
+    9 => "00110111", 10 => "00000000" );
 
 
 begin 
@@ -68,8 +63,8 @@ use IEEE.std_logic_1164.all;
 entity SHA256_p_str is
     generic (
         DataWidth : INTEGER := 8;
-        AddressRange : INTEGER := 35;
-        AddressWidth : INTEGER := 6);
+        AddressRange : INTEGER := 11;
+        AddressWidth : INTEGER := 4);
     port (
         reset : IN STD_LOGIC;
         clk : IN STD_LOGIC;

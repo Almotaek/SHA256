@@ -1,0 +1,1068 @@
+INFO-FLOW: Workspace C:/Users/almotaek/Desktop/ECE/SHA256/solution1 opened at Sat Apr 23 18:59:25 -0400 2022
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     import_lib C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/artix7/artix7 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute     ap_family_info -name artix7 -data parts 
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2020.2\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2020.2/data/parts/arch.xml
+Command     ap_family_info done; 1.955 sec.
+Execute     ap_part_info -name xc7a12ticsg325-1L -data info 
+Execute     source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.104 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.158 sec.
+Execute     import_lib C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/artix7/artix7_fpv6 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute     source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.155 sec.
+Execute     import_lib C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/artix7/artix7 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute     ap_family_info -name artix7 -data parts 
+Execute     ap_part_info -name xc7a12ticsg325-1L -data info 
+Execute     source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.144 sec.
+Execute     set_part xc7a100t-csg324-1 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=C:/Xilinx/Vivado/2020.2
+INFO-FLOW: DBG:set_part: RDI_DATADIR=C:/Xilinx/Vivado/2020.2/data;C:/Xilinx/Vitis_HLS/2020.2/data
+Execute       ap_part_info -name xc7a100t-csg324-1 -data single -quiet 
+Execute       ap_part_info -name xc7a100t-csg324-1 -data info 
+Execute       add_library xilinx/artix7/artix7:xc7a100t:-csg324:-1 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         ap_part_info -data single -name xc7a100t-csg324-1 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data resources 
+Execute         config_chip_info -resource {SLICE 15850} {LUT 63400} {FF 126800} {DSP 240} {BRAM 270} {URAM 0} 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info 
+Execute         config_chip_info -speed slow 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info 
+Execute         config_library_info -library artix7_slow 
+Execute         config_library_info -family artix7 
+Execute         config_library_info -part xc7a100t:-csg324:-1 
+Execute         import_lib C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/artix7/artix7 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/artix7_dsp48e1.hlp 
+Execute         ap_family_info -name artix7 -data parts 
+Execute         ap_part_info -name xc7a12ticsg325-1L -data info 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command         ap_source done; 0.14 sec.
+Command       add_library done; 0.363 sec.
+INFO: [HLS 200-10] Setting target device to 'xc7a100t-csg324-1'
+Execute       ap_part_info -name xc7a100t-csg324-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.447 sec.
+Execute     ap_part_info -data single -name xc7a100t-csg324-1 
+Execute     ap_part_info -name xc7a100t-csg324-1 -data resources 
+Execute     config_chip_info -resource {SLICE 15850} {LUT 63400} {FF 126800} {DSP 240} {BRAM 270} {URAM 0} 
+Execute     ap_part_info -name xc7a100t-csg324-1 -data info 
+Execute     config_chip_info -speed slow 
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_interface -m_axi_offset 
+Execute     get_config_rtl -register_reset_num 
+Command   open_solution done; 3.075 sec.
+Execute   set_part xc7a100t-csg324-1 
+INFO: [HLS 200-1510] Running: set_part xc7a100t-csg324-1 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=C:/Xilinx/Vivado/2020.2
+INFO-FLOW: DBG:set_part: RDI_DATADIR=C:/Xilinx/Vivado/2020.2/data;C:/Xilinx/Vitis_HLS/2020.2/data
+Execute     ap_part_info -name xc7a100t-csg324-1 -data single -quiet 
+Execute     ap_part_info -name xc7a100t-csg324-1 -data info 
+Execute     add_library xilinx/artix7/artix7:xc7a100t:-csg324:-1 
+Execute       get_default_platform 
+Execute       open_platform DefaultPlatform 
+Execute       ap_part_info -data single -name xc7a100t-csg324-1 
+Execute       ap_part_info -name xc7a100t-csg324-1 -data resources 
+Execute       config_chip_info -resource {SLICE 15850} {LUT 63400} {FF 126800} {DSP 240} {BRAM 270} {URAM 0} 
+Execute       ap_part_info -name xc7a100t-csg324-1 -data info 
+Execute       config_chip_info -speed slow 
+Execute       ap_part_info -name xc7a100t-csg324-1 -data info 
+Execute       config_library_info -library artix7_slow 
+Execute       config_library_info -family artix7 
+Execute       config_library_info -part xc7a100t:-csg324:-1 
+Execute       import_lib C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/artix7/artix7 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/artix7_dsp48e1.hlp 
+Execute       ap_family_info -name artix7 -data parts 
+Execute       ap_part_info -name xc7a12ticsg325-1L -data info 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.132 sec.
+Command     add_library done; 0.271 sec.
+Execute     ap_part_info -name xc7a100t-csg324-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.353 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   source ./SHA256/solution1/directives.tcl 
+Execute     set_directive_top -name SHA256 SHA256 
+INFO: [HLS 200-1510] Running: set_directive_top -name SHA256 SHA256 
+INFO-FLOW: Setting directive 'TOP' name=SHA256 
+Execute   csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 162.389 MB.
+INFO: [HLS 200-10] Analyzing design file 'main.c' ... 
+INFO-FLOW: Compiling one TU...
+Execute       get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling main.c as C
+Execute       ap_part_info -name xc7a100t-csg324-1 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2020.2/win64/tools/clang-3.9-csynth/bin/clang main.c -foptimization-record-file=C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/clang.main.c.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info --sysroot C:/Xilinx/Vitis_HLS/2020.2/tps/mingw/6.2.0/win64.o/nt -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -std=gnu99 -fgnu89-inline -target fpga64-xilinx-mingw32 -I C:/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/39 -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/main.pp.0.c > C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/clang.main.c.out.log 2> C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/clang.main.c.err.log 
+Command       ap_eval done; 0.968 sec.
+INFO-FLOW: Done: GCC PP 39 time: 1 seconds per iteration
+Execute       set_directive_top SHA256 -name=SHA256 
+INFO-FLOW: Setting directive 'TOP' name=SHA256 
+INFO-FLOW: Setting directive 'TOP' name=SHA256 
+INFO-FLOW: Setting directive 'TOP' name=SHA256 
+INFO-FLOW: Setting directive 'TOP' name=SHA256 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO-FLOW: Setting directive 'TOP' name=SHA256 
+INFO-FLOW: Setting directive 'TOP' name=SHA256 
+Execute       list_core -type functional_unit 
+Execute       clang_tidy xilinx-systemc-detector C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/main.pp.0.c std=gnu99 -target fpga  -directive=C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2020.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/.systemc_flag -fix-errors C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/main.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.11 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/main.pp.0.c std=gnu99 -target fpga  -directive=C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2020.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/all.directive.json -fix-errors C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/main.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.257 sec.
+Execute       clang_tidy xilinx-constantarray-param,xilinx-remove-assert C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/main.pp.0.c std=gnu99 -target fpga  
+INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2020.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-remove-assert -fix-errors C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/main.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.116 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.4 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+Execute       clang_tidy -errorcheck xilinx-label-all-loops,xilinx-top-parameters,xilinx-array-stream-check,xilinx-warn-mayneed-no-ctor-attribute C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/main.pp.0.c std=gnu99 -target fpga  
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2020.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/clang-tidy.main.pp.0.c.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-top-parameters,xilinx-array-stream-check,xilinx-warn-mayneed-no-ctor-attribute -fix-errors C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/main.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0 > C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/clang-tidy.main.pp.0.c.out.log 2> C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/clang-tidy.main.pp.0.c.err.log 
+Command         ap_eval done; 0.152 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Command       clang_tidy done; 0.212 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2020.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/xilinx-dataflow-lawyer.main.pp.0.c.diag.yml C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/main.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/xilinx-dataflow-lawyer.main.pp.0.c.out.log 2> C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/xilinx-dataflow-lawyer.main.pp.0.c.err.log 
+Command       ap_eval done; 0.135 sec.
+Execute       ap_part_info -name xc7a100t-csg324-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2020.2/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/clang.main.pp.0.c.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/main.pp.0.c -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -std=gnu99 -fgnu89-inline -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/main.bc > C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/clang.main.pp.0.c.out.log 2> C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/clang.main.pp.0.c.err.log 
+Command       ap_eval done; 0.143 sec.
+WARNING: [HLS 207-5301] unused parameter 'string': main.c:269:26
+WARNING: [HLS 207-5301] unused parameter 'bitArray': main.c:383:57
+WARNING: [HLS 207-5301] unused parameter 'string': main.c:416:22
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.225 seconds; current allocated memory: 163.752 MB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute       run_link_or_opt -out C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.ld.0.bc -args  "C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/main.g.bc"  
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2020.2/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/main.g.bc -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.ld.0.bc > C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/llvm-link.a.g.ld.0.bc.out.log 2> C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/llvm-link.a.g.ld.0.bc.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.ld.1.lower.bc -args C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2020.2/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.diag.yml C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.ld.1.lower.bc > C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.out.log 2> C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.err.log 
+INFO-FLOW: 
+INFO-FLOW: Linking math bc lib
+Execute       run_link_or_opt -out C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.ld.2.m1.bc -args C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/Vitis_HLS/2020.2/win64/lib/libhlsm_39.bc C:/Xilinx/Vitis_HLS/2020.2/win64/lib/libhlsmc++_39.bc 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2020.2/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/Vitis_HLS/2020.2/win64/lib/libhlsm_39.bc C:/Xilinx/Vitis_HLS/2020.2/win64/lib/libhlsmc++_39.bc -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.ld.2.m1.bc > C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/llvm-link.a.g.ld.2.m1.bc.out.log 2> C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/llvm-link.a.g.ld.2.m1.bc.err.log 
+Command         ap_eval done; 2.936 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 2.942 sec.
+Execute       run_link_or_opt -opt -out C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=SHA256 -reflow-float-conversion 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2020.2/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.diag.yml C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=SHA256 -reflow-float-conversion -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.ld.3.fpc.bc > C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.out.log 2> C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.err.log 
+Command         ap_eval done; 1.156 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 1.164 sec.
+Execute       run_link_or_opt -out C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.ld.4.m2.bc -args C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2020.2/win64/lib/libfloatconversion_39.bc 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2020.2/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2020.2/win64/lib/libfloatconversion_39.bc -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.ld.4.m2.bc > C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/llvm-link.a.g.ld.4.m2.bc.out.log 2> C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/llvm-link.a.g.ld.4.m2.bc.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=SHA256 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2020.2/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.diag.yml C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=SHA256 -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.ld.5.gdce.bc > C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.out.log 2> C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.err.log 
+INFO-FLOW: 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_interface -m_axi_offset 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_auto_max_ports 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -s_axilite_data64 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_compile -pragma_strict_mode 
+Execute       get_config_compile -pipeline_style 
+Execute       send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+Execute       is_m_axi_addr64 
+INFO-FLOW: Doing LTO.
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2020.2/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/clang.a.g.ld.0.bc.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=SHA256 -mllvm -hls-db-dir -mllvm C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=off -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -assume-maxi-align=0 -mllvm -no-unaligned-maxi-accesses -mllvm -reflow-pipeline-style-llvm-setting=0 -mllvm -disable-inlined-alloca-merging=true -x ir C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.lto.bc > C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/clang.a.g.ld.0.bc.out.log 2> C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/clang.a.g.ld.0.bc.err.log 
+Command       ap_eval done; 0.322 sec.
+INFO: [HLS 214-178] Inlining function 'cpy' into 'textToBinary' (main.c:269:0)
+INFO: [HLS 214-178] Inlining function 'len' into 'cat' (main.c:456:0)
+INFO: [HLS 214-178] Inlining function 'hToB' into 'hexToBin' (main.c:316:0)
+INFO: [HLS 214-178] Inlining function 'cat' into 'hexToBin' (main.c:316:0)
+INFO: [HLS 214-178] Inlining function 'textToBinary' into 'SHA256' (main.c:4:0)
+INFO: [HLS 214-178] Inlining function 'cpy' into 'SHA256' (main.c:4:0)
+INFO-FLOW: DBG:CMD: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 5.302 seconds; current allocated memory: 165.216 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.093 seconds; current allocated memory: 165.217 MB.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top SHA256 -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.0.bc -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.161 seconds; current allocated memory: 166.783 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.1.bc -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.2.prechk.bc -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.159 seconds; current allocated memory: 165.885 MB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.g.1.bc to C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db -interface-port-rename -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -function-uniquify -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.o.1.bc -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+WARNING: [XFORM 203-803] Dropped interface mode 'ap_auto' on 'input' (main.c:4) as it is incompatible with its interface mode 's_axilite'.
+WARNING: [XFORM 203-803] Dropped interface mode 'ap_auto' on 'hash' (main.c:4) as it is incompatible with its interface mode 's_axilite'.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_449_1' (main.c:450) in function 'hexToBin' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_460_1' (main.c:458) in function 'hexToBin' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_441_1' (main.c:442) in function 'SHA256' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'SHA256' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-4' in function 'SHA256' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-5' in function 'SHA256' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-6' in function 'SHA256' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-7' in function 'SHA256' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-8' in function 'SHA256' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-9' in function 'SHA256' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-10' in function 'SHA256' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_441_1' (main.c:442) in function 'SHA256' automatically.
+Command         transform done; 0.293 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -barrier -norm-name C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.o.1.tmp.bc -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.494 seconds; current allocated memory: 186.653 MB.
+Execute         get_config_compile -enable_loop_extract 
+Execute         get_config_compile -disable_auto_rewind 
+Execute         get_config_compile -enable_auto_rewind 
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin2 -bitwidthmin2 -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.o.2.bc -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_318_1' (main.c:319:13) in function 'hexToBin' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'bits' (main.c:461:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'h0' 
+INFO: [HLS 200-472] Inferring partial write operation for 'h1' 
+INFO: [HLS 200-472] Inferring partial write operation for 'h2' 
+INFO: [HLS 200-472] Inferring partial write operation for 'h3' 
+INFO: [HLS 200-472] Inferring partial write operation for 'h4' 
+INFO: [HLS 200-472] Inferring partial write operation for 'h5' 
+INFO: [HLS 200-472] Inferring partial write operation for 'h6' 
+INFO: [HLS 200-472] Inferring partial write operation for 'h7' 
+Command         transform done; 1.484 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.58 seconds; current allocated memory: 210.205 MB.
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 2.408 sec.
+Command     elaborate done; 10.145 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'SHA256' ...
+Execute       ap_set_top_model SHA256 
+Execute       get_model_list SHA256 -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model SHA256 
+Execute       preproc_iomode -model hexToBin 
+Execute       get_model_list SHA256 -filter all-wo-channel 
+INFO-FLOW: Model list for configure: hexToBin SHA256
+INFO-FLOW: Configuring Module : hexToBin ...
+Execute       set_default_model hexToBin 
+Execute       apply_spec_resource_limit hexToBin 
+INFO-FLOW: Configuring Module : SHA256 ...
+Execute       set_default_model SHA256 
+Execute       apply_spec_resource_limit SHA256 
+INFO-FLOW: Model list for preprocess: hexToBin SHA256
+INFO-FLOW: Preprocessing Module: hexToBin ...
+Execute       set_default_model hexToBin 
+Execute       cdfg_preprocess -model hexToBin 
+Execute       rtl_gen_preprocess hexToBin 
+INFO-FLOW: Preprocessing Module: SHA256 ...
+Execute       set_default_model SHA256 
+Execute       cdfg_preprocess -model SHA256 
+Execute       rtl_gen_preprocess SHA256 
+WARNING: [SYN 201-107] Renaming port name 'SHA256/input' to 'SHA256/input_r' to avoid the conflict with HDL keywords or other object names.
+INFO-FLOW: Model list for synthesis: hexToBin SHA256
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hexToBin' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model hexToBin 
+Execute       schedule -model hexToBin 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_449_1'.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln449', main.c:449)) in the first pipeline iteration (II = 1 cycles).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_449_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_460_1'.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln460', main.c:460)) in the first pipeline iteration (II = 1 cycles).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 3, loop 'VITIS_LOOP_460_1'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.164 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.315 seconds; current allocated memory: 210.921 MB.
+Execute       syn_report -verbosereport -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/hexToBin.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.162 sec.
+Execute       db_write -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/hexToBin.sched.adb -f 
+INFO-FLOW: Finish scheduling hexToBin.
+Execute       set_default_model hexToBin 
+Execute       bind -model hexToBin 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.453 seconds; current allocated memory: 212.711 MB.
+Execute       syn_report -verbosereport -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/hexToBin.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.147 sec.
+Execute       db_write -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/hexToBin.bind.adb -f 
+Command       db_write done; 0.127 sec.
+INFO-FLOW: Finish binding hexToBin.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'SHA256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model SHA256 
+Execute       schedule -model SHA256 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_441_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_441_1'
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Loop 2'
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Loop 3'
+INFO: [SCHED 204-61] Pipelining loop 'Loop 4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Loop 4'
+INFO: [SCHED 204-61] Pipelining loop 'Loop 5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Loop 5'
+INFO: [SCHED 204-61] Pipelining loop 'Loop 6'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Loop 6'
+INFO: [SCHED 204-61] Pipelining loop 'Loop 7'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Loop 7'
+INFO: [SCHED 204-61] Pipelining loop 'Loop 8'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Loop 8'
+INFO: [SCHED 204-61] Pipelining loop 'Loop 9'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Loop 9'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_441_1'.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln441_1', main.c:441)) in the first pipeline iteration (II = 1 cycles).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 3, loop 'VITIS_LOOP_441_1'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.329 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.719 seconds; current allocated memory: 213.092 MB.
+Execute       syn_report -verbosereport -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.144 sec.
+Execute       db_write -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.sched.adb -f 
+INFO-FLOW: Finish scheduling SHA256.
+Execute       set_default_model SHA256 
+Execute       bind -model SHA256 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.243 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.532 seconds; current allocated memory: 213.707 MB.
+Execute       syn_report -verbosereport -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.407 sec.
+Execute       db_write -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.bind.adb -f 
+Command       db_write done; 0.14 sec.
+INFO-FLOW: Finish binding SHA256.
+Execute       get_model_list SHA256 -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess hexToBin 
+Execute       rtl_gen_preprocess SHA256 
+INFO-FLOW: Model list for RTL generation: hexToBin SHA256
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hexToBin' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model hexToBin -top_prefix SHA256_ -sub_prefix SHA256_ -mg_file C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/hexToBin.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hexToBin'.
+Command       create_rtl_model done; 0.16 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.846 seconds; current allocated memory: 214.921 MB.
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.rtl_wrap.cfg.tcl 
+Execute       gen_rtl hexToBin -style xilinx -f -lang vhdl -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/syn/vhdl/SHA256_hexToBin 
+Execute       gen_rtl hexToBin -style xilinx -f -lang vlog -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/syn/verilog/SHA256_hexToBin 
+Execute       syn_report -csynth -model hexToBin -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/syn/report/hexToBin_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model hexToBin -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/syn/report/hexToBin_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model hexToBin -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/hexToBin.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.148 sec.
+Execute       db_write -model hexToBin -f -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/hexToBin.adb 
+Command       db_write done; 0.147 sec.
+Execute       gen_tb_info hexToBin -p C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/hexToBin 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'SHA256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model SHA256 -top_prefix  -sub_prefix SHA256_ -mg_file C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'SHA256/input_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'SHA256/hash' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'SHA256' to 's_axilite & ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Global array 'p_str_8' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_25' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_24' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_23' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_22' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_21' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_20' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_19' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_18' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_17' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_16' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_15' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_14' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_13' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_12' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_11' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_10' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_9' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_1' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_2' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_3' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_4' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_5' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_6' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'p_str_7' will not be exposed as RTL port.
+INFO: [RTGEN 206-100] Bundling port 'return', 'input_r' and 'hash' to AXI-Lite port CRTLS.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'SHA256'.
+Command       create_rtl_model done; 0.32 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 1.409 seconds; current allocated memory: 219.290 MB.
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.rtl_wrap.cfg.tcl 
+Execute       gen_rtl SHA256 -istop -style xilinx -f -lang vhdl -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/syn/vhdl/SHA256 
+Execute       gen_rtl SHA256 -istop -style xilinx -f -lang vlog -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/syn/verilog/SHA256 
+Execute       syn_report -csynth -model SHA256 -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/syn/report/SHA256_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model SHA256 -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/syn/report/SHA256_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model SHA256 -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.449 sec.
+Execute       db_write -model SHA256 -f -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.adb 
+Command       db_write done; 0.109 sec.
+Execute       gen_tb_info SHA256 -p C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256 
+Execute       export_constraint_db -f -tool general -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.constraint.tcl 
+Execute       syn_report -designview -model SHA256 -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.design.xml 
+Command       syn_report done; 0.126 sec.
+Execute       syn_report -csynthDesign -model SHA256 -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/syn/report/csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model SHA256 -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model SHA256 -o C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks SHA256 
+Execute       get_config_export -vivado_clock 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       sc_get_portdomain SHA256 
+INFO-FLOW: Model list for RTL component generation: hexToBin SHA256
+INFO-FLOW: Handling components in module [hexToBin] ... 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/hexToBin.compgen.tcl 
+INFO-FLOW: Found component SHA256_hexToBin_p_str_25.
+INFO-FLOW: Append model SHA256_hexToBin_p_str_25
+INFO-FLOW: Found component SHA256_hexToBin_p_str_24.
+INFO-FLOW: Append model SHA256_hexToBin_p_str_24
+INFO-FLOW: Found component SHA256_hexToBin_p_str_23.
+INFO-FLOW: Append model SHA256_hexToBin_p_str_23
+INFO-FLOW: Found component SHA256_hexToBin_p_str_22.
+INFO-FLOW: Append model SHA256_hexToBin_p_str_22
+INFO-FLOW: Found component SHA256_hexToBin_p_str_21.
+INFO-FLOW: Append model SHA256_hexToBin_p_str_21
+INFO-FLOW: Found component SHA256_hexToBin_p_str_20.
+INFO-FLOW: Append model SHA256_hexToBin_p_str_20
+INFO-FLOW: Found component SHA256_hexToBin_p_str_19.
+INFO-FLOW: Append model SHA256_hexToBin_p_str_19
+INFO-FLOW: Found component SHA256_hexToBin_p_str_18.
+INFO-FLOW: Append model SHA256_hexToBin_p_str_18
+INFO-FLOW: Found component SHA256_hexToBin_p_str_17.
+INFO-FLOW: Append model SHA256_hexToBin_p_str_17
+INFO-FLOW: Found component SHA256_hexToBin_p_str_16.
+INFO-FLOW: Append model SHA256_hexToBin_p_str_16
+INFO-FLOW: Found component SHA256_hexToBin_p_str_15.
+INFO-FLOW: Append model SHA256_hexToBin_p_str_15
+INFO-FLOW: Found component SHA256_hexToBin_p_str_14.
+INFO-FLOW: Append model SHA256_hexToBin_p_str_14
+INFO-FLOW: Found component SHA256_hexToBin_p_str_13.
+INFO-FLOW: Append model SHA256_hexToBin_p_str_13
+INFO-FLOW: Found component SHA256_hexToBin_p_str_12.
+INFO-FLOW: Append model SHA256_hexToBin_p_str_12
+INFO-FLOW: Found component SHA256_hexToBin_p_str_11.
+INFO-FLOW: Append model SHA256_hexToBin_p_str_11
+INFO-FLOW: Found component SHA256_hexToBin_p_str_10.
+INFO-FLOW: Append model SHA256_hexToBin_p_str_10
+INFO-FLOW: Found component SHA256_hexToBin_p_str_9.
+INFO-FLOW: Append model SHA256_hexToBin_p_str_9
+INFO-FLOW: Handling components in module [SHA256] ... 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.compgen.tcl 
+INFO-FLOW: Found component SHA256_p_str_8.
+INFO-FLOW: Append model SHA256_p_str_8
+INFO-FLOW: Found component SHA256_p_str.
+INFO-FLOW: Append model SHA256_p_str
+INFO-FLOW: Found component SHA256_p_str_1.
+INFO-FLOW: Append model SHA256_p_str_1
+INFO-FLOW: Found component SHA256_p_str_2.
+INFO-FLOW: Append model SHA256_p_str_2
+INFO-FLOW: Found component SHA256_p_str_3.
+INFO-FLOW: Append model SHA256_p_str_3
+INFO-FLOW: Found component SHA256_p_str_4.
+INFO-FLOW: Append model SHA256_p_str_4
+INFO-FLOW: Found component SHA256_p_str_5.
+INFO-FLOW: Append model SHA256_p_str_5
+INFO-FLOW: Found component SHA256_p_str_6.
+INFO-FLOW: Append model SHA256_p_str_6
+INFO-FLOW: Found component SHA256_p_str_7.
+INFO-FLOW: Append model SHA256_p_str_7
+INFO-FLOW: Found component SHA256_h0.
+INFO-FLOW: Append model SHA256_h0
+INFO-FLOW: Found component SHA256_CRTLS_s_axi.
+INFO-FLOW: Append model SHA256_CRTLS_s_axi
+INFO-FLOW: Append model hexToBin
+INFO-FLOW: Append model SHA256
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: SHA256_hexToBin_p_str_25 SHA256_hexToBin_p_str_24 SHA256_hexToBin_p_str_23 SHA256_hexToBin_p_str_22 SHA256_hexToBin_p_str_21 SHA256_hexToBin_p_str_20 SHA256_hexToBin_p_str_19 SHA256_hexToBin_p_str_18 SHA256_hexToBin_p_str_17 SHA256_hexToBin_p_str_16 SHA256_hexToBin_p_str_15 SHA256_hexToBin_p_str_14 SHA256_hexToBin_p_str_13 SHA256_hexToBin_p_str_12 SHA256_hexToBin_p_str_11 SHA256_hexToBin_p_str_10 SHA256_hexToBin_p_str_9 SHA256_p_str_8 SHA256_p_str SHA256_p_str_1 SHA256_p_str_2 SHA256_p_str_3 SHA256_p_str_4 SHA256_p_str_5 SHA256_p_str_6 SHA256_p_str_7 SHA256_h0 SHA256_CRTLS_s_axi hexToBin SHA256
+INFO-FLOW: To file: write model SHA256_hexToBin_p_str_25
+INFO-FLOW: To file: write model SHA256_hexToBin_p_str_24
+INFO-FLOW: To file: write model SHA256_hexToBin_p_str_23
+INFO-FLOW: To file: write model SHA256_hexToBin_p_str_22
+INFO-FLOW: To file: write model SHA256_hexToBin_p_str_21
+INFO-FLOW: To file: write model SHA256_hexToBin_p_str_20
+INFO-FLOW: To file: write model SHA256_hexToBin_p_str_19
+INFO-FLOW: To file: write model SHA256_hexToBin_p_str_18
+INFO-FLOW: To file: write model SHA256_hexToBin_p_str_17
+INFO-FLOW: To file: write model SHA256_hexToBin_p_str_16
+INFO-FLOW: To file: write model SHA256_hexToBin_p_str_15
+INFO-FLOW: To file: write model SHA256_hexToBin_p_str_14
+INFO-FLOW: To file: write model SHA256_hexToBin_p_str_13
+INFO-FLOW: To file: write model SHA256_hexToBin_p_str_12
+INFO-FLOW: To file: write model SHA256_hexToBin_p_str_11
+INFO-FLOW: To file: write model SHA256_hexToBin_p_str_10
+INFO-FLOW: To file: write model SHA256_hexToBin_p_str_9
+INFO-FLOW: To file: write model SHA256_p_str_8
+INFO-FLOW: To file: write model SHA256_p_str
+INFO-FLOW: To file: write model SHA256_p_str_1
+INFO-FLOW: To file: write model SHA256_p_str_2
+INFO-FLOW: To file: write model SHA256_p_str_3
+INFO-FLOW: To file: write model SHA256_p_str_4
+INFO-FLOW: To file: write model SHA256_p_str_5
+INFO-FLOW: To file: write model SHA256_p_str_6
+INFO-FLOW: To file: write model SHA256_p_str_7
+INFO-FLOW: To file: write model SHA256_h0
+INFO-FLOW: To file: write model SHA256_CRTLS_s_axi
+INFO-FLOW: To file: write model hexToBin
+INFO-FLOW: To file: write model SHA256
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       get_top 
+Execute       get_config_export -ipname 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_rtl -module_auto_prefix 
+INFO-FLOW: DBG:CMD:   auto_impl: set ipname to top (module_auto_prefix): SHA256
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d C:/Users/almotaek/Desktop/ECE/SHA256/solution1
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/global.setting.tcl
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/op.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/interface.gen 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_family_info -name artix7 -data parts 
+Execute       ap_part_info -name xc7a12ticsg325-1L -data info 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.138 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.137 sec.
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute       ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/hexToBin.compgen.tcl 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_25_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_24_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Command         ap_part_info done; 0.143 sec.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_23_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_22_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_21_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_20_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_19_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_18_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_17_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_16_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_15_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_14_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_13_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_12_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_11_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_10_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_hexToBin_p_str_9_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Command       ap_source done; 3.806 sec.
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.compgen.tcl 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_p_str_8_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_p_str_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_p_str_1_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_p_str_2_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_p_str_3_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_p_str_4_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_p_str_5_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_p_str_6_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Command         ap_part_info done; 0.123 sec.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'SHA256_p_str_7_rom' using auto ROMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'SHA256_h0_ram (RAM)' using auto RAMs.
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         source ./CRTLS.slave.tcl 
+Command       ap_source done; 2.397 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d C:/Users/almotaek/Desktop/ECE/SHA256/solution1
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/global.setting.tcl
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/op.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/generic/autopilot/interface.gen 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_family_info -name artix7 -data parts 
+Execute       ap_part_info -name xc7a12ticsg325-1L -data info 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.113 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.168 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.169 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.228 sec.
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=SHA256 xml_exists=0
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.tbgen.tcl 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/hexToBin.compgen.tcl 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/hexToBin.compgen.tcl 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.compgen.tcl 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute         ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Command       ap_source done; 0.323 sec.
+Execute       ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute       ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/hexToBin.compgen.tcl 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.compgen.tcl 
+Execute       ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute       ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute       ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute       ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute       ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.constraint.tcl 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=2
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=3
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=30 #gSsdmPorts=2
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/top-io-be.tcl 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.tbgen.tcl 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.compgen.dataonly.tcl 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.compgen.dataonly.tcl 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.compgen.dataonly.tcl 
+Execute       get_config_export -format 
+Execute       ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute       ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/hexToBin.tbgen.tcl 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.tbgen.tcl 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7a100t-csg324-1 -data names -quiet 
+Execute       ap_part_info -name xc7a100t-csg324-1 -data info -quiet 
+Execute       get_solution -flow_target 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.constraint.tcl 
+Execute       sc_get_clocks SHA256 
+Execute       source C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 7 seconds. CPU system time: 3 seconds. Elapsed time: 12.004 seconds; current allocated memory: 228.182 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for SHA256.
+INFO: [VLOG 209-307] Generating Verilog RTL for SHA256.
+INFO-FLOW: DBG:CMD:       update_csynth_xml_report append design.xml content design_xml=C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.autopilot/db/SHA256.design.xml
+INFO-FLOW: DBG:CMD:       update_csynth_xml_report json2reportxml
+INFO-FLOW: DBG:CMD:       update_csynth_xml_report done
+Execute       syn_report -model SHA256 -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 150.42 MHz
+Command     autosyn done; 16.543 sec.
+Command   csynth_design done; 26.707 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 12 seconds. CPU system time: 4 seconds. Elapsed time: 26.806 seconds; current allocated memory: 228.475 MB.
+Command ap_source done; 30.321 sec.
+Execute cleanup_all 

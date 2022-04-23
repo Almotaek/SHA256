@@ -7,8 +7,8 @@ module SHA256_p_str_rom (
 addr0, ce0, q0, clk);
 
 parameter DWIDTH = 8;
-parameter AWIDTH = 6;
-parameter MEM_SIZE = 35;
+parameter AWIDTH = 4;
+parameter MEM_SIZE = 11;
 
 input[AWIDTH-1:0] addr0;
 input ce0;
@@ -44,8 +44,8 @@ module SHA256_p_str(
     q0);
 
 parameter DataWidth = 32'd8;
-parameter AddressRange = 32'd35;
-parameter AddressWidth = 32'd6;
+parameter AddressRange = 32'd11;
+parameter AddressWidth = 32'd4;
 input reset;
 input clk;
 input[AddressWidth - 1:0] address0;

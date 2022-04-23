@@ -15,34 +15,97 @@
         <PipelineType>none</PipelineType>
         <SummaryOfTimingAnalysis>
             <unit>ns</unit>
-            <EstimatedClockPeriod>3.152</EstimatedClockPeriod>
+            <EstimatedClockPeriod>6.648</EstimatedClockPeriod>
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>36</Best-caseLatency>
-            <Average-caseLatency>36</Average-caseLatency>
-            <Worst-caseLatency>36</Worst-caseLatency>
-            <Best-caseRealTimeLatency>0.360 us</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>0.360 us</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>0.360 us</Worst-caseRealTimeLatency>
-            <Interval-min>37</Interval-min>
-            <Interval-max>37</Interval-max>
+            <Best-caseLatency>undef</Best-caseLatency>
+            <Average-caseLatency>undef</Average-caseLatency>
+            <Worst-caseLatency>undef</Worst-caseLatency>
+            <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+            <Interval-min>undef</Interval-min>
+            <Interval-max>undef</Interval-max>
         </SummaryOfOverallLatency>
         <SummaryOfLoopLatency>
-            <VITIS_LOOP_72_1>
+            <VITIS_LOOP_441_1>
                 <TripCount>34</TripCount>
                 <Latency>34</Latency>
                 <AbsoluteTimeLatency>340</AbsoluteTimeLatency>
                 <PipelineII>1</PipelineII>
                 <PipelineDepth>2</PipelineDepth>
-            </VITIS_LOOP_72_1>
+            </VITIS_LOOP_441_1>
+            <Loop2>
+                <TripCount>12</TripCount>
+                <Latency>12</Latency>
+                <AbsoluteTimeLatency>120</AbsoluteTimeLatency>
+                <PipelineII>1</PipelineII>
+                <PipelineDepth>1</PipelineDepth>
+            </Loop2>
+            <Loop3>
+                <TripCount>12</TripCount>
+                <Latency>12</Latency>
+                <AbsoluteTimeLatency>120</AbsoluteTimeLatency>
+                <PipelineII>1</PipelineII>
+                <PipelineDepth>1</PipelineDepth>
+            </Loop3>
+            <Loop4>
+                <TripCount>12</TripCount>
+                <Latency>12</Latency>
+                <AbsoluteTimeLatency>120</AbsoluteTimeLatency>
+                <PipelineII>1</PipelineII>
+                <PipelineDepth>1</PipelineDepth>
+            </Loop4>
+            <Loop5>
+                <TripCount>12</TripCount>
+                <Latency>12</Latency>
+                <AbsoluteTimeLatency>120</AbsoluteTimeLatency>
+                <PipelineII>1</PipelineII>
+                <PipelineDepth>1</PipelineDepth>
+            </Loop5>
+            <Loop6>
+                <TripCount>12</TripCount>
+                <Latency>12</Latency>
+                <AbsoluteTimeLatency>120</AbsoluteTimeLatency>
+                <PipelineII>1</PipelineII>
+                <PipelineDepth>1</PipelineDepth>
+            </Loop6>
+            <Loop7>
+                <TripCount>12</TripCount>
+                <Latency>12</Latency>
+                <AbsoluteTimeLatency>120</AbsoluteTimeLatency>
+                <PipelineII>1</PipelineII>
+                <PipelineDepth>1</PipelineDepth>
+            </Loop7>
+            <Loop8>
+                <TripCount>12</TripCount>
+                <Latency>12</Latency>
+                <AbsoluteTimeLatency>120</AbsoluteTimeLatency>
+                <PipelineII>1</PipelineII>
+                <PipelineDepth>1</PipelineDepth>
+            </Loop8>
+            <Loop9>
+                <TripCount>12</TripCount>
+                <Latency>12</Latency>
+                <AbsoluteTimeLatency>120</AbsoluteTimeLatency>
+                <PipelineII>1</PipelineII>
+                <PipelineDepth>1</PipelineDepth>
+            </Loop9>
+            <VITIS_LOOP_441_1>
+                <TripCount>undef</TripCount>
+                <Latency>undef</Latency>
+                <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                <PipelineII>2</PipelineII>
+                <PipelineDepth>3</PipelineDepth>
+            </VITIS_LOOP_441_1>
         </SummaryOfLoopLatency>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
             <BRAM_18K>0</BRAM_18K>
-            <FF>148</FF>
-            <LUT>272</LUT>
+            <FF>4396</FF>
+            <LUT>8147</LUT>
             <DSP>0</DSP>
             <URAM>0</URAM>
         </Resources>
@@ -313,36 +376,102 @@
     <RTLDesignHierarchy>
         <TopModule>
             <ModuleName>SHA256</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_hexToBin_fu_411</InstName>
+                    <ModuleName>hexToBin</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>411</ID>
+                </Instance>
+                <Instance>
+                    <InstName>grp_hexToBin_fu_453</InstName>
+                    <ModuleName>hexToBin</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>453</ID>
+                </Instance>
+                <Instance>
+                    <InstName>grp_hexToBin_fu_494</InstName>
+                    <ModuleName>hexToBin</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>494</ID>
+                </Instance>
+                <Instance>
+                    <InstName>grp_hexToBin_fu_535</InstName>
+                    <ModuleName>hexToBin</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>535</ID>
+                </Instance>
+                <Instance>
+                    <InstName>grp_hexToBin_fu_576</InstName>
+                    <ModuleName>hexToBin</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>576</ID>
+                </Instance>
+                <Instance>
+                    <InstName>grp_hexToBin_fu_617</InstName>
+                    <ModuleName>hexToBin</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>617</ID>
+                </Instance>
+                <Instance>
+                    <InstName>grp_hexToBin_fu_658</InstName>
+                    <ModuleName>hexToBin</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>658</ID>
+                </Instance>
+                <Instance>
+                    <InstName>grp_hexToBin_fu_699</InstName>
+                    <ModuleName>hexToBin</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>699</ID>
+                </Instance>
+            </InstancesList>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
         <Module>
-            <Name>SHA256</Name>
+            <Name>hexToBin</Name>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>3.152</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>6.648</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>36</Best-caseLatency>
-                    <Average-caseLatency>36</Average-caseLatency>
-                    <Worst-caseLatency>36</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.360 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.360 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.360 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>37</PipelineInitiationInterval>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
                     <PipelineType>none</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_72_1>
-                        <Name>VITIS_LOOP_72_1</Name>
-                        <TripCount>34</TripCount>
-                        <Latency>34</Latency>
-                        <AbsoluteTimeLatency>0.340 us</AbsoluteTimeLatency>
-                        <PipelineII>1</PipelineII>
-                        <PipelineDepth>2</PipelineDepth>
-                    </VITIS_LOOP_72_1>
+                    <VITIS_LOOP_318_1>
+                        <Name>VITIS_LOOP_318_1</Name>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <IterationLatency>undef</IterationLatency>
+                        <PipelineDepth>undef</PipelineDepth>
+                        <VITIS_LOOP_449_1>
+                            <Name>VITIS_LOOP_449_1</Name>
+                            <TripCount>undef</TripCount>
+                            <Latency>undef</Latency>
+                            <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                            <PipelineII>2</PipelineII>
+                            <PipelineDepth>2</PipelineDepth>
+                        </VITIS_LOOP_449_1>
+                        <VITIS_LOOP_460_1>
+                            <Name>VITIS_LOOP_460_1</Name>
+                            <TripCount>undef</TripCount>
+                            <Latency>undef</Latency>
+                            <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                            <PipelineII>2</PipelineII>
+                            <PipelineDepth>3</PipelineDepth>
+                        </VITIS_LOOP_460_1>
+                    </VITIS_LOOP_318_1>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
@@ -350,12 +479,289 @@
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>270</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
-                    <FF>148</FF>
+                    <FF>484</FF>
                     <AVAIL_FF>126800</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>272</LUT>
+                    <LUT>856</LUT>
                     <AVAIL_LUT>63400</AVAIL_LUT>
-                    <UTIL_LUT>~0</UTIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>240</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <InterfaceSummary>
+                <RtlPorts>
+                    <name>ap_clk</name>
+                    <Object>hexToBin</Object>
+                    <Type>return value</Type>
+                    <Scope/>
+                    <IOProtocol>ap_ctrl_hs</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>ap_rst</name>
+                    <Object>hexToBin</Object>
+                    <Type>return value</Type>
+                    <Scope/>
+                    <IOProtocol>ap_ctrl_hs</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>ap_start</name>
+                    <Object>hexToBin</Object>
+                    <Type>return value</Type>
+                    <Scope/>
+                    <IOProtocol>ap_ctrl_hs</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>ap_done</name>
+                    <Object>hexToBin</Object>
+                    <Type>return value</Type>
+                    <Scope/>
+                    <IOProtocol>ap_ctrl_hs</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>ap_idle</name>
+                    <Object>hexToBin</Object>
+                    <Type>return value</Type>
+                    <Scope/>
+                    <IOProtocol>ap_ctrl_hs</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>ap_ready</name>
+                    <Object>hexToBin</Object>
+                    <Type>return value</Type>
+                    <Scope/>
+                    <IOProtocol>ap_ctrl_hs</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>string_r_address0</name>
+                    <Object>string_r</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>4</Bits>
+                    <Attribute>address</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>string_r_ce0</name>
+                    <Object>string_r</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>string_r_q0</name>
+                    <Object>string_r</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>8</Bits>
+                    <Attribute>data</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>bits_address0</name>
+                    <Object>bits</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>4</Bits>
+                    <Attribute>address</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>bits_ce0</name>
+                    <Object>bits</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>bits_we0</name>
+                    <Object>bits</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>1</Bits>
+                    <Attribute>control</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>bits_d0</name>
+                    <Object>bits</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>out</Dir>
+                    <Bits>7</Bits>
+                    <Attribute>data</Attribute>
+                </RtlPorts>
+                <RtlPorts>
+                    <name>bits_q0</name>
+                    <Object>bits</Object>
+                    <Type>array</Type>
+                    <Scope/>
+                    <IOProtocol>ap_memory</IOProtocol>
+                    <IOConfig/>
+                    <Dir>in</Dir>
+                    <Bits>7</Bits>
+                    <Attribute>data</Attribute>
+                </RtlPorts>
+            </InterfaceSummary>
+        </Module>
+        <Module>
+            <Name>SHA256</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.648</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>none</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_441_1>
+                        <Name>VITIS_LOOP_441_1</Name>
+                        <TripCount>34</TripCount>
+                        <Latency>34</Latency>
+                        <AbsoluteTimeLatency>0.340 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                    </VITIS_LOOP_441_1>
+                    <Loop2>
+                        <Name>Loop 2</Name>
+                        <TripCount>12</TripCount>
+                        <Latency>12</Latency>
+                        <AbsoluteTimeLatency>0.120 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                    </Loop2>
+                    <Loop3>
+                        <Name>Loop 3</Name>
+                        <TripCount>12</TripCount>
+                        <Latency>12</Latency>
+                        <AbsoluteTimeLatency>0.120 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                    </Loop3>
+                    <Loop4>
+                        <Name>Loop 4</Name>
+                        <TripCount>12</TripCount>
+                        <Latency>12</Latency>
+                        <AbsoluteTimeLatency>0.120 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                    </Loop4>
+                    <Loop5>
+                        <Name>Loop 5</Name>
+                        <TripCount>12</TripCount>
+                        <Latency>12</Latency>
+                        <AbsoluteTimeLatency>0.120 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                    </Loop5>
+                    <Loop6>
+                        <Name>Loop 6</Name>
+                        <TripCount>12</TripCount>
+                        <Latency>12</Latency>
+                        <AbsoluteTimeLatency>0.120 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                    </Loop6>
+                    <Loop7>
+                        <Name>Loop 7</Name>
+                        <TripCount>12</TripCount>
+                        <Latency>12</Latency>
+                        <AbsoluteTimeLatency>0.120 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                    </Loop7>
+                    <Loop8>
+                        <Name>Loop 8</Name>
+                        <TripCount>12</TripCount>
+                        <Latency>12</Latency>
+                        <AbsoluteTimeLatency>0.120 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                    </Loop8>
+                    <Loop9>
+                        <Name>Loop 9</Name>
+                        <TripCount>12</TripCount>
+                        <Latency>12</Latency>
+                        <AbsoluteTimeLatency>0.120 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                    </Loop9>
+                    <VITIS_LOOP_441_1>
+                        <Name>VITIS_LOOP_441_1</Name>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <PipelineII>2</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                    </VITIS_LOOP_441_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>270</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <FF>4396</FF>
+                    <AVAIL_FF>126800</AVAIL_FF>
+                    <UTIL_FF>3</UTIL_FF>
+                    <LUT>8147</LUT>
+                    <AVAIL_LUT>63400</AVAIL_LUT>
+                    <UTIL_LUT>12</UTIL_LUT>
                     <DSP>0</DSP>
                     <AVAIL_DSP>240</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
@@ -629,7 +1035,7 @@
                 <hwRef type="register" interface="s_axi_CRTLS" name="input_r" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="hash" index="1" direction="out" srcType="char*" srcSize="8">
+        <Arg ArgName="hash" index="1" direction="inout" srcType="char*" srcSize="8">
             <hwRefs>
                 <hwRef type="register" interface="s_axi_CRTLS" name="hash" usage="data" direction="out"/>
                 <hwRef type="register" interface="s_axi_CRTLS" name="hash_ctrl" usage="control" direction="out"/>
@@ -785,7 +1191,7 @@
                 <table isCollapsed="1">
                     <keys size="3">Argument, Direction, Datatype</keys>
                     <column name="input">unused, char*</column>
-                    <column name="hash">out, char*</column>
+                    <column name="hash">inout, char*</column>
                     <column name="return">out, char*</column>
                 </table>
             </item>
@@ -802,7 +1208,16 @@
         </section>
     </ReportSWInterface>
     <ReportBurst>
-        <section name="M_AXI Burst Information" level="0"/>
+        <section name="M_AXI Burst Information" level="0">
+            <item name="Burst Missed">
+                <table>
+                    <keys size="4">Variable, Problem, Resolution, Location</keys>
+                    <column name="">Cannot analyze the loop bounds of 'VITIS_LOOP_441_1', 214-252, main.c:441:20</column>
+                    <column name="">Cannot analyze the loop bounds of 'VITIS_LOOP_449_1', 214-252, main.c:449:20</column>
+                    <column name="">Cannot analyze the loop bounds of 'VITIS_LOOP_460_1', 214-252, main.c:460:20</column>
+                </table>
+            </item>
+        </section>
     </ReportBurst>
 </profile>
 

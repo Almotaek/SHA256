@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="main.h" path="C:\Users\almotaek\Desktop\ECE\main.h"/>
+    <originFiles name="main.c" path="C:\Users\almotaek\Desktop\ECE\main.c"/>
+  </source>
+  <testbench>
+    <originFiles name="test.c" path="C:\Users\almotaek\Desktop\ECE\test.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
