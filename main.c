@@ -381,12 +381,14 @@ char* hToB(char oneHex){
 //step 5
 
 int createMessageScheduling(char* bitsString, uint32_t* bitArray){
-	  char stringBitArray[16][34];
+	  char stringBitArray[64][34];
 	  makeArrayOfBitStrings (bitsString, stringBitArray);
+      //call a function that populates the bitArray with the values of int value of stringBitArray using bitsTo32Ints
+      //now, bitArray can be used to preform the operations of step 5.
 	  return 0;
 }
 
-void makeArrayOfBitStrings (char *bitsString, char stringBitArray[16][34]){
+void makeArrayOfBitStrings (char *bitsString, char stringBitArray[64][34]){
   int i = 0;
   int c = 0;
   int index = 0;
@@ -413,15 +415,21 @@ void makeArrayOfBitStrings (char *bitsString, char stringBitArray[16][34]){
 }
 
 //string to int32_t
-uint32_t sToB(char * string){
+uint32_t bitsTo32Ints(char * string){
 	uint32_t x = 0;
     int i =0;
-
-//    for(i=32; i>0; i--){
-//        int oz = string[i]-48;
-//
-//    }
-    return x;
+    uint32_t t = 1;
+    uint32_t total = 0;
+    for(i=31; i>=0; i--){
+        // printf("%d",i);
+        int oz = string[i]-48;
+        // printf("%d\n",oz);
+        if(oz==1){
+            total  = total + t;
+        }
+        t=t*2;
+    }
+    return total;
 }
 
 
