@@ -17,14 +17,14 @@ char* SHA256(char* input,char* hash) {
 	//STEP2:
 
     //initlizing hash values 0..7
-    char h0[12] = "";
-    char h1[12] = "";
-    char h2[12] = "";
-    char h3[12] = "";
-    char h4[12] = "";
-    char h5[12] = "";
-    char h6[12] = "";
-    char h7[12] = "";
+    char h0[64] = "";
+    char h1[64] = "";
+    char h2[64] = "";
+    char h3[64] = "";
+    char h4[64] = "";
+    char h5[64] = "";
+    char h6[64] = "";
+    char h7[64] = "";
 
 
     //the fractions of the sqaure roots of the 1st 8 prime numbers.
