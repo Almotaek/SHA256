@@ -446,6 +446,8 @@ void modify(uint32_t* ints){
     int i = 0;
     for(i=16; i<64; i++){
         uint32_t s0  = xor(xor(right_rotate(ints[i-15], 7), right_rotate(ints[i-15], 8)),  right_shift(ints[i-15], 8));
+        uint32_t s1  = xor(xor(right_rotate(ints[i-2], 17), right_rotate(ints[i-2], 19)),  right_shift(ints[i-2], 10));
+        ints[i] = ints[i-16] + s0 + ints[i-7] + s1;
     }
 }
 
