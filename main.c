@@ -442,6 +442,14 @@ void add48Ints(uint32_t * bitArray){
     }
 }
 
+void modify(uint32_t* ints){
+    int i = 0;
+    for(i=16; i<64; i++){
+        uint32_t s0  = xor(xor(right_rotate(ints[i-15], 7), right_rotate(ints[i-15], 8)),  right_shift(ints[i-15], 8));
+    }
+}
+
+
 //string to int32_t
 uint32_t bitsTo32Ints(char * string){
 	uint32_t x = 0;
@@ -462,6 +470,17 @@ uint32_t bitsTo32Ints(char * string){
 
 
 //helper functions
+
+uint32_t right_shift(uint32_t num, int n) {
+  return num >> n;
+}
+uint32_t right_rotate(uint32_t num, int n) {
+  return (num >> n) | (num << (32 - n));
+}
+
+int xor(uint32_t  a, uint32_t  b){
+    return a ^ b;
+}
 
 char* catc(char* dest, char new){
 	int i = 0;
