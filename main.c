@@ -393,6 +393,7 @@ int createMessageScheduling(char* bitsString, uint32_t* bitArray){
 	  //adding 48 more words (i.e. 48 more uint32_t elements)
 	  add48Ints(bitArray);
       //now, bitArray can be used to preform the operations of step 5.
+      modify(bitArray);
 	  return 0;
 }
 
