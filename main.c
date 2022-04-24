@@ -384,33 +384,56 @@ int createMessageScheduling(char* bitsString, uint32_t* bitArray){
 	  char stringBitArray[64][34];
 	  makeArrayOfBitStrings (bitsString, stringBitArray);
       //call a function that populates the bitArray with the values of int value of stringBitArray using bitsTo32Ints
+	  makeArrayOfBitInts(stringBitArray,bitArray);
+	  //adding 48 more words (i.e. 48 more uint32_t elements)
+	  add48Ints(bitArray);
       //now, bitArray can be used to preform the operations of step 5.
 	  return 0;
 }
 
-void makeArrayOfBitStrings (char *bitsString, char stringBitArray[64][34]){
+void makeArrayOfBitInts (char stringBitArray[64][34],uint32_t * bitArray){
+    int i = 0;
+    for(i=0; i<32; i++){
+        // printf ("%s\n", stringBitArray[i]);
+        bitArray[i] = bitsTo32Ints(stringBitArray[i]);
+    }
+}
+
+void makeArrayOfBitStrings (char *bitsString, char stringBitArray[64][34])
+{
   int i = 0;
   int c = 0;
   int index = 0;
   char currentInt[99] = "";
   while (bitsString[i] != '\0')
     {
+     //  printf ("%d\n", i);
+    //   printf ("%c\n", bitsString[i]);
       catc (currentInt, bitsString[i]);
+      //printf ("%s\n", currentInt);
       if (c == 31)
 	{
-	  //printf ("%s\n", currentInt)
-	  currentInt[c] = '\0';;
+	  currentInt[c+1] = '\0';
+	  stringBitArray[index][c+1] = '\0';
 	  cpy (stringBitArray[index], currentInt);
+	  //currentInt[c] = '\0';
 	  c = 0;
 	  currentInt[0] = '\0';
 	  index++;
-	}
-      else
-	{
-	  i++;
-	  c++;
+	}else{
+	    c++;
 	}
 
+	  i++;
+
+
+    }
+}
+
+void add48Ints(uint32_t * bitArray){
+    int i = 33;
+    for(i = 33; i<64; i ++){
+        bitArray[i] = 0;
     }
 }
 

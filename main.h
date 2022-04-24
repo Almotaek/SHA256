@@ -18,9 +18,12 @@ char* hexToBin(char* string, char* bits);
 char* hToB(char oneHex);
 
 //step5
-void makeArrayOfBitStrings(char* bitsString, char[64][34] );
 int createMessageScheduling(char* bitsString, uint32_t* bitArray);
-uint32_t bitsTo32Int(char *);
+void makeArrayOfBitStrings(char* bitsString, char[64][34] );
+void makeArrayOfBitInts (char[64][34],uint32_t * bitArray);
+uint32_t bitsTo32Ints(char *);
+void add48Ints(uint32_t* bitArray);
+
 
 
 //helper functions
