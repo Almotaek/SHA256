@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'hexToBin'" level="0">
-<item name = "Date">Sat Apr 23 18:59:41 2022
+<item name = "Date">Sun Apr 24 14:36:21 2022
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)</item>
 <item name = "Project">SHA256</item>
@@ -36,8 +36,8 @@
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
 <column name="- VITIS_LOOP_318_1">?, ?, ?, -, -, ?, no</column>
-<column name=" + VITIS_LOOP_449_1">?, ?, 2, 2, 1, ?, yes</column>
-<column name=" + VITIS_LOOP_460_1">?, ?, 3, 2, 1, ?, yes</column>
+<column name=" + VITIS_LOOP_480_1">?, ?, 2, 2, 1, ?, yes</column>
+<column name=" + VITIS_LOOP_491_1">?, ?, 3, 2, 1, ?, yes</column>
 </table>
 </item>
 </section>
@@ -98,17 +98,17 @@
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="add_ln322_fu_665_p2">+, 0, 0, 71, 64, 1</column>
-<column name="add_ln450_fu_693_p2">+, 0, 0, 71, 64, 1</column>
-<column name="add_ln462_fu_929_p2">+, 0, 0, 13, 4, 1</column>
-<column name="add_ln463_fu_709_p2">+, 0, 0, 71, 64, 1</column>
+<column name="add_ln481_fu_693_p2">+, 0, 0, 71, 64, 1</column>
+<column name="add_ln493_fu_929_p2">+, 0, 0, 13, 4, 1</column>
+<column name="add_ln494_fu_709_p2">+, 0, 0, 71, 64, 1</column>
 <column name="ap_condition_378">and, 0, 0, 2, 1, 1</column>
 <column name="ap_condition_557">and, 0, 0, 2, 1, 1</column>
 <column name="ap_condition_614">and, 0, 0, 2, 1, 1</column>
 <column name="ap_condition_875">and, 0, 0, 2, 1, 1</column>
 <column name="icmp_ln318_fu_671_p2">icmp, 0, 0, 11, 8, 1</column>
 <column name="icmp_ln319_fu_687_p2">icmp, 0, 0, 28, 63, 1</column>
-<column name="icmp_ln449_fu_699_p2">icmp, 0, 0, 10, 7, 1</column>
-<column name="icmp_ln460_fu_918_p2">icmp, 0, 0, 10, 7, 1</column>
+<column name="icmp_ln480_fu_699_p2">icmp, 0, 0, 10, 7, 1</column>
+<column name="icmp_ln491_fu_918_p2">icmp, 0, 0, 10, 7, 1</column>
 <column name="ap_condition_362">or, 0, 0, 2, 1, 1</column>
 <column name="ap_enable_pp1">xor, 0, 0, 2, 1, 2</column>
 </table>
@@ -137,7 +137,7 @@
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="add_ln322_reg_935">64, 0, 64, 0</column>
-<column name="add_ln463_reg_1089">64, 0, 64, 0</column>
+<column name="add_ln494_reg_1089">64, 0, 64, 0</column>
 <column name="ap_CS_fsm">9, 0, 9, 0</column>
 <column name="ap_enable_reg_pp1_iter0">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp1_iter1">1, 0, 1, 0</column>
@@ -145,7 +145,7 @@
 <column name="i_1_reg_555">64, 0, 64, 0</column>
 <column name="i_2_reg_656">4, 0, 4, 0</column>
 <column name="i_reg_467">64, 0, 64, 0</column>
-<column name="icmp_ln460_reg_1094">1, 0, 1, 0</column>
+<column name="icmp_ln491_reg_1094">1, 0, 1, 0</column>
 <column name="j_reg_568">64, 0, 64, 0</column>
 <column name="retval_0_i8_reg_480">5, 0, 5, 0</column>
 </table>

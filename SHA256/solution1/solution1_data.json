@@ -207,10 +207,7 @@
     "IpMisc": ["impl\/misc\/logo.png"],
     "DesignXml": ".autopilot\/db\/SHA256.design.xml",
     "DebugDir": ".debug",
-    "ProtoInst": [
-      "C:\/Users\/almotaek\/Desktop\/ECE\/SHA256\/solution1\/.debug\/factorial_calculator.protoinst",
-      "C:\/Users\/almotaek\/Desktop\/ECE\/SHA256\/solution1\/.debug\/SHA256.protoinst"
-    ]
+    "ProtoInst": ["C:\/Users\/almotaek\/Desktop\/ECE2\/SHA256\/SHA256\/solution1\/.debug\/SHA256.protoinst"]
   },
   "SubcoreInfo": {
     "HasXpmMemory": false,
@@ -713,14 +710,14 @@
             "PipelineDepth": "",
             "Loops": [
               {
-                "Name": "VITIS_LOOP_449_1",
+                "Name": "VITIS_LOOP_480_1",
                 "TripCount": "",
                 "Latency": "",
                 "PipelineII": "2",
                 "PipelineDepth": "2"
               },
               {
-                "Name": "VITIS_LOOP_460_1",
+                "Name": "VITIS_LOOP_491_1",
                 "TripCount": "",
                 "Latency": "",
                 "PipelineII": "2",
@@ -762,7 +759,7 @@
         },
         "Loops": [
           {
-            "Name": "VITIS_LOOP_441_1",
+            "Name": "VITIS_LOOP_472_1",
             "TripCount": "34",
             "Latency": "34",
             "PipelineII": "1",
@@ -825,7 +822,7 @@
             "PipelineDepth": "1"
           },
           {
-            "Name": "VITIS_LOOP_441_1",
+            "Name": "VITIS_LOOP_472_1",
             "TripCount": "",
             "Latency": "",
             "PipelineII": "2",
@@ -855,7 +852,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-04-23 18:59:54 -0400",
+    "Time": "2022-04-24 14:36:33 -0400",
     "ToolName": "vivado_hls",
     "ToolVersion": "2020.2"
   }

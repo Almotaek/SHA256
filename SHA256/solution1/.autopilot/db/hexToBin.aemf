@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1650754782519">
-  <ports id="1" name="string_r" type="PortType" coreName="ROM" coreId="2022068608" bitwidth="8" iftype="IfTypeRegister" arraysize="11">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1650825382332">
+  <ports id="1" name="string_r" type="PortType" coreName="ROM" coreId="2181133056" bitwidth="8" iftype="IfTypeRegister" arraysize="11">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="2" name="bits" type="PortType" originalName="dest" coreName="RAM" coreId="0" bitwidth="7" direction="DirInOut" iftype="IfTypeRegister" arraysize="12">
+  <ports id="2" name="bits" type="PortType" originalName="dest" coreName="RAM" coreId="2180528432" bitwidth="7" direction="DirInOut" iftype="IfTypeRegister" arraysize="12">
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
@@ -451,8 +451,8 @@
   <blocks id="38" name="block_38" type="BlockType">
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>block_45</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="br_ln318" lineNumber="318" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="hexToBin" opcode="br" m_display="0" m_delay="1.61" m_topoIndex="1" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="318" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hexToBin"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="br_ln318" lineNumber="318" fileName="main.c" fileDirectory=".." coreId="2150064464" contextFuncName="hexToBin" opcode="br" m_display="0" m_delay="1.61" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="318" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hexToBin"/>
       <controlInputObjs>block_45</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -467,7 +467,7 @@
     <controlOutputObjs>block_273</controlOutputObjs>
     <controlOutputObjs>block_50</controlOutputObjs>
     <node_objs xsi:type="cdfg:CdfgNode" id="39" name="i" lineNumber="322" originalName="i" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="hexToBin" bitwidth="64" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="322" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hexToBin"/>
+      <inlineStackInfo fileName="main.c" linenumber="322" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hexToBin"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
@@ -477,32 +477,32 @@
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="40" name="add_ln322" lineNumber="322" fileName="main.c" fileDirectory=".." rtlName="add_ln322_fu_665_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="hexToBin" bitwidth="64" opcode="add" nodeLabel="1.0" m_display="0" m_delay="3.56" m_topoIndex="3" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="322" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hexToBin"/>
+      <inlineStackInfo fileName="main.c" linenumber="322" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hexToBin"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="string_addr" lineNumber="318" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="hexToBin" bitwidth="4" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="318" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hexToBin"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="string_addr" lineNumber="318" fileName="main.c" fileDirectory=".." coreId="2975751696" contextFuncName="hexToBin" bitwidth="4" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="318" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hexToBin"/>
       <dataInputObjs>string_r</dataInputObjs>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="42" name="string_load" lineNumber="318" originalName="oneHex" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="hexToBin" bitwidth="8" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="5" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="318" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hexToBin"/>
+      <inlineStackInfo fileName="main.c" linenumber="318" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hexToBin"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <dataOutputObjs>switch</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="icmp_ln318" lineNumber="318" fileName="main.c" fileDirectory=".." rtlName="icmp_ln318_fu_671_p2" opType="icmp" coreId="4294967295" contextFuncName="hexToBin" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="1.47" m_topoIndex="6" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="318" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hexToBin"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="icmp_ln318" lineNumber="318" fileName="main.c" fileDirectory=".." rtlName="icmp_ln318_fu_671_p2" opType="icmp" coreId="0" contextFuncName="hexToBin" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="1.47" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="318" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hexToBin"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="br_ln318" lineNumber="318" fileName="main.c" fileDirectory=".." coreId="2024258248" contextFuncName="hexToBin" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="318" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hexToBin"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="br_ln318" lineNumber="318" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="hexToBin" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="318" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hexToBin"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>block_50</controlInputObjs>
       <controlInputObjs>block_273</controlInputObjs>
@@ -517,20 +517,20 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>block_52</controlOutputObjs>
     <controlOutputObjs>cat.exit</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="tmp" lineNumber="319" fileName="main.c" fileDirectory=".." rtlName="tmp_fu_677_p4" coreId="4294967295" contextFuncName="hexToBin" bitwidth="63" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="319" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hexToBin"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="tmp" lineNumber="319" fileName="main.c" fileDirectory=".." rtlName="tmp_fu_677_p4" coreId="2975794704" contextFuncName="hexToBin" bitwidth="63" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="319" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hexToBin"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="48" name="icmp_ln319" lineNumber="319" fileName="main.c" fileDirectory=".." rtlName="icmp_ln319_fu_687_p2" opType="icmp" coreId="0" contextFuncName="hexToBin" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="2.83" m_topoIndex="9" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="319" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hexToBin"/>
+      <inlineStackInfo fileName="main.c" linenumber="319" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hexToBin"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="br_ln319" lineNumber="319" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="hexToBin" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="319" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hexToBin"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="br_ln319" lineNumber="319" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="hexToBin" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="319" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hexToBin"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>cat.exit</controlInputObjs>
       <controlInputObjs>block_52</controlInputObjs>
@@ -567,7 +567,7 @@
     <controlOutputObjs>block_56</controlOutputObjs>
     <controlOutputObjs>block_54</controlOutputObjs>
     <node_objs xsi:type="cdfg:CdfgNode" id="51" name="_ln331" lineNumber="331" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="hToB" opcode="switch" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="11" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="331" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hToB"/>
+      <inlineStackInfo fileName="main.c" linenumber="331" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hToB"/>
       <dataInputObjs>load</dataInputObjs>
       <controlInputObjs>block_96</controlInputObjs>
       <controlInputObjs>hToB.exit</controlInputObjs>
@@ -603,8 +603,8 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>hToB.exit</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="br_ln375" lineNumber="375" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="12" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="375" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hToB"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="br_ln375" lineNumber="375" fileName="main.c" fileDirectory=".." coreId="1702063205" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="375" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hToB"/>
       <controlInputObjs>hToB.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -616,8 +616,8 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>hToB.exit</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="br_ln373" lineNumber="373" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="13" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="373" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hToB"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="br_ln373" lineNumber="373" fileName="main.c" fileDirectory=".." coreId="1667199090" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="373" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hToB"/>
       <controlInputObjs>hToB.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -629,8 +629,8 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>hToB.exit</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="br_ln371" lineNumber="371" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="14" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="371" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hToB"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="br_ln371" lineNumber="371" fileName="main.c" fileDirectory=".." coreId="50" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="371" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hToB"/>
       <controlInputObjs>hToB.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -643,7 +643,7 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>hToB.exit</controlOutputObjs>
     <node_objs xsi:type="cdfg:CdfgNode" id="59" name="br_ln369" lineNumber="369" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="15" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="369" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hToB"/>
+      <inlineStackInfo fileName="main.c" linenumber="369" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hToB"/>
       <controlInputObjs>hToB.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -656,7 +656,7 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>hToB.exit</controlOutputObjs>
     <node_objs xsi:type="cdfg:CdfgNode" id="61" name="br_ln367" lineNumber="367" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="16" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="367" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hToB"/>
+      <inlineStackInfo fileName="main.c" linenumber="367" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hToB"/>
       <controlInputObjs>hToB.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -668,8 +668,8 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>hToB.exit</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="br_ln365" lineNumber="365" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="17" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="365" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hToB"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="br_ln365" lineNumber="365" fileName="main.c" fileDirectory=".." coreId="2152260336" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="365" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hToB"/>
       <controlInputObjs>hToB.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -682,7 +682,7 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>hToB.exit</controlOutputObjs>
     <node_objs xsi:type="cdfg:CdfgNode" id="65" name="br_ln363" lineNumber="363" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="18" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="363" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hToB"/>
+      <inlineStackInfo fileName="main.c" linenumber="363" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hToB"/>
       <controlInputObjs>hToB.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -694,8 +694,8 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>hToB.exit</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="br_ln361" lineNumber="361" fileName="main.c" fileDirectory=".." coreId="1693760355" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="19" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="361" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hToB"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="br_ln361" lineNumber="361" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="361" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hToB"/>
       <controlInputObjs>hToB.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -707,8 +707,8 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>hToB.exit</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="br_ln359" lineNumber="359" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="20" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="359" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hToB"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="br_ln359" lineNumber="359" fileName="main.c" fileDirectory=".." coreId="2975776080" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="359" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hToB"/>
       <controlInputObjs>hToB.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -720,8 +720,8 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>hToB.exit</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="br_ln357" lineNumber="357" fileName="main.c" fileDirectory=".." coreId="1" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="21" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="357" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hToB"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="br_ln357" lineNumber="357" fileName="main.c" fileDirectory=".." coreId="2153667360" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="357" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hToB"/>
       <controlInputObjs>hToB.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -733,8 +733,8 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>hToB.exit</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="br_ln355" lineNumber="355" fileName="main.c" fileDirectory=".." coreId="2024252968" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="22" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="355" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hToB"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="br_ln355" lineNumber="355" fileName="main.c" fileDirectory=".." coreId="98" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="355" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hToB"/>
       <controlInputObjs>hToB.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -746,8 +746,8 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>hToB.exit</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="br_ln353" lineNumber="353" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="23" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="353" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hToB"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="br_ln353" lineNumber="353" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="353" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hToB"/>
       <controlInputObjs>hToB.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -759,8 +759,8 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>hToB.exit</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="br_ln351" lineNumber="351" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="24" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="351" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hToB"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="br_ln351" lineNumber="351" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="351" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hToB"/>
       <controlInputObjs>hToB.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -772,8 +772,8 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>hToB.exit</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="br_ln349" lineNumber="349" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="25" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="349" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hToB"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="br_ln349" lineNumber="349" fileName="main.c" fileDirectory=".." coreId="2975783472" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="349" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hToB"/>
       <controlInputObjs>hToB.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -785,8 +785,8 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>hToB.exit</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="br_ln347" lineNumber="347" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="26" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="347" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hToB"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="br_ln347" lineNumber="347" fileName="main.c" fileDirectory=".." coreId="1936027241" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="347" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hToB"/>
       <controlInputObjs>hToB.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -798,8 +798,8 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>hToB.exit</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="br_ln345" lineNumber="345" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="27" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="345" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hToB"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="br_ln345" lineNumber="345" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="345" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hToB"/>
       <controlInputObjs>hToB.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -811,8 +811,8 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>hToB.exit</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="br_ln343" lineNumber="343" fileName="main.c" fileDirectory=".." coreId="6" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="28" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="343" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hToB"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="br_ln343" lineNumber="343" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="343" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hToB"/>
       <controlInputObjs>hToB.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -824,8 +824,8 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>hToB.exit</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="br_ln341" lineNumber="341" fileName="main.c" fileDirectory=".." coreId="1704049166" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="29" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="341" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hToB"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="br_ln341" lineNumber="341" fileName="main.c" fileDirectory=".." coreId="4267188864" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="341" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hToB"/>
       <controlInputObjs>hToB.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -837,8 +837,8 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>hToB.exit</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="89" name="br_ln339" lineNumber="339" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="30" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="339" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hToB"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="89" name="br_ln339" lineNumber="339" fileName="main.c" fileDirectory=".." coreId="2148900816" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="339" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hToB"/>
       <controlInputObjs>hToB.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -851,7 +851,7 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>hToB.exit</controlOutputObjs>
     <node_objs xsi:type="cdfg:CdfgNode" id="91" name="br_ln337" lineNumber="337" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="31" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="337" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hToB"/>
+      <inlineStackInfo fileName="main.c" linenumber="337" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hToB"/>
       <controlInputObjs>hToB.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -864,7 +864,7 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>hToB.exit</controlOutputObjs>
     <node_objs xsi:type="cdfg:CdfgNode" id="93" name="br_ln335" lineNumber="335" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="32" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="335" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hToB"/>
+      <inlineStackInfo fileName="main.c" linenumber="335" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hToB"/>
       <controlInputObjs>hToB.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -876,8 +876,8 @@
     <controlOutputObjs>switch</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>hToB.exit</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="br_ln377" lineNumber="377" fileName="main.c" fileDirectory=".." coreId="6" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="33" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="377" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hToB"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="br_ln377" lineNumber="377" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="hToB" opcode="br" nodeLabel="2.0" m_display="0" m_delay="3.02" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="377" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hToB"/>
       <controlInputObjs>hToB.exit</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -933,7 +933,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>block_107</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="retval_0_i8" coreId="0" bitwidth="5" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="retval_0_i8" coreId="4171107392" bitwidth="5" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
       <dataOutputObjs>switch</dataOutputObjs>
       <controlInputObjs>block_96</controlInputObjs>
       <controlInputObjs>block_54</controlInputObjs>
@@ -960,12 +960,12 @@
       <controlInputObjs>block_52</controlInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="br_ln449" lineNumber="449" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="len" opcode="br" nodeLabel="2.0" m_display="0" m_delay="1.61" m_topoIndex="35" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="449" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="len"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="br_ln480" lineNumber="480" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="len" opcode="br" nodeLabel="2.0" m_display="0" m_delay="1.61" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="480" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="len"/>
       <controlInputObjs>block_107</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
-      <validLinenumbers>449</validLinenumbers>
+      <validLinenumbers>480</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="113" name="len.exit.i" type="BlockType">
@@ -974,18 +974,18 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>block_120</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="111" name="trunc_ln457" lineNumber="457" fileName="main.c" fileDirectory=".." rtlName="trunc_ln457_fu_705_p1" coreId="0" contextFuncName="cat" bitwidth="4" opcode="trunc" nodeLabel="5.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="457" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="111" name="trunc_ln488" lineNumber="488" fileName="main.c" fileDirectory=".." rtlName="trunc_ln488_fu_705_p1" coreId="2152349488" contextFuncName="cat" bitwidth="4" opcode="trunc" nodeLabel="5.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="488" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="112" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="5.0" m_display="0" m_delay="1.61" m_topoIndex="45" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="112" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="5.0" m_display="0" m_delay="1.61" m_topoIndex="45" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
       <controlInputObjs>block_120</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
-      <validLinenumbers>457</validLinenumbers>
-      <validLinenumbers>460</validLinenumbers>
+      <validLinenumbers>488</validLinenumbers>
+      <validLinenumbers>491</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="269" name="cat.exit.loopexit" type="BlockType">
@@ -1004,7 +1004,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>block_45</controlOutputObjs>
     <node_objs xsi:type="cdfg:CdfgNode" id="270" name="br_ln318" lineNumber="318" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="hexToBin" opcode="br" nodeLabel="9.0" m_display="0" m_topoIndex="173" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="main.c" linenumber="318" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="hexToBin"/>
+      <inlineStackInfo fileName="main.c" linenumber="318" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="hexToBin"/>
       <controlInputObjs>block_45</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="main.c">
@@ -1016,7 +1016,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <node_objs xsi:type="cdfg:CdfgNode" id="272" name="_ln0" coreId="0" opcode="ret" nodeLabel="2.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1"/>
   </blocks>
-  <regions anchor_node="-1" region_type="8" interval="2" typeName="Pipeline" id="1069" pipe_depth="2" RegionName="VITIS_LOOP_449_1">
+  <regions anchor_node="-1" region_type="8" interval="2" typeName="Pipeline" id="1069" pipe_depth="2" RegionName="VITIS_LOOP_480_1">
     <basic_blocks id="107" name="block_107" type="BlockType">
       <controlInputObjs>hToB.exit</controlInputObjs>
       <controlInputObjs>block_110</controlInputObjs>
@@ -1024,8 +1024,8 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>len.exit.i</controlOutputObjs>
       <controlOutputObjs>block_110</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="100" name="i_1" lineNumber="450" originalName="i" fileName="main.c" fileDirectory=".." coreId="845108053" contextFuncName="len" bitwidth="64" opcode="phi" nodeLabel="3.0" m_display="1" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="37" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="450" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="len"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="100" name="i_1" lineNumber="481" originalName="i" fileName="main.c" fileDirectory=".." coreId="2975744976" contextFuncName="len" bitwidth="64" opcode="phi" nodeLabel="3.0" m_display="1" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="37" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="481" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="len"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>icmp</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
@@ -1035,41 +1035,41 @@
         <controlInputObjs>hToB.exit</controlInputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="101" name="add_ln450" lineNumber="450" fileName="main.c" fileDirectory=".." rtlName="add_ln450_fu_693_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="len" bitwidth="64" opcode="add" nodeLabel="4.0" m_display="0" m_delay="3.56" m_topoIndex="40" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="450" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="len"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="101" name="add_ln481" lineNumber="481" fileName="main.c" fileDirectory=".." rtlName="add_ln481_fu_693_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="len" bitwidth="64" opcode="add" nodeLabel="4.0" m_display="0" m_delay="3.56" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="481" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="len"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="103" name="bits_addr" lineNumber="449" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="len" bitwidth="4" opcode="getelementptr" nodeLabel="3.0" m_display="1" m_isLCDNode="true" m_topoIndex="38" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="449" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="len"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="103" name="bits_addr" lineNumber="480" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="len" bitwidth="4" opcode="getelementptr" nodeLabel="3.0" m_display="1" m_isLCDNode="true" m_topoIndex="38" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="480" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="len"/>
         <dataInputObjs>bits</dataInputObjs>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>bits</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="104" name="bits_load" lineNumber="449" fileName="main.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="82" contextFuncName="len" bitwidth="7" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="1" m_delay="2.15" m_isLCDNode="true" m_topoIndex="39" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="449" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="len"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="104" name="bits_load" lineNumber="480" fileName="main.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="82" contextFuncName="len" bitwidth="7" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="1" m_delay="2.15" m_isLCDNode="true" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="480" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="len"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="105" name="icmp_ln449" lineNumber="449" fileName="main.c" fileDirectory=".." rtlName="icmp_ln449_fu_699_p2" opType="icmp" coreId="0" contextFuncName="len" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="1" m_delay="1.46" m_isLCDNode="true" m_topoIndex="41" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="449" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="len"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="105" name="icmp_ln480" lineNumber="480" fileName="main.c" fileDirectory=".." rtlName="icmp_ln480_fu_699_p2" opType="icmp" coreId="93" contextFuncName="len" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="1" m_delay="1.46" m_isLCDNode="true" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="480" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="len"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="106" name="br_ln449" lineNumber="449" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="len" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="449" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="len"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="106" name="br_ln480" lineNumber="480" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="len" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="480" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="len"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>block_110</controlInputObjs>
         <controlInputObjs>len.exit.i</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>450</validLinenumbers>
-        <validLinenumbers>449</validLinenumbers>
+        <validLinenumbers>481</validLinenumbers>
+        <validLinenumbers>480</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="110" name="block_110" type="BlockType">
@@ -1077,16 +1077,16 @@
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>block_107</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="109" name="br_ln449" lineNumber="449" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="len" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="449" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="len"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="109" name="br_ln480" lineNumber="480" fileName="main.c" fileDirectory=".." coreId="98" contextFuncName="len" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="480" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="len"/>
         <controlInputObjs>block_107</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>449</validLinenumbers>
+        <validLinenumbers>480</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
   </regions>
-  <regions anchor_node="-1" region_type="8" interval="2" typeName="Pipeline" id="1070" pipe_depth="3" RegionName="VITIS_LOOP_460_1">
+  <regions anchor_node="-1" region_type="8" interval="2" typeName="Pipeline" id="1070" pipe_depth="3" RegionName="VITIS_LOOP_491_1">
     <basic_blocks id="120" name="block_120" type="BlockType">
       <controlInputObjs>len.exit.i</controlInputObjs>
       <controlInputObjs>block_267</controlInputObjs>
@@ -1115,8 +1115,8 @@
       <controlOutputObjs>block_138</controlOutputObjs>
       <controlOutputObjs>block_132</controlOutputObjs>
       <controlOutputObjs>block_126</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="114" name="j" lineNumber="463" originalName="j" fileName="main.c" fileDirectory=".." coreId="93" contextFuncName="cat" bitwidth="64" opcode="phi" nodeLabel="6.0" m_display="1" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="46" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="463" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="114" name="j" lineNumber="494" originalName="j" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="64" opcode="phi" nodeLabel="6.0" m_display="1" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="46" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="494" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>icmp</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
@@ -1147,8 +1147,8 @@
         <controlInputObjs>len.exit.i</controlInputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="115" name="i_2" lineNumber="462" originalName="i" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="4" opcode="phi" nodeLabel="8.0" m_display="0" m_topoIndex="166" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="462" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="115" name="i_2" lineNumber="493" originalName="i" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="4" opcode="phi" nodeLabel="8.0" m_display="0" m_topoIndex="166" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="493" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
@@ -1156,14 +1156,14 @@
         <controlInputObjs>block_267</controlInputObjs>
         <controlInputObjs>len.exit.i</controlInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="116" name="add_ln463" lineNumber="463" fileName="main.c" fileDirectory=".." rtlName="add_ln463_fu_709_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="cat" bitwidth="64" opcode="add" nodeLabel="7.0" m_display="0" m_delay="3.56" m_topoIndex="94" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="463" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="116" name="add_ln494" lineNumber="494" fileName="main.c" fileDirectory=".." rtlName="add_ln494_fu_709_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="cat" bitwidth="64" opcode="add" nodeLabel="7.0" m_display="0" m_delay="3.56" m_topoIndex="94" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="494" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="119" name="_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="switch" nodeLabel="6.0" m_display="0" m_delay="1.45" m_topoIndex="47" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="119" name="_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="switch" nodeLabel="6.0" m_display="0" m_delay="1.45" m_topoIndex="47" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <controlInputObjs>block_257</controlInputObjs>
         <controlInputObjs>block_252</controlInputObjs>
@@ -1191,9 +1191,9 @@
         <constName>empty</constName>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>463</validLinenumbers>
-        <validLinenumbers>462</validLinenumbers>
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>494</validLinenumbers>
+        <validLinenumbers>493</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="126" name="block_126" type="BlockType">
@@ -1201,33 +1201,33 @@
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>block_261</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="121" name="p_str_9_addr" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="1" m_isLCDNode="true" m_topoIndex="48" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="121" name="p_str_9_addr" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="1" m_isLCDNode="true" m_topoIndex="48" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="122" name="p_str_9_load" lineNumber="460" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="1" m_delay="2.15" m_isLCDNode="true" m_topoIndex="49" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="122" name="p_str_9_load" lineNumber="491" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="1" m_delay="2.15" m_isLCDNode="true" m_topoIndex="49" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="123" name="trunc_ln460_22" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="trunc_ln460_22_fu_715_p1" coreId="4294967295" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="1" m_isLCDNode="true" m_topoIndex="95" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="123" name="trunc_ln491_22" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="trunc_ln491_22_fu_715_p1" coreId="6" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="1" m_isLCDNode="true" m_topoIndex="95" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="124" name="zext_ln460_21" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="zext_ln460_21_fu_719_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="1" m_isLCDNode="true" m_topoIndex="96" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="124" name="zext_ln491_21" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="zext_ln491_21_fu_719_p1" coreId="4294967295" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="1" m_isLCDNode="true" m_topoIndex="96" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="125" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="1738718265" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="97" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="125" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="97" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_261</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="132" name="block_132" type="BlockType">
@@ -1235,33 +1235,33 @@
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>block_261</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="127" name="p_str_10_addr" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="127" name="p_str_10_addr" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="128" name="p_str_10_load" lineNumber="460" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="51" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="128" name="p_str_10_load" lineNumber="491" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="51" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="129" name="trunc_ln460_21" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="trunc_ln460_21_fu_724_p1" coreId="4294967295" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="98" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="129" name="trunc_ln491_21" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="trunc_ln491_21_fu_724_p1" coreId="4294967295" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="98" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="130" name="zext_ln460_20" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="zext_ln460_20_fu_728_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="99" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="130" name="zext_ln491_20" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="zext_ln491_20_fu_728_p1" coreId="415705688" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="99" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="131" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="100" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="131" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="100" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_261</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="138" name="block_138" type="BlockType">
@@ -1269,33 +1269,33 @@
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>block_261</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="133" name="p_str_11_addr" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="133" name="p_str_11_addr" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="1" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="134" name="p_str_11_load" lineNumber="460" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="53" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="134" name="p_str_11_load" lineNumber="491" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="53" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="135" name="trunc_ln460_20" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="trunc_ln460_20_fu_733_p1" coreId="93" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="101" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="135" name="trunc_ln491_20" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="trunc_ln491_20_fu_733_p1" coreId="0" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="101" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="136" name="zext_ln460_19" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="zext_ln460_19_fu_737_p1" coreId="594" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="102" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="136" name="zext_ln491_19" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="zext_ln491_19_fu_737_p1" coreId="4294967295" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="102" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="137" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="563" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="103" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="137" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="103" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_261</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="144" name="block_144" type="BlockType">
@@ -1303,33 +1303,33 @@
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>block_261</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="139" name="p_str_12_addr" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="139" name="p_str_12_addr" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="140" name="p_str_12_load" lineNumber="460" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="55" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="140" name="p_str_12_load" lineNumber="491" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="55" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="141" name="trunc_ln460_19" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="trunc_ln460_19_fu_742_p1" coreId="604" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="104" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="141" name="trunc_ln491_19" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="trunc_ln491_19_fu_742_p1" coreId="0" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="104" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="142" name="zext_ln460_18" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="zext_ln460_18_fu_746_p1" coreId="585" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="105" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="142" name="zext_ln491_18" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="zext_ln491_18_fu_746_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="105" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="143" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="106" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="143" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="106" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_261</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="150" name="block_150" type="BlockType">
@@ -1337,33 +1337,33 @@
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>block_261</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="145" name="p_str_13_addr" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="145" name="p_str_13_addr" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="146" name="p_str_13_load" lineNumber="460" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="57" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="146" name="p_str_13_load" lineNumber="491" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="57" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="147" name="trunc_ln460_18" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="trunc_ln460_18_fu_751_p1" coreId="589" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="107" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="147" name="trunc_ln491_18" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="trunc_ln491_18_fu_751_p1" coreId="0" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="107" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="148" name="zext_ln460_17" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="zext_ln460_17_fu_755_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="108" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="148" name="zext_ln491_17" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="zext_ln491_17_fu_755_p1" coreId="6" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="108" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="149" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="598" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="109" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="149" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="109" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_261</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="156" name="block_156" type="BlockType">
@@ -1371,33 +1371,33 @@
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>block_261</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="151" name="p_str_14_addr" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="151" name="p_str_14_addr" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="488583040" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="152" name="p_str_14_load" lineNumber="460" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="59" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="152" name="p_str_14_load" lineNumber="491" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="59" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="153" name="trunc_ln460_17" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="trunc_ln460_17_fu_760_p1" coreId="0" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="110" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="153" name="trunc_ln491_17" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="trunc_ln491_17_fu_760_p1" coreId="2183024664" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="110" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="154" name="zext_ln460_16" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="zext_ln460_16_fu_764_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="111" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="154" name="zext_ln491_16" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="zext_ln491_16_fu_764_p1" coreId="4294967295" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="111" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="155" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="112" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="155" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="2183006184" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="112" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_261</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="162" name="block_162" type="BlockType">
@@ -1405,33 +1405,33 @@
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>block_261</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="157" name="p_str_15_addr" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="157" name="p_str_15_addr" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="430058245" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="158" name="p_str_15_load" lineNumber="460" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="61" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="158" name="p_str_15_load" lineNumber="491" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="61" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="159" name="trunc_ln460_16" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="trunc_ln460_16_fu_769_p1" coreId="583" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="113" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="159" name="trunc_ln491_16" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="trunc_ln491_16_fu_769_p1" coreId="4294967295" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="113" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="160" name="zext_ln460_15" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="zext_ln460_15_fu_773_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="114" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="160" name="zext_ln491_15" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="zext_ln491_15_fu_773_p1" coreId="4294967295" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="114" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="161" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="115" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="161" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="6" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="115" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_261</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="168" name="block_168" type="BlockType">
@@ -1439,33 +1439,33 @@
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>block_261</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="163" name="p_str_16_addr" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="163" name="p_str_16_addr" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="1" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="164" name="p_str_16_load" lineNumber="460" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="63" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="164" name="p_str_16_load" lineNumber="491" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="63" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="165" name="trunc_ln460_15" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="trunc_ln460_15_fu_778_p1" coreId="0" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="116" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="165" name="trunc_ln491_15" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="trunc_ln491_15_fu_778_p1" coreId="4294967295" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="116" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="166" name="zext_ln460_14" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="zext_ln460_14_fu_782_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="117" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="166" name="zext_ln491_14" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="zext_ln491_14_fu_782_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="117" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="167" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="118" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="167" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="118" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_261</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="174" name="block_174" type="BlockType">
@@ -1473,33 +1473,33 @@
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>block_261</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="169" name="p_str_17_addr" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="169" name="p_str_17_addr" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="170" name="p_str_17_load" lineNumber="460" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="65" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="170" name="p_str_17_load" lineNumber="491" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="65" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="171" name="trunc_ln460_14" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="trunc_ln460_14_fu_787_p1" coreId="584" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="119" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="171" name="trunc_ln491_14" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="trunc_ln491_14_fu_787_p1" coreId="845108053" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="119" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="172" name="zext_ln460_13" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="zext_ln460_13_fu_791_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="120" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="172" name="zext_ln491_13" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="zext_ln491_13_fu_791_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="120" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="173" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="121" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="173" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="121" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_261</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="180" name="block_180" type="BlockType">
@@ -1507,33 +1507,33 @@
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>block_261</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="175" name="p_str_18_addr" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="175" name="p_str_18_addr" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="176" name="p_str_18_load" lineNumber="460" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="67" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="176" name="p_str_18_load" lineNumber="491" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="67" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="177" name="trunc_ln460_13" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="trunc_ln460_13_fu_796_p1" coreId="588" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="122" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="177" name="trunc_ln491_13" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="trunc_ln491_13_fu_796_p1" coreId="460073459" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="122" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="178" name="zext_ln460_12" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="zext_ln460_12_fu_800_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="123" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="178" name="zext_ln491_12" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="zext_ln491_12_fu_800_p1" coreId="4294967295" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="123" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="179" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="124" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="179" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="427633634" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="124" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_261</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="186" name="block_186" type="BlockType">
@@ -1541,33 +1541,33 @@
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>block_261</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="181" name="p_str_19_addr_1" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="181" name="p_str_19_addr_1" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="182" name="p_str_19_load_1" lineNumber="460" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="69" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="182" name="p_str_19_load_1" lineNumber="491" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="69" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="183" name="trunc_ln460_12" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="trunc_ln460_12_fu_805_p1" coreId="578" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="125" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="183" name="trunc_ln491_12" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="trunc_ln491_12_fu_805_p1" coreId="6" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="125" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="184" name="zext_ln460_11" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="zext_ln460_11_fu_809_p1" coreId="599" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="126" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="184" name="zext_ln491_11" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="zext_ln491_11_fu_809_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="126" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="185" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="602" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="127" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="185" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="127" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_261</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="192" name="block_192" type="BlockType">
@@ -1575,33 +1575,33 @@
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>block_261</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="187" name="p_str_20_addr_1" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="187" name="p_str_20_addr_1" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="188" name="p_str_20_load_1" lineNumber="460" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="71" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="188" name="p_str_20_load_1" lineNumber="491" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="71" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="189" name="trunc_ln460_11" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="trunc_ln460_11_fu_814_p1" coreId="580" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="128" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="189" name="trunc_ln491_11" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="trunc_ln491_11_fu_814_p1" coreId="4294967295" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="128" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="190" name="zext_ln460_10" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="zext_ln460_10_fu_818_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="129" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="190" name="zext_ln491_10" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="zext_ln491_10_fu_818_p1" coreId="4294967295" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="129" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="191" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="130" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="191" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="130" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_261</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="198" name="block_198" type="BlockType">
@@ -1609,33 +1609,33 @@
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>block_261</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="193" name="p_str_21_addr_1" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="193" name="p_str_21_addr_1" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="2183029944" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="194" name="p_str_21_load_1" lineNumber="460" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="73" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="194" name="p_str_21_load_1" lineNumber="491" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="73" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="195" name="trunc_ln460_10" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="trunc_ln460_10_fu_823_p1" coreId="591" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="131" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="195" name="trunc_ln491_10" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="trunc_ln491_10_fu_823_p1" coreId="439756969" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="131" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="196" name="zext_ln460_9" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="zext_ln460_9_fu_827_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="132" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="196" name="zext_ln491_9" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="zext_ln491_9_fu_827_p1" coreId="474228442" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="132" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="197" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="133" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="197" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="133" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_261</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="204" name="block_204" type="BlockType">
@@ -1643,33 +1643,33 @@
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>block_261</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="199" name="p_str_22_addr_1" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="199" name="p_str_22_addr_1" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="200" name="p_str_22_load_1" lineNumber="460" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="75" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="200" name="p_str_22_load_1" lineNumber="491" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="75" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="201" name="trunc_ln460_9" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="trunc_ln460_9_fu_832_p1" coreId="0" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="134" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="201" name="trunc_ln491_9" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="trunc_ln491_9_fu_832_p1" coreId="517481550" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="134" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="202" name="zext_ln460_8" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="zext_ln460_8_fu_836_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="135" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="202" name="zext_ln491_8" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="zext_ln491_8_fu_836_p1" coreId="439754920" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="135" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="203" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="136" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="203" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="136" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_261</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="210" name="block_210" type="BlockType">
@@ -1677,33 +1677,33 @@
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>block_261</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="205" name="p_str_23_addr_1" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="205" name="p_str_23_addr_1" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="206" name="p_str_23_load_1" lineNumber="460" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="77" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="206" name="p_str_23_load_1" lineNumber="491" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="77" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="207" name="trunc_ln460_8" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="trunc_ln460_8_fu_841_p1" coreId="0" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="137" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="207" name="trunc_ln491_8" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="trunc_ln491_8_fu_841_p1" coreId="4294967295" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="137" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="208" name="zext_ln460_7" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="zext_ln460_7_fu_845_p1" coreId="593" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="138" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="208" name="zext_ln491_7" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="zext_ln491_7_fu_845_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="138" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="209" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="139" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="209" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="139" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_261</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="216" name="block_216" type="BlockType">
@@ -1711,33 +1711,33 @@
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>block_261</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="211" name="p_str_24_addr_1" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="78" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="211" name="p_str_24_addr_1" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="78" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="212" name="p_str_24_load_1" lineNumber="460" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="79" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="212" name="p_str_24_load_1" lineNumber="491" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="79" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="213" name="trunc_ln460_7" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="trunc_ln460_7_fu_850_p1" coreId="0" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="140" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="213" name="trunc_ln491_7" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="trunc_ln491_7_fu_850_p1" coreId="2183041608" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="140" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="214" name="zext_ln460_6" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="zext_ln460_6_fu_854_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="141" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="214" name="zext_ln491_6" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="zext_ln491_6_fu_854_p1" coreId="531834155" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="141" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="215" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="142" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="215" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="142" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_261</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="222" name="block_222" type="BlockType">
@@ -1745,33 +1745,33 @@
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>block_261</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="217" name="p_str_19_addr" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="80" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="217" name="p_str_19_addr" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="80" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="218" name="p_str_19_load" lineNumber="460" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="81" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="218" name="p_str_19_load" lineNumber="491" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="81" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="219" name="trunc_ln460_6" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="trunc_ln460_6_fu_859_p1" coreId="574" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="143" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="219" name="trunc_ln491_6" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="trunc_ln491_6_fu_859_p1" coreId="0" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="143" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="220" name="zext_ln460_5" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="zext_ln460_5_fu_863_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="144" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="220" name="zext_ln491_5" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="zext_ln491_5_fu_863_p1" coreId="4294967295" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="144" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="221" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="145" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="221" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="145" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_261</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="228" name="block_228" type="BlockType">
@@ -1779,33 +1779,33 @@
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>block_261</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="223" name="p_str_20_addr" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="596" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="82" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="223" name="p_str_20_addr" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="521020816" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="82" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="224" name="p_str_20_load" lineNumber="460" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="83" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="224" name="p_str_20_load" lineNumber="491" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="83" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="225" name="trunc_ln460_5" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="trunc_ln460_5_fu_868_p1" coreId="0" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="146" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="225" name="trunc_ln491_5" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="trunc_ln491_5_fu_868_p1" coreId="4294967295" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="146" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="226" name="zext_ln460_4" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="zext_ln460_4_fu_872_p1" coreId="564" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="147" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="226" name="zext_ln491_4" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="zext_ln491_4_fu_872_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="147" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="227" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="148" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="227" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="148" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_261</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="234" name="block_234" type="BlockType">
@@ -1813,33 +1813,33 @@
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>block_261</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="229" name="p_str_21_addr" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="84" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="229" name="p_str_21_addr" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="84" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="230" name="p_str_21_load" lineNumber="460" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="85" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="230" name="p_str_21_load" lineNumber="491" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="85" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="231" name="trunc_ln460_4" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="trunc_ln460_4_fu_877_p1" coreId="0" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="149" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="231" name="trunc_ln491_4" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="trunc_ln491_4_fu_877_p1" coreId="2183052168" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="149" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="232" name="zext_ln460_3" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="zext_ln460_3_fu_881_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="150" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="232" name="zext_ln491_3" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="zext_ln491_3_fu_881_p1" coreId="4294967295" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="150" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="233" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="151" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="233" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="485041789" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="151" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_261</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="240" name="block_240" type="BlockType">
@@ -1847,33 +1847,33 @@
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>block_261</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="235" name="p_str_22_addr" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="86" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="235" name="p_str_22_addr" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="86" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="236" name="p_str_22_load" lineNumber="460" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="87" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="236" name="p_str_22_load" lineNumber="491" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="87" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="237" name="trunc_ln460_3" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="trunc_ln460_3_fu_886_p1" coreId="560" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="152" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="237" name="trunc_ln491_3" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="trunc_ln491_3_fu_886_p1" coreId="0" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="152" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="238" name="zext_ln460_2" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="zext_ln460_2_fu_890_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="153" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="238" name="zext_ln491_2" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="zext_ln491_2_fu_890_p1" coreId="427631585" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="153" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="239" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="154" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="239" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="154" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_261</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="246" name="block_246" type="BlockType">
@@ -1881,33 +1881,33 @@
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>block_261</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="241" name="p_str_23_addr" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="14" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="88" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="241" name="p_str_23_addr" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="88" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="242" name="p_str_23_load" lineNumber="460" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="89" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="242" name="p_str_23_load" lineNumber="491" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="89" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="243" name="trunc_ln460_2" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="trunc_ln460_2_fu_895_p1" coreId="0" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="155" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="243" name="trunc_ln491_2" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="trunc_ln491_2_fu_895_p1" coreId="0" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="155" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="244" name="zext_ln460_1" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="zext_ln460_1_fu_899_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="156" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="244" name="zext_ln491_1" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="zext_ln491_1_fu_899_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="156" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="245" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="157" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="245" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="157" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_261</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="252" name="block_252" type="BlockType">
@@ -1915,33 +1915,33 @@
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>block_261</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="247" name="p_str_24_addr" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="90" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="247" name="p_str_24_addr" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="90" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="248" name="p_str_24_load" lineNumber="460" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="91" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="248" name="p_str_24_load" lineNumber="491" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="91" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="249" name="trunc_ln460_1" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="trunc_ln460_1_fu_904_p1" coreId="0" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="158" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="249" name="trunc_ln491_1" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="trunc_ln491_1_fu_904_p1" coreId="0" contextFuncName="cat" bitwidth="6" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="158" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="250" name="zext_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="zext_ln460_fu_908_p1" coreId="348" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="159" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="250" name="zext_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="zext_ln491_fu_908_p1" coreId="4294967295" contextFuncName="cat" bitwidth="7" opcode="zext" nodeLabel="7.0" m_display="0" m_topoIndex="159" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="251" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="460" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="160" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="251" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="488580999" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="160" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_261</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="257" name="block_257" type="BlockType">
@@ -1949,28 +1949,28 @@
       <controlOutputObjs>switch</controlOutputObjs>
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>block_261</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="253" name="p_str_25_addr" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="92" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="253" name="p_str_25_addr" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="cat" bitwidth="3" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="92" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="254" name="p_str_25_load" lineNumber="460" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="93" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="254" name="p_str_25_load" lineNumber="491" fileName="main.c" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="cat" bitwidth="8" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="93" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="255" name="trunc_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="trunc_ln460_fu_913_p1" coreId="0" contextFuncName="cat" bitwidth="7" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="161" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="255" name="trunc_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="trunc_ln491_fu_913_p1" coreId="4294967295" contextFuncName="cat" bitwidth="7" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="161" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="256" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="162" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="256" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_delay="3.02" m_topoIndex="162" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_261</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="261" name="block_261" type="BlockType">
@@ -2022,8 +2022,8 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>cat.exit.loopexit</controlOutputObjs>
       <controlOutputObjs>block_267</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="258" name="empty" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="7" opcode="phi" nodeLabel="7.0" m_display="1" m_isLCDNode="true" m_topoIndex="163" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="258" name="empty" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" bitwidth="7" opcode="phi" nodeLabel="7.0" m_display="1" m_isLCDNode="true" m_topoIndex="163" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
@@ -2073,21 +2073,21 @@
         <controlInputObjs>block_132</controlInputObjs>
         <controlInputObjs>block_126</controlInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="259" name="icmp_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." rtlName="icmp_ln460_fu_918_p2" opType="icmp" coreId="0" contextFuncName="cat" bitwidth="1" opcode="icmp" nodeLabel="7.0" m_display="1" m_delay="1.46" m_isLCDNode="true" m_topoIndex="164" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="259" name="icmp_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." rtlName="icmp_ln491_fu_918_p2" opType="icmp" coreId="430056196" contextFuncName="cat" bitwidth="1" opcode="icmp" nodeLabel="7.0" m_display="1" m_delay="1.46" m_isLCDNode="true" m_topoIndex="164" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="260" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_topoIndex="165" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="260" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="2183046888" contextFuncName="cat" opcode="br" nodeLabel="7.0" m_display="0" m_topoIndex="165" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>block_267</controlInputObjs>
         <controlInputObjs>cat.exit.loopexit</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
     <basic_blocks id="267" name="block_267" type="BlockType">
@@ -2096,38 +2096,38 @@
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>block_120</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="262" name="i_2_cast1" lineNumber="462" fileName="main.c" fileDirectory=".." rtlName="i_2_cast1_fu_924_p1" coreId="0" contextFuncName="cat" bitwidth="64" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="167" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="462" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="262" name="i_2_cast1" lineNumber="493" fileName="main.c" fileDirectory=".." rtlName="i_2_cast1_fu_924_p1" coreId="0" contextFuncName="cat" bitwidth="64" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="167" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="493" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="263" name="bits_addr_1" lineNumber="461" fileName="main.c" fileDirectory=".." coreId="446" contextFuncName="cat" bitwidth="4" opcode="getelementptr" nodeLabel="8.0" m_display="0" m_topoIndex="168" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="461" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="263" name="bits_addr_1" lineNumber="492" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="cat" bitwidth="4" opcode="getelementptr" nodeLabel="8.0" m_display="0" m_topoIndex="168" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="492" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>bits</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <dataOutputObjs>bits</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="264" name="bits_addr_1_write_ln461" lineNumber="461" fileName="main.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="82" contextFuncName="cat" opcode="store" nodeLabel="8.0" m_display="0" m_delay="2.15" m_topoIndex="169" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="461" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="264" name="bits_addr_1_write_ln492" lineNumber="492" fileName="main.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="82" contextFuncName="cat" opcode="store" nodeLabel="8.0" m_display="0" m_delay="2.15" m_topoIndex="169" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="492" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="265" name="add_ln462" lineNumber="462" fileName="main.c" fileDirectory=".." rtlName="add_ln462_fu_929_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="cat" bitwidth="4" opcode="add" nodeLabel="8.0" m_display="0" m_delay="1.77" m_topoIndex="170" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="462" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="265" name="add_ln493" lineNumber="493" fileName="main.c" fileDirectory=".." rtlName="add_ln493_fu_929_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="cat" bitwidth="4" opcode="add" nodeLabel="8.0" m_display="0" m_delay="1.77" m_topoIndex="170" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="493" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="266" name="br_ln460" lineNumber="460" fileName="main.c" fileDirectory=".." coreId="0" contextFuncName="cat" opcode="br" nodeLabel="8.0" m_display="0" m_topoIndex="171" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="main.c" linenumber="460" fileDirectory="C:\Users\almotaek\Desktop\ECE" functionName="cat"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="266" name="br_ln491" lineNumber="491" fileName="main.c" fileDirectory=".." coreId="4294967295" contextFuncName="cat" opcode="br" nodeLabel="8.0" m_display="0" m_topoIndex="171" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="main.c" linenumber="491" fileDirectory="C:\Users\almotaek\Desktop\ECE2\SHA256" functionName="cat"/>
         <controlInputObjs>block_120</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="main.c">
-        <validLinenumbers>462</validLinenumbers>
-        <validLinenumbers>461</validLinenumbers>
-        <validLinenumbers>460</validLinenumbers>
+        <validLinenumbers>493</validLinenumbers>
+        <validLinenumbers>492</validLinenumbers>
+        <validLinenumbers>491</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
   </regions>
@@ -2141,9 +2141,6 @@
   <ScheduleInfo time="7"/>
   <ScheduleInfo time="8"/>
   <ScheduleInfo time="9"/>
-  <regnodes realName="add_ln450_reg_961">
-    <nodeIds>101</nodeIds>
-  </regnodes>
   <regnodes realName="p_str_23_addr_reg_1074">
     <nodeIds>241</nodeIds>
   </regnodes>
@@ -2165,6 +2162,9 @@
   <regnodes realName="p_str_10_addr_reg_979">
     <nodeIds>127</nodeIds>
   </regnodes>
+  <regnodes realName="add_ln481_reg_961">
+    <nodeIds>101</nodeIds>
+  </regnodes>
   <regnodes realName="p_str_18_addr_reg_1019">
     <nodeIds>175</nodeIds>
   </regnodes>
@@ -2177,8 +2177,8 @@
   <regnodes realName="p_str_11_addr_reg_984">
     <nodeIds>133</nodeIds>
   </regnodes>
-  <regnodes realName="icmp_ln460_reg_1094">
-    <nodeIds>259</nodeIds>
+  <regnodes realName="add_ln494_reg_1089">
+    <nodeIds>116</nodeIds>
   </regnodes>
   <regnodes realName="p_str_21_addr_reg_1064">
     <nodeIds>229</nodeIds>
@@ -2207,6 +2207,9 @@
   <regnodes realName="p_str_15_addr_reg_1004">
     <nodeIds>157</nodeIds>
   </regnodes>
+  <regnodes realName="add_ln493_reg_1098">
+    <nodeIds>265</nodeIds>
+  </regnodes>
   <regnodes realName="bits_addr_reg_956">
     <nodeIds>103</nodeIds>
   </regnodes>
@@ -2219,9 +2222,6 @@
   <regnodes realName="p_str_24_addr_reg_1079">
     <nodeIds>247</nodeIds>
   </regnodes>
-  <regnodes realName="add_ln463_reg_1089">
-    <nodeIds>116</nodeIds>
-  </regnodes>
   <regnodes realName="j_reg_568">
     <nodeIds>114</nodeIds>
   </regnodes>
@@ -2231,14 +2231,14 @@
   <regnodes realName="icmp_ln319_reg_952">
     <nodeIds>48</nodeIds>
   </regnodes>
-  <regnodes realName="trunc_ln457_reg_969">
-    <nodeIds>111</nodeIds>
-  </regnodes>
   <regnodes realName="p_str_13_addr_reg_994">
     <nodeIds>145</nodeIds>
   </regnodes>
   <regnodes realName="p_str_16_addr_reg_1009">
     <nodeIds>163</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln488_reg_969">
+    <nodeIds>111</nodeIds>
   </regnodes>
   <regnodes realName="p_str_14_addr_reg_999">
     <nodeIds>151</nodeIds>
@@ -2249,47 +2249,50 @@
   <regnodes realName="p_str_25_addr_reg_1084">
     <nodeIds>253</nodeIds>
   </regnodes>
+  <regnodes realName="icmp_ln491_reg_1094">
+    <nodeIds>259</nodeIds>
+  </regnodes>
   <regnodes realName="p_str_24_addr_1_reg_1049">
     <nodeIds>211</nodeIds>
   </regnodes>
   <regnodes realName="string_addr_reg_940">
     <nodeIds>41</nodeIds>
   </regnodes>
-  <regnodes realName="add_ln462_reg_1098">
-    <nodeIds>265</nodeIds>
-  </regnodes>
-  <expressionNodes realName="trunc_ln460_10_fu_823">
-    <nodeIds>195</nodeIds>
+  <expressionNodes realName="trunc_ln491_20_fu_733">
+    <nodeIds>135</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln460_4_fu_872">
-    <nodeIds>226</nodeIds>
+  <expressionNodes realName="trunc_ln491_2_fu_895">
+    <nodeIds>243</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln460_fu_908">
-    <nodeIds>250</nodeIds>
+  <expressionNodes realName="zext_ln491_14_fu_782">
+    <nodeIds>166</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln460_8_fu_836">
-    <nodeIds>202</nodeIds>
+  <expressionNodes realName="zext_ln491_7_fu_845">
+    <nodeIds>208</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="trunc_ln460_21_fu_724">
-    <nodeIds>129</nodeIds>
+  <expressionNodes realName="icmp_ln480_fu_699">
+    <nodeIds>105</nodeIds>
   </expressionNodes>
   <expressionNodes realName="p_str_11_addr_gep_fu_216">
     <nodeIds>133</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln460_15_fu_773">
-    <nodeIds>160</nodeIds>
+  <expressionNodes realName="zext_ln491_18_fu_746">
+    <nodeIds>142</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="trunc_ln460_2_fu_895">
-    <nodeIds>243</nodeIds>
+  <expressionNodes realName="add_ln494_fu_709">
+    <nodeIds>116</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="trunc_ln460_6_fu_859">
-    <nodeIds>219</nodeIds>
+  <expressionNodes realName="zext_ln491_10_fu_818">
+    <nodeIds>190</nodeIds>
   </expressionNodes>
   <expressionNodes realName="p_str_19_addr_1_gep_fu_320">
     <nodeIds>181</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln460_18_fu_746">
-    <nodeIds>142</nodeIds>
+  <expressionNodes realName="zext_ln491_21_fu_719">
+    <nodeIds>124</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln491_3_fu_881">
+    <nodeIds>232</nodeIds>
   </expressionNodes>
   <expressionNodes realName="empty_phi_fu_607">
     <nodeIds>258</nodeIds>
@@ -2297,11 +2300,14 @@
   <expressionNodes realName="p_str_15_addr_gep_fu_268">
     <nodeIds>157</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="trunc_ln457_fu_705">
-    <nodeIds>111</nodeIds>
+  <expressionNodes realName="trunc_ln491_17_fu_760">
+    <nodeIds>153</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="trunc_ln460_18_fu_751">
-    <nodeIds>147</nodeIds>
+  <expressionNodes realName="trunc_ln491_16_fu_769">
+    <nodeIds>159</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln481_fu_693">
+    <nodeIds>101</nodeIds>
   </expressionNodes>
   <expressionNodes realName="p_str_18_addr_gep_fu_307">
     <nodeIds>175</nodeIds>
@@ -2312,41 +2318,44 @@
   <expressionNodes realName="p_str_12_addr_gep_fu_229">
     <nodeIds>139</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="trunc_ln460_7_fu_850">
-    <nodeIds>213</nodeIds>
+  <expressionNodes realName="trunc_ln491_fu_913">
+    <nodeIds>255</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="trunc_ln460_13_fu_796">
-    <nodeIds>177</nodeIds>
+  <expressionNodes realName="trunc_ln491_10_fu_823">
+    <nodeIds>195</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln460_11_fu_809">
-    <nodeIds>184</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="icmp_ln449_fu_699">
-    <nodeIds>105</nodeIds>
+  <expressionNodes realName="trunc_ln491_5_fu_868">
+    <nodeIds>225</nodeIds>
   </expressionNodes>
   <expressionNodes realName="p_str_19_addr_gep_fu_398">
     <nodeIds>217</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="trunc_ln460_11_fu_814">
-    <nodeIds>189</nodeIds>
+  <expressionNodes realName="trunc_ln488_fu_705">
+    <nodeIds>111</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln460_5_fu_863">
-    <nodeIds>220</nodeIds>
+  <expressionNodes realName="trunc_ln491_21_fu_724">
+    <nodeIds>129</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln460_9_fu_827">
-    <nodeIds>196</nodeIds>
+  <expressionNodes realName="zext_ln491_15_fu_773">
+    <nodeIds>160</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="trunc_ln460_20_fu_733">
-    <nodeIds>135</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="trunc_ln460_fu_913">
-    <nodeIds>255</nodeIds>
+  <expressionNodes realName="trunc_ln491_3_fu_886">
+    <nodeIds>237</nodeIds>
   </expressionNodes>
   <expressionNodes realName="p_str_23_addr_1_gep_fu_372">
     <nodeIds>205</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln460_14_fu_782">
-    <nodeIds>166</nodeIds>
+  <expressionNodes realName="zext_ln491_19_fu_737">
+    <nodeIds>136</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln491_6_fu_854">
+    <nodeIds>214</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln491_9_fu_832">
+    <nodeIds>201</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln491_11_fu_809">
+    <nodeIds>184</nodeIds>
   </expressionNodes>
   <expressionNodes realName="bits_addr_1_gep_fu_459">
     <nodeIds>263</nodeIds>
@@ -2357,17 +2366,17 @@
   <expressionNodes realName="p_str_14_addr_gep_fu_255">
     <nodeIds>151</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="trunc_ln460_5_fu_868">
-    <nodeIds>225</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="zext_ln460_10_fu_818">
-    <nodeIds>190</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="trunc_ln460_16_fu_769">
-    <nodeIds>159</nodeIds>
+  <expressionNodes realName="zext_ln491_20_fu_728">
+    <nodeIds>130</nodeIds>
   </expressionNodes>
   <expressionNodes realName="p_str_17_addr_gep_fu_294">
     <nodeIds>169</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln491_fu_908">
+    <nodeIds>250</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln491_9_fu_827">
+    <nodeIds>196</nodeIds>
   </expressionNodes>
   <expressionNodes realName="i_2_phi_fu_659">
     <nodeIds>115</nodeIds>
@@ -2378,17 +2387,14 @@
   <expressionNodes realName="p_str_22_addr_gep_fu_422">
     <nodeIds>235</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln460_1_fu_899">
-    <nodeIds>244</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="trunc_ln460_19_fu_742">
-    <nodeIds>141</nodeIds>
+  <expressionNodes realName="zext_ln491_2_fu_890">
+    <nodeIds>238</nodeIds>
   </expressionNodes>
   <expressionNodes realName="bits_addr_gep_fu_177">
     <nodeIds>103</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="add_ln463_fu_709">
-    <nodeIds>116</nodeIds>
+  <expressionNodes realName="trunc_ln491_13_fu_796">
+    <nodeIds>177</nodeIds>
   </expressionNodes>
   <expressionNodes realName="p_str_24_addr_gep_fu_438">
     <nodeIds>247</nodeIds>
@@ -2399,26 +2405,17 @@
   <expressionNodes realName="string_addr_gep_fu_164">
     <nodeIds>41</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="add_ln462_fu_929">
-    <nodeIds>265</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="trunc_ln460_8_fu_841">
-    <nodeIds>207</nodeIds>
+  <expressionNodes realName="trunc_ln491_6_fu_859">
+    <nodeIds>219</nodeIds>
   </expressionNodes>
   <expressionNodes realName="i_1_phi_fu_559">
     <nodeIds>100</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="trunc_ln460_12_fu_805">
-    <nodeIds>183</nodeIds>
+  <expressionNodes realName="trunc_ln491_4_fu_877">
+    <nodeIds>231</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln460_2_fu_890">
-    <nodeIds>238</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="zext_ln460_6_fu_854">
-    <nodeIds>214</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="trunc_ln460_1_fu_904">
-    <nodeIds>249</nodeIds>
+  <expressionNodes realName="trunc_ln491_22_fu_715">
+    <nodeIds>123</nodeIds>
   </expressionNodes>
   <expressionNodes realName="tmp_fu_677">
     <nodeIds>47</nodeIds>
@@ -2426,56 +2423,56 @@
   <expressionNodes realName="p_str_25_addr_gep_fu_446">
     <nodeIds>253</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln460_13_fu_791">
-    <nodeIds>172</nodeIds>
+  <expressionNodes realName="zext_ln491_12_fu_800">
+    <nodeIds>178</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln460_17_fu_755">
-    <nodeIds>148</nodeIds>
+  <expressionNodes realName="zext_ln491_16_fu_764">
+    <nodeIds>154</nodeIds>
   </expressionNodes>
   <expressionNodes realName="retval_0_i8_phi_fu_483">
     <nodeIds>97</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="trunc_ln460_15_fu_778">
-    <nodeIds>165</nodeIds>
+  <expressionNodes realName="zext_ln491_1_fu_899">
+    <nodeIds>244</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln460_20_fu_728">
-    <nodeIds>130</nodeIds>
+  <expressionNodes realName="zext_ln491_5_fu_863">
+    <nodeIds>220</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="trunc_ln460_4_fu_877">
-    <nodeIds>231</nodeIds>
+  <expressionNodes realName="add_ln493_fu_929">
+    <nodeIds>265</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="trunc_ln460_9_fu_832">
-    <nodeIds>201</nodeIds>
+  <expressionNodes realName="trunc_ln491_19_fu_742">
+    <nodeIds>141</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln491_8_fu_841">
+    <nodeIds>207</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln491_1_fu_904">
+    <nodeIds>249</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln491_14_fu_787">
+    <nodeIds>171</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln491_12_fu_805">
+    <nodeIds>183</nodeIds>
   </expressionNodes>
   <expressionNodes realName="icmp_ln318_fu_671">
     <nodeIds>43</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln460_3_fu_881">
-    <nodeIds>232</nodeIds>
-  </expressionNodes>
   <expressionNodes realName="p_str_20_addr_1_gep_fu_333">
     <nodeIds>187</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="zext_ln460_7_fu_845">
-    <nodeIds>208</nodeIds>
   </expressionNodes>
   <expressionNodes realName="i_phi_fu_471">
     <nodeIds>39</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln460_12_fu_800">
-    <nodeIds>178</nodeIds>
+  <expressionNodes realName="zext_ln491_17_fu_755">
+    <nodeIds>148</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="icmp_ln460_fu_918">
-    <nodeIds>259</nodeIds>
+  <expressionNodes realName="zext_ln491_4_fu_872">
+    <nodeIds>226</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln460_16_fu_764">
-    <nodeIds>154</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="add_ln450_fu_693">
-    <nodeIds>101</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="trunc_ln460_22_fu_715">
-    <nodeIds>123</nodeIds>
+  <expressionNodes realName="zext_ln491_8_fu_836">
+    <nodeIds>202</nodeIds>
   </expressionNodes>
   <expressionNodes realName="p_str_23_addr_gep_fu_430">
     <nodeIds>241</nodeIds>
@@ -2483,17 +2480,20 @@
   <expressionNodes realName="p_str_22_addr_1_gep_fu_359">
     <nodeIds>199</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="trunc_ln460_14_fu_787">
-    <nodeIds>171</nodeIds>
+  <expressionNodes realName="trunc_ln491_7_fu_850">
+    <nodeIds>213</nodeIds>
   </expressionNodes>
   <expressionNodes realName="icmp_ln319_fu_687">
     <nodeIds>48</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln460_19_fu_737">
-    <nodeIds>136</nodeIds>
+  <expressionNodes realName="trunc_ln491_18_fu_751">
+    <nodeIds>147</nodeIds>
   </expressionNodes>
   <expressionNodes realName="p_str_21_addr_1_gep_fu_346">
     <nodeIds>193</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln491_15_fu_778">
+    <nodeIds>165</nodeIds>
   </expressionNodes>
   <expressionNodes realName="add_ln322_fu_665">
     <nodeIds>40</nodeIds>
@@ -2507,20 +2507,20 @@
   <expressionNodes realName="p_str_16_addr_gep_fu_281">
     <nodeIds>163</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln460_21_fu_719">
-    <nodeIds>124</nodeIds>
+  <expressionNodes realName="zext_ln491_13_fu_791">
+    <nodeIds>172</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln491_fu_918">
+    <nodeIds>259</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln491_11_fu_814">
+    <nodeIds>189</nodeIds>
   </expressionNodes>
   <expressionNodes realName="p_str_9_addr_gep_fu_190">
     <nodeIds>121</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="trunc_ln460_3_fu_886">
-    <nodeIds>237</nodeIds>
-  </expressionNodes>
   <expressionNodes realName="p_str_21_addr_gep_fu_414">
     <nodeIds>229</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="trunc_ln460_17_fu_760">
-    <nodeIds>153</nodeIds>
   </expressionNodes>
   <memoryPorts dataString="bits">
     <nodeIds>104</nodeIds>
@@ -2912,7 +2912,7 @@
       <basicBlocks>99</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
-    <cfgRegions mId="5" mTag="VITIS_LOOP_449_1" mII="2" mDepth="2" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mType="1">
+    <cfgRegions mId="5" mTag="VITIS_LOOP_480_1" mII="2" mDepth="2" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mType="1">
       <basicBlocks>107</basicBlocks>
       <basicBlocks>110</basicBlocks>
       <mDfPipe/>
@@ -2921,7 +2921,7 @@
       <basicBlocks>113</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
-    <cfgRegions mId="7" mTag="VITIS_LOOP_460_1" mII="2" mDepth="3" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mType="1">
+    <cfgRegions mId="7" mTag="VITIS_LOOP_491_1" mII="2" mDepth="3" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mType="1">
       <basicBlocks>120</basicBlocks>
       <basicBlocks>126</basicBlocks>
       <basicBlocks>132</basicBlocks>

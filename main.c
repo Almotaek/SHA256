@@ -266,11 +266,16 @@ char* SHA256(char* input,char* hash) {
 
 //STEP 1 Functions:
 
-char* textToBinary(char* string,char* hash){
-	char* binary = "0010100101010110001010101010101011";
-	cpy(hash,binary);
-    return hash;
- }
+void textToBinary(){
+	int i;
+
+   char *string = "String to Binary In C";
+   for(i=0;i<8*strlen(string);i++)
+	 printf("%d",0 != (string[i/8] & 1 << (~i&7)));
+
+	 printf("\n");
+}
+
 
 
 

@@ -5,8 +5,8 @@
 ############################################################
 open_project SHA256
 set_top SHA256
-add_files main.h
 add_files main.c
+add_files main.h
 add_files -tb test.c -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1" -flow_target vivado
 set_part {xc7a100t-csg324-1}

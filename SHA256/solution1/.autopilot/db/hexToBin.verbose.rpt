@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'hexToBin'
 ================================================================
-* Date:           Sat Apr 23 18:59:41 2022
+* Date:           Sun Apr 24 14:36:21 2022
 
 * Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
 * Project:        SHA256
@@ -42,8 +42,8 @@
         |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +---------------------+---------+---------+----------+-----------+-----------+------+----------+
         |- VITIS_LOOP_318_1   |        ?|        ?|         ?|          -|          -|     ?|        no|
-        | + VITIS_LOOP_449_1  |        ?|        ?|         2|          2|          1|     ?|       yes|
-        | + VITIS_LOOP_460_1  |        ?|        ?|         3|          2|          1|     ?|       yes|
+        | + VITIS_LOOP_480_1  |        ?|        ?|         2|          2|          1|     ?|       yes|
+        | + VITIS_LOOP_491_1  |        ?|        ?|         3|          2|          1|     ?|       yes|
         +---------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -110,17 +110,17 @@
     |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +----------------------+----------+----+---+----+------------+------------+
     |add_ln322_fu_665_p2   |         +|   0|  0|  71|          64|           1|
-    |add_ln450_fu_693_p2   |         +|   0|  0|  71|          64|           1|
-    |add_ln462_fu_929_p2   |         +|   0|  0|  13|           4|           1|
-    |add_ln463_fu_709_p2   |         +|   0|  0|  71|          64|           1|
+    |add_ln481_fu_693_p2   |         +|   0|  0|  71|          64|           1|
+    |add_ln493_fu_929_p2   |         +|   0|  0|  13|           4|           1|
+    |add_ln494_fu_709_p2   |         +|   0|  0|  71|          64|           1|
     |ap_condition_378      |       and|   0|  0|   2|           1|           1|
     |ap_condition_557      |       and|   0|  0|   2|           1|           1|
     |ap_condition_614      |       and|   0|  0|   2|           1|           1|
     |ap_condition_875      |       and|   0|  0|   2|           1|           1|
     |icmp_ln318_fu_671_p2  |      icmp|   0|  0|  11|           8|           1|
     |icmp_ln319_fu_687_p2  |      icmp|   0|  0|  28|          63|           1|
-    |icmp_ln449_fu_699_p2  |      icmp|   0|  0|  10|           7|           1|
-    |icmp_ln460_fu_918_p2  |      icmp|   0|  0|  10|           7|           1|
+    |icmp_ln480_fu_699_p2  |      icmp|   0|  0|  10|           7|           1|
+    |icmp_ln491_fu_918_p2  |      icmp|   0|  0|  10|           7|           1|
     |ap_condition_362      |        or|   0|  0|   2|           1|           1|
     |ap_enable_pp1         |       xor|   0|  0|   2|           1|           2|
     +----------------------+----------+----+---+----+------------+------------+
@@ -157,7 +157,7 @@
     |           Name          | FF | LUT| Bits| Const Bits|
     +-------------------------+----+----+-----+-----------+
     |add_ln322_reg_935        |  64|   0|   64|          0|
-    |add_ln463_reg_1089       |  64|   0|   64|          0|
+    |add_ln494_reg_1089       |  64|   0|   64|          0|
     |ap_CS_fsm                |   9|   0|    9|          0|
     |ap_enable_reg_pp1_iter0  |   1|   0|    1|          0|
     |ap_enable_reg_pp1_iter1  |   1|   0|    1|          0|
@@ -165,7 +165,7 @@
     |i_1_reg_555              |  64|   0|   64|          0|
     |i_2_reg_656              |   4|   0|    4|          0|
     |i_reg_467                |  64|   0|   64|          0|
-    |icmp_ln460_reg_1094      |   1|   0|    1|          0|
+    |icmp_ln491_reg_1094      |   1|   0|    1|          0|
     |j_reg_568                |  64|   0|   64|          0|
     |retval_0_i8_reg_480      |   5|   0|    5|          0|
     +-------------------------+----+----+-----+-----------+
@@ -288,183 +288,183 @@ ST_3 : Operation 43 [1/1] (3.02ns)   --->   "%br_ln337 = br void %hToB.exit" [ma
 ST_3 : Operation 44 [1/1] (3.02ns)   --->   "%br_ln335 = br void %hToB.exit" [main.c:335]   --->   Operation 44 'br' 'br_ln335' <Predicate = (!icmp_ln318 & icmp_ln319 & string_load == 49)> <Delay = 3.02>
 ST_3 : Operation 45 [1/1] (3.02ns)   --->   "%br_ln377 = br void %hToB.exit" [main.c:377]   --->   Operation 45 'br' 'br_ln377' <Predicate = (!icmp_ln318 & icmp_ln319 & string_load != 48 & string_load != 49 & string_load != 50 & string_load != 51 & string_load != 52 & string_load != 53 & string_load != 54 & string_load != 55 & string_load != 56 & string_load != 57 & string_load != 65 & string_load != 66 & string_load != 67 & string_load != 68 & string_load != 69 & string_load != 70 & string_load != 97 & string_load != 98 & string_load != 99 & string_load != 100 & string_load != 101 & string_load != 102)> <Delay = 3.02>
 ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%retval_0_i8 = phi i5 0, void, i5 1, void, i5 2, void, i5 3, void, i5 4, void, i5 5, void, i5 6, void, i5 7, void, i5 8, void, i5 9, void, i5 10, void, i5 11, void, i5 12, void, i5 13, void, i5 14, void, i5 15, void, i5 16, void, i5 17, void, i5 18, void, i5 19, void, i5 20, void, i5 21, void, i5 22, void"   --->   Operation 46 'phi' 'retval_0_i8' <Predicate = (!icmp_ln318 & icmp_ln319)> <Delay = 0.00>
-ST_3 : Operation 47 [1/1] (1.61ns)   --->   "%br_ln449 = br void" [main.c:449]   --->   Operation 47 'br' 'br_ln449' <Predicate = (!icmp_ln318 & icmp_ln319)> <Delay = 1.61>
+ST_3 : Operation 47 [1/1] (1.61ns)   --->   "%br_ln480 = br void" [main.c:480]   --->   Operation 47 'br' 'br_ln480' <Predicate = (!icmp_ln318 & icmp_ln319)> <Delay = 1.61>
 ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 48 'ret' 'ret_ln0' <Predicate = (icmp_ln318)> <Delay = 0.00>
 
 State 4 <SV = 3> <Delay = 2.15>
-ST_4 : Operation 49 [1/1] (0.00ns)   --->   "%i_1 = phi i64 %add_ln450, void, i64 0, void %hToB.exit" [main.c:450]   --->   Operation 49 'phi' 'i_1' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 50 [1/1] (0.00ns)   --->   "%bits_addr = getelementptr i7 %bits, i64 0, i64 %i_1" [main.c:449]   --->   Operation 50 'getelementptr' 'bits_addr' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 51 [2/2] (2.15ns)   --->   "%bits_load = load i4 %bits_addr" [main.c:449]   --->   Operation 51 'load' 'bits_load' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 7> <Depth = 12> <RAM>
+ST_4 : Operation 49 [1/1] (0.00ns)   --->   "%i_1 = phi i64 %add_ln481, void, i64 0, void %hToB.exit" [main.c:481]   --->   Operation 49 'phi' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "%bits_addr = getelementptr i7 %bits, i64 0, i64 %i_1" [main.c:480]   --->   Operation 50 'getelementptr' 'bits_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 51 [2/2] (2.15ns)   --->   "%bits_load = load i4 %bits_addr" [main.c:480]   --->   Operation 51 'load' 'bits_load' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 7> <Depth = 12> <RAM>
 
 State 5 <SV = 4> <Delay = 3.61>
-ST_5 : Operation 52 [1/1] (3.56ns)   --->   "%add_ln450 = add i64 %i_1, i64 1" [main.c:450]   --->   Operation 52 'add' 'add_ln450' <Predicate = true> <Delay = 3.56> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 52 [1/1] (3.56ns)   --->   "%add_ln481 = add i64 %i_1, i64 1" [main.c:481]   --->   Operation 52 'add' 'add_ln481' <Predicate = true> <Delay = 3.56> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_5 : Operation 53 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str4"   --->   Operation 53 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 54 [1/2] (2.15ns)   --->   "%bits_load = load i4 %bits_addr" [main.c:449]   --->   Operation 54 'load' 'bits_load' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 7> <Depth = 12> <RAM>
-ST_5 : Operation 55 [1/1] (1.46ns)   --->   "%icmp_ln449 = icmp_eq  i7 %bits_load, i7 0" [main.c:449]   --->   Operation 55 'icmp' 'icmp_ln449' <Predicate = true> <Delay = 1.46> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.46> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 56 [1/1] (0.00ns)   --->   "%br_ln449 = br i1 %icmp_ln449, void, void %len.exit.i" [main.c:449]   --->   Operation 56 'br' 'br_ln449' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 57 [1/1] (0.00ns)   --->   "%specloopname_ln450 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8" [main.c:450]   --->   Operation 57 'specloopname' 'specloopname_ln450' <Predicate = (!icmp_ln449)> <Delay = 0.00>
-ST_5 : Operation 58 [1/1] (0.00ns)   --->   "%br_ln449 = br void" [main.c:449]   --->   Operation 58 'br' 'br_ln449' <Predicate = (!icmp_ln449)> <Delay = 0.00>
+ST_5 : Operation 54 [1/2] (2.15ns)   --->   "%bits_load = load i4 %bits_addr" [main.c:480]   --->   Operation 54 'load' 'bits_load' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 7> <Depth = 12> <RAM>
+ST_5 : Operation 55 [1/1] (1.46ns)   --->   "%icmp_ln480 = icmp_eq  i7 %bits_load, i7 0" [main.c:480]   --->   Operation 55 'icmp' 'icmp_ln480' <Predicate = true> <Delay = 1.46> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.46> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 56 [1/1] (0.00ns)   --->   "%br_ln480 = br i1 %icmp_ln480, void, void %len.exit.i" [main.c:480]   --->   Operation 56 'br' 'br_ln480' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 57 [1/1] (0.00ns)   --->   "%specloopname_ln481 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8" [main.c:481]   --->   Operation 57 'specloopname' 'specloopname_ln481' <Predicate = (!icmp_ln480)> <Delay = 0.00>
+ST_5 : Operation 58 [1/1] (0.00ns)   --->   "%br_ln480 = br void" [main.c:480]   --->   Operation 58 'br' 'br_ln480' <Predicate = (!icmp_ln480)> <Delay = 0.00>
 
 State 6 <SV = 5> <Delay = 1.61>
-ST_6 : Operation 59 [1/1] (0.00ns)   --->   "%trunc_ln457 = trunc i64 %i_1" [main.c:457]   --->   Operation 59 'trunc' 'trunc_ln457' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 60 [1/1] (1.61ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 60 'br' 'br_ln460' <Predicate = true> <Delay = 1.61>
+ST_6 : Operation 59 [1/1] (0.00ns)   --->   "%trunc_ln488 = trunc i64 %i_1" [main.c:488]   --->   Operation 59 'trunc' 'trunc_ln488' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 60 [1/1] (1.61ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 60 'br' 'br_ln491' <Predicate = true> <Delay = 1.61>
 
 State 7 <SV = 6> <Delay = 2.15>
-ST_7 : Operation 61 [1/1] (0.00ns)   --->   "%j = phi i64 %add_ln463, void, i64 0, void %len.exit.i" [main.c:463]   --->   Operation 61 'phi' 'j' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 62 [1/1] (1.45ns)   --->   "%switch_ln460 = switch i5 %retval_0_i8, void, i5 1, void, i5 2, void, i5 3, void, i5 4, void, i5 5, void, i5 6, void, i5 7, void, i5 8, void, i5 9, void, i5 10, void, i5 11, void, i5 12, void, i5 13, void, i5 14, void, i5 15, void, i5 16, void, i5 17, void, i5 18, void, i5 19, void, i5 20, void, i5 21, void, i5 22, void" [main.c:460]   --->   Operation 62 'switch' 'switch_ln460' <Predicate = true> <Delay = 1.45>
-ST_7 : Operation 63 [1/1] (0.00ns)   --->   "%p_str_9_addr = getelementptr i8 %p_str_9, i64 0, i64 %j" [main.c:460]   --->   Operation 63 'getelementptr' 'p_str_9_addr' <Predicate = (retval_0_i8 == 22)> <Delay = 0.00>
-ST_7 : Operation 64 [2/2] (2.15ns)   --->   "%p_str_9_load = load i3 %p_str_9_addr" [main.c:460]   --->   Operation 64 'load' 'p_str_9_load' <Predicate = (retval_0_i8 == 22)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_7 : Operation 65 [1/1] (0.00ns)   --->   "%p_str_10_addr = getelementptr i8 %p_str_10, i64 0, i64 %j" [main.c:460]   --->   Operation 65 'getelementptr' 'p_str_10_addr' <Predicate = (retval_0_i8 == 21)> <Delay = 0.00>
-ST_7 : Operation 66 [2/2] (2.15ns)   --->   "%p_str_10_load = load i3 %p_str_10_addr" [main.c:460]   --->   Operation 66 'load' 'p_str_10_load' <Predicate = (retval_0_i8 == 21)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_7 : Operation 67 [1/1] (0.00ns)   --->   "%p_str_11_addr = getelementptr i8 %p_str_11, i64 0, i64 %j" [main.c:460]   --->   Operation 67 'getelementptr' 'p_str_11_addr' <Predicate = (retval_0_i8 == 20)> <Delay = 0.00>
-ST_7 : Operation 68 [2/2] (2.15ns)   --->   "%p_str_11_load = load i3 %p_str_11_addr" [main.c:460]   --->   Operation 68 'load' 'p_str_11_load' <Predicate = (retval_0_i8 == 20)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_7 : Operation 69 [1/1] (0.00ns)   --->   "%p_str_12_addr = getelementptr i8 %p_str_12, i64 0, i64 %j" [main.c:460]   --->   Operation 69 'getelementptr' 'p_str_12_addr' <Predicate = (retval_0_i8 == 19)> <Delay = 0.00>
-ST_7 : Operation 70 [2/2] (2.15ns)   --->   "%p_str_12_load = load i3 %p_str_12_addr" [main.c:460]   --->   Operation 70 'load' 'p_str_12_load' <Predicate = (retval_0_i8 == 19)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_7 : Operation 71 [1/1] (0.00ns)   --->   "%p_str_13_addr = getelementptr i8 %p_str_13, i64 0, i64 %j" [main.c:460]   --->   Operation 71 'getelementptr' 'p_str_13_addr' <Predicate = (retval_0_i8 == 18)> <Delay = 0.00>
-ST_7 : Operation 72 [2/2] (2.15ns)   --->   "%p_str_13_load = load i3 %p_str_13_addr" [main.c:460]   --->   Operation 72 'load' 'p_str_13_load' <Predicate = (retval_0_i8 == 18)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_7 : Operation 73 [1/1] (0.00ns)   --->   "%p_str_14_addr = getelementptr i8 %p_str_14, i64 0, i64 %j" [main.c:460]   --->   Operation 73 'getelementptr' 'p_str_14_addr' <Predicate = (retval_0_i8 == 17)> <Delay = 0.00>
-ST_7 : Operation 74 [2/2] (2.15ns)   --->   "%p_str_14_load = load i3 %p_str_14_addr" [main.c:460]   --->   Operation 74 'load' 'p_str_14_load' <Predicate = (retval_0_i8 == 17)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_7 : Operation 75 [1/1] (0.00ns)   --->   "%p_str_15_addr = getelementptr i8 %p_str_15, i64 0, i64 %j" [main.c:460]   --->   Operation 75 'getelementptr' 'p_str_15_addr' <Predicate = (retval_0_i8 == 16)> <Delay = 0.00>
-ST_7 : Operation 76 [2/2] (2.15ns)   --->   "%p_str_15_load = load i3 %p_str_15_addr" [main.c:460]   --->   Operation 76 'load' 'p_str_15_load' <Predicate = (retval_0_i8 == 16)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_7 : Operation 77 [1/1] (0.00ns)   --->   "%p_str_16_addr = getelementptr i8 %p_str_16, i64 0, i64 %j" [main.c:460]   --->   Operation 77 'getelementptr' 'p_str_16_addr' <Predicate = (retval_0_i8 == 15)> <Delay = 0.00>
-ST_7 : Operation 78 [2/2] (2.15ns)   --->   "%p_str_16_load = load i3 %p_str_16_addr" [main.c:460]   --->   Operation 78 'load' 'p_str_16_load' <Predicate = (retval_0_i8 == 15)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_7 : Operation 79 [1/1] (0.00ns)   --->   "%p_str_17_addr = getelementptr i8 %p_str_17, i64 0, i64 %j" [main.c:460]   --->   Operation 79 'getelementptr' 'p_str_17_addr' <Predicate = (retval_0_i8 == 14)> <Delay = 0.00>
-ST_7 : Operation 80 [2/2] (2.15ns)   --->   "%p_str_17_load = load i3 %p_str_17_addr" [main.c:460]   --->   Operation 80 'load' 'p_str_17_load' <Predicate = (retval_0_i8 == 14)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_7 : Operation 81 [1/1] (0.00ns)   --->   "%p_str_18_addr = getelementptr i8 %p_str_18, i64 0, i64 %j" [main.c:460]   --->   Operation 81 'getelementptr' 'p_str_18_addr' <Predicate = (retval_0_i8 == 13)> <Delay = 0.00>
-ST_7 : Operation 82 [2/2] (2.15ns)   --->   "%p_str_18_load = load i3 %p_str_18_addr" [main.c:460]   --->   Operation 82 'load' 'p_str_18_load' <Predicate = (retval_0_i8 == 13)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_7 : Operation 83 [1/1] (0.00ns)   --->   "%p_str_19_addr_1 = getelementptr i8 %p_str_19, i64 0, i64 %j" [main.c:460]   --->   Operation 83 'getelementptr' 'p_str_19_addr_1' <Predicate = (retval_0_i8 == 12)> <Delay = 0.00>
-ST_7 : Operation 84 [2/2] (2.15ns)   --->   "%p_str_19_load_1 = load i3 %p_str_19_addr_1" [main.c:460]   --->   Operation 84 'load' 'p_str_19_load_1' <Predicate = (retval_0_i8 == 12)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_7 : Operation 85 [1/1] (0.00ns)   --->   "%p_str_20_addr_1 = getelementptr i8 %p_str_20, i64 0, i64 %j" [main.c:460]   --->   Operation 85 'getelementptr' 'p_str_20_addr_1' <Predicate = (retval_0_i8 == 11)> <Delay = 0.00>
-ST_7 : Operation 86 [2/2] (2.15ns)   --->   "%p_str_20_load_1 = load i3 %p_str_20_addr_1" [main.c:460]   --->   Operation 86 'load' 'p_str_20_load_1' <Predicate = (retval_0_i8 == 11)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_7 : Operation 87 [1/1] (0.00ns)   --->   "%p_str_21_addr_1 = getelementptr i8 %p_str_21, i64 0, i64 %j" [main.c:460]   --->   Operation 87 'getelementptr' 'p_str_21_addr_1' <Predicate = (retval_0_i8 == 10)> <Delay = 0.00>
-ST_7 : Operation 88 [2/2] (2.15ns)   --->   "%p_str_21_load_1 = load i3 %p_str_21_addr_1" [main.c:460]   --->   Operation 88 'load' 'p_str_21_load_1' <Predicate = (retval_0_i8 == 10)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_7 : Operation 89 [1/1] (0.00ns)   --->   "%p_str_22_addr_1 = getelementptr i8 %p_str_22, i64 0, i64 %j" [main.c:460]   --->   Operation 89 'getelementptr' 'p_str_22_addr_1' <Predicate = (retval_0_i8 == 9)> <Delay = 0.00>
-ST_7 : Operation 90 [2/2] (2.15ns)   --->   "%p_str_22_load_1 = load i3 %p_str_22_addr_1" [main.c:460]   --->   Operation 90 'load' 'p_str_22_load_1' <Predicate = (retval_0_i8 == 9)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_7 : Operation 91 [1/1] (0.00ns)   --->   "%p_str_23_addr_1 = getelementptr i8 %p_str_23, i64 0, i64 %j" [main.c:460]   --->   Operation 91 'getelementptr' 'p_str_23_addr_1' <Predicate = (retval_0_i8 == 8)> <Delay = 0.00>
-ST_7 : Operation 92 [2/2] (2.15ns)   --->   "%p_str_23_load_1 = load i3 %p_str_23_addr_1" [main.c:460]   --->   Operation 92 'load' 'p_str_23_load_1' <Predicate = (retval_0_i8 == 8)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_7 : Operation 93 [1/1] (0.00ns)   --->   "%p_str_24_addr_1 = getelementptr i8 %p_str_24, i64 0, i64 %j" [main.c:460]   --->   Operation 93 'getelementptr' 'p_str_24_addr_1' <Predicate = (retval_0_i8 == 7)> <Delay = 0.00>
-ST_7 : Operation 94 [2/2] (2.15ns)   --->   "%p_str_24_load_1 = load i3 %p_str_24_addr_1" [main.c:460]   --->   Operation 94 'load' 'p_str_24_load_1' <Predicate = (retval_0_i8 == 7)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_7 : Operation 95 [1/1] (0.00ns)   --->   "%p_str_19_addr = getelementptr i8 %p_str_19, i64 0, i64 %j" [main.c:460]   --->   Operation 95 'getelementptr' 'p_str_19_addr' <Predicate = (retval_0_i8 == 6)> <Delay = 0.00>
-ST_7 : Operation 96 [2/2] (2.15ns)   --->   "%p_str_19_load = load i3 %p_str_19_addr" [main.c:460]   --->   Operation 96 'load' 'p_str_19_load' <Predicate = (retval_0_i8 == 6)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_7 : Operation 97 [1/1] (0.00ns)   --->   "%p_str_20_addr = getelementptr i8 %p_str_20, i64 0, i64 %j" [main.c:460]   --->   Operation 97 'getelementptr' 'p_str_20_addr' <Predicate = (retval_0_i8 == 5)> <Delay = 0.00>
-ST_7 : Operation 98 [2/2] (2.15ns)   --->   "%p_str_20_load = load i3 %p_str_20_addr" [main.c:460]   --->   Operation 98 'load' 'p_str_20_load' <Predicate = (retval_0_i8 == 5)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_7 : Operation 99 [1/1] (0.00ns)   --->   "%p_str_21_addr = getelementptr i8 %p_str_21, i64 0, i64 %j" [main.c:460]   --->   Operation 99 'getelementptr' 'p_str_21_addr' <Predicate = (retval_0_i8 == 4)> <Delay = 0.00>
-ST_7 : Operation 100 [2/2] (2.15ns)   --->   "%p_str_21_load = load i3 %p_str_21_addr" [main.c:460]   --->   Operation 100 'load' 'p_str_21_load' <Predicate = (retval_0_i8 == 4)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_7 : Operation 101 [1/1] (0.00ns)   --->   "%p_str_22_addr = getelementptr i8 %p_str_22, i64 0, i64 %j" [main.c:460]   --->   Operation 101 'getelementptr' 'p_str_22_addr' <Predicate = (retval_0_i8 == 3)> <Delay = 0.00>
-ST_7 : Operation 102 [2/2] (2.15ns)   --->   "%p_str_22_load = load i3 %p_str_22_addr" [main.c:460]   --->   Operation 102 'load' 'p_str_22_load' <Predicate = (retval_0_i8 == 3)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_7 : Operation 103 [1/1] (0.00ns)   --->   "%p_str_23_addr = getelementptr i8 %p_str_23, i64 0, i64 %j" [main.c:460]   --->   Operation 103 'getelementptr' 'p_str_23_addr' <Predicate = (retval_0_i8 == 2)> <Delay = 0.00>
-ST_7 : Operation 104 [2/2] (2.15ns)   --->   "%p_str_23_load = load i3 %p_str_23_addr" [main.c:460]   --->   Operation 104 'load' 'p_str_23_load' <Predicate = (retval_0_i8 == 2)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_7 : Operation 105 [1/1] (0.00ns)   --->   "%p_str_24_addr = getelementptr i8 %p_str_24, i64 0, i64 %j" [main.c:460]   --->   Operation 105 'getelementptr' 'p_str_24_addr' <Predicate = (retval_0_i8 == 1)> <Delay = 0.00>
-ST_7 : Operation 106 [2/2] (2.15ns)   --->   "%p_str_24_load = load i3 %p_str_24_addr" [main.c:460]   --->   Operation 106 'load' 'p_str_24_load' <Predicate = (retval_0_i8 == 1)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_7 : Operation 107 [1/1] (0.00ns)   --->   "%p_str_25_addr = getelementptr i8 %p_str_25, i64 0, i64 %j" [main.c:460]   --->   Operation 107 'getelementptr' 'p_str_25_addr' <Predicate = (retval_0_i8 == 31) | (retval_0_i8 == 30) | (retval_0_i8 == 29) | (retval_0_i8 == 28) | (retval_0_i8 == 27) | (retval_0_i8 == 26) | (retval_0_i8 == 25) | (retval_0_i8 == 24) | (retval_0_i8 == 23) | (retval_0_i8 == 0)> <Delay = 0.00>
-ST_7 : Operation 108 [2/2] (2.15ns)   --->   "%p_str_25_load = load i3 %p_str_25_addr" [main.c:460]   --->   Operation 108 'load' 'p_str_25_load' <Predicate = (retval_0_i8 == 31) | (retval_0_i8 == 30) | (retval_0_i8 == 29) | (retval_0_i8 == 28) | (retval_0_i8 == 27) | (retval_0_i8 == 26) | (retval_0_i8 == 25) | (retval_0_i8 == 24) | (retval_0_i8 == 23) | (retval_0_i8 == 0)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 6> <ROM>
+ST_7 : Operation 61 [1/1] (0.00ns)   --->   "%j = phi i64 %add_ln494, void, i64 0, void %len.exit.i" [main.c:494]   --->   Operation 61 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 62 [1/1] (1.45ns)   --->   "%switch_ln491 = switch i5 %retval_0_i8, void, i5 1, void, i5 2, void, i5 3, void, i5 4, void, i5 5, void, i5 6, void, i5 7, void, i5 8, void, i5 9, void, i5 10, void, i5 11, void, i5 12, void, i5 13, void, i5 14, void, i5 15, void, i5 16, void, i5 17, void, i5 18, void, i5 19, void, i5 20, void, i5 21, void, i5 22, void" [main.c:491]   --->   Operation 62 'switch' 'switch_ln491' <Predicate = true> <Delay = 1.45>
+ST_7 : Operation 63 [1/1] (0.00ns)   --->   "%p_str_9_addr = getelementptr i8 %p_str_9, i64 0, i64 %j" [main.c:491]   --->   Operation 63 'getelementptr' 'p_str_9_addr' <Predicate = (retval_0_i8 == 22)> <Delay = 0.00>
+ST_7 : Operation 64 [2/2] (2.15ns)   --->   "%p_str_9_load = load i3 %p_str_9_addr" [main.c:491]   --->   Operation 64 'load' 'p_str_9_load' <Predicate = (retval_0_i8 == 22)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_7 : Operation 65 [1/1] (0.00ns)   --->   "%p_str_10_addr = getelementptr i8 %p_str_10, i64 0, i64 %j" [main.c:491]   --->   Operation 65 'getelementptr' 'p_str_10_addr' <Predicate = (retval_0_i8 == 21)> <Delay = 0.00>
+ST_7 : Operation 66 [2/2] (2.15ns)   --->   "%p_str_10_load = load i3 %p_str_10_addr" [main.c:491]   --->   Operation 66 'load' 'p_str_10_load' <Predicate = (retval_0_i8 == 21)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_7 : Operation 67 [1/1] (0.00ns)   --->   "%p_str_11_addr = getelementptr i8 %p_str_11, i64 0, i64 %j" [main.c:491]   --->   Operation 67 'getelementptr' 'p_str_11_addr' <Predicate = (retval_0_i8 == 20)> <Delay = 0.00>
+ST_7 : Operation 68 [2/2] (2.15ns)   --->   "%p_str_11_load = load i3 %p_str_11_addr" [main.c:491]   --->   Operation 68 'load' 'p_str_11_load' <Predicate = (retval_0_i8 == 20)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_7 : Operation 69 [1/1] (0.00ns)   --->   "%p_str_12_addr = getelementptr i8 %p_str_12, i64 0, i64 %j" [main.c:491]   --->   Operation 69 'getelementptr' 'p_str_12_addr' <Predicate = (retval_0_i8 == 19)> <Delay = 0.00>
+ST_7 : Operation 70 [2/2] (2.15ns)   --->   "%p_str_12_load = load i3 %p_str_12_addr" [main.c:491]   --->   Operation 70 'load' 'p_str_12_load' <Predicate = (retval_0_i8 == 19)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_7 : Operation 71 [1/1] (0.00ns)   --->   "%p_str_13_addr = getelementptr i8 %p_str_13, i64 0, i64 %j" [main.c:491]   --->   Operation 71 'getelementptr' 'p_str_13_addr' <Predicate = (retval_0_i8 == 18)> <Delay = 0.00>
+ST_7 : Operation 72 [2/2] (2.15ns)   --->   "%p_str_13_load = load i3 %p_str_13_addr" [main.c:491]   --->   Operation 72 'load' 'p_str_13_load' <Predicate = (retval_0_i8 == 18)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_7 : Operation 73 [1/1] (0.00ns)   --->   "%p_str_14_addr = getelementptr i8 %p_str_14, i64 0, i64 %j" [main.c:491]   --->   Operation 73 'getelementptr' 'p_str_14_addr' <Predicate = (retval_0_i8 == 17)> <Delay = 0.00>
+ST_7 : Operation 74 [2/2] (2.15ns)   --->   "%p_str_14_load = load i3 %p_str_14_addr" [main.c:491]   --->   Operation 74 'load' 'p_str_14_load' <Predicate = (retval_0_i8 == 17)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_7 : Operation 75 [1/1] (0.00ns)   --->   "%p_str_15_addr = getelementptr i8 %p_str_15, i64 0, i64 %j" [main.c:491]   --->   Operation 75 'getelementptr' 'p_str_15_addr' <Predicate = (retval_0_i8 == 16)> <Delay = 0.00>
+ST_7 : Operation 76 [2/2] (2.15ns)   --->   "%p_str_15_load = load i3 %p_str_15_addr" [main.c:491]   --->   Operation 76 'load' 'p_str_15_load' <Predicate = (retval_0_i8 == 16)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_7 : Operation 77 [1/1] (0.00ns)   --->   "%p_str_16_addr = getelementptr i8 %p_str_16, i64 0, i64 %j" [main.c:491]   --->   Operation 77 'getelementptr' 'p_str_16_addr' <Predicate = (retval_0_i8 == 15)> <Delay = 0.00>
+ST_7 : Operation 78 [2/2] (2.15ns)   --->   "%p_str_16_load = load i3 %p_str_16_addr" [main.c:491]   --->   Operation 78 'load' 'p_str_16_load' <Predicate = (retval_0_i8 == 15)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_7 : Operation 79 [1/1] (0.00ns)   --->   "%p_str_17_addr = getelementptr i8 %p_str_17, i64 0, i64 %j" [main.c:491]   --->   Operation 79 'getelementptr' 'p_str_17_addr' <Predicate = (retval_0_i8 == 14)> <Delay = 0.00>
+ST_7 : Operation 80 [2/2] (2.15ns)   --->   "%p_str_17_load = load i3 %p_str_17_addr" [main.c:491]   --->   Operation 80 'load' 'p_str_17_load' <Predicate = (retval_0_i8 == 14)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_7 : Operation 81 [1/1] (0.00ns)   --->   "%p_str_18_addr = getelementptr i8 %p_str_18, i64 0, i64 %j" [main.c:491]   --->   Operation 81 'getelementptr' 'p_str_18_addr' <Predicate = (retval_0_i8 == 13)> <Delay = 0.00>
+ST_7 : Operation 82 [2/2] (2.15ns)   --->   "%p_str_18_load = load i3 %p_str_18_addr" [main.c:491]   --->   Operation 82 'load' 'p_str_18_load' <Predicate = (retval_0_i8 == 13)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_7 : Operation 83 [1/1] (0.00ns)   --->   "%p_str_19_addr_1 = getelementptr i8 %p_str_19, i64 0, i64 %j" [main.c:491]   --->   Operation 83 'getelementptr' 'p_str_19_addr_1' <Predicate = (retval_0_i8 == 12)> <Delay = 0.00>
+ST_7 : Operation 84 [2/2] (2.15ns)   --->   "%p_str_19_load_1 = load i3 %p_str_19_addr_1" [main.c:491]   --->   Operation 84 'load' 'p_str_19_load_1' <Predicate = (retval_0_i8 == 12)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_7 : Operation 85 [1/1] (0.00ns)   --->   "%p_str_20_addr_1 = getelementptr i8 %p_str_20, i64 0, i64 %j" [main.c:491]   --->   Operation 85 'getelementptr' 'p_str_20_addr_1' <Predicate = (retval_0_i8 == 11)> <Delay = 0.00>
+ST_7 : Operation 86 [2/2] (2.15ns)   --->   "%p_str_20_load_1 = load i3 %p_str_20_addr_1" [main.c:491]   --->   Operation 86 'load' 'p_str_20_load_1' <Predicate = (retval_0_i8 == 11)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_7 : Operation 87 [1/1] (0.00ns)   --->   "%p_str_21_addr_1 = getelementptr i8 %p_str_21, i64 0, i64 %j" [main.c:491]   --->   Operation 87 'getelementptr' 'p_str_21_addr_1' <Predicate = (retval_0_i8 == 10)> <Delay = 0.00>
+ST_7 : Operation 88 [2/2] (2.15ns)   --->   "%p_str_21_load_1 = load i3 %p_str_21_addr_1" [main.c:491]   --->   Operation 88 'load' 'p_str_21_load_1' <Predicate = (retval_0_i8 == 10)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_7 : Operation 89 [1/1] (0.00ns)   --->   "%p_str_22_addr_1 = getelementptr i8 %p_str_22, i64 0, i64 %j" [main.c:491]   --->   Operation 89 'getelementptr' 'p_str_22_addr_1' <Predicate = (retval_0_i8 == 9)> <Delay = 0.00>
+ST_7 : Operation 90 [2/2] (2.15ns)   --->   "%p_str_22_load_1 = load i3 %p_str_22_addr_1" [main.c:491]   --->   Operation 90 'load' 'p_str_22_load_1' <Predicate = (retval_0_i8 == 9)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_7 : Operation 91 [1/1] (0.00ns)   --->   "%p_str_23_addr_1 = getelementptr i8 %p_str_23, i64 0, i64 %j" [main.c:491]   --->   Operation 91 'getelementptr' 'p_str_23_addr_1' <Predicate = (retval_0_i8 == 8)> <Delay = 0.00>
+ST_7 : Operation 92 [2/2] (2.15ns)   --->   "%p_str_23_load_1 = load i3 %p_str_23_addr_1" [main.c:491]   --->   Operation 92 'load' 'p_str_23_load_1' <Predicate = (retval_0_i8 == 8)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_7 : Operation 93 [1/1] (0.00ns)   --->   "%p_str_24_addr_1 = getelementptr i8 %p_str_24, i64 0, i64 %j" [main.c:491]   --->   Operation 93 'getelementptr' 'p_str_24_addr_1' <Predicate = (retval_0_i8 == 7)> <Delay = 0.00>
+ST_7 : Operation 94 [2/2] (2.15ns)   --->   "%p_str_24_load_1 = load i3 %p_str_24_addr_1" [main.c:491]   --->   Operation 94 'load' 'p_str_24_load_1' <Predicate = (retval_0_i8 == 7)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_7 : Operation 95 [1/1] (0.00ns)   --->   "%p_str_19_addr = getelementptr i8 %p_str_19, i64 0, i64 %j" [main.c:491]   --->   Operation 95 'getelementptr' 'p_str_19_addr' <Predicate = (retval_0_i8 == 6)> <Delay = 0.00>
+ST_7 : Operation 96 [2/2] (2.15ns)   --->   "%p_str_19_load = load i3 %p_str_19_addr" [main.c:491]   --->   Operation 96 'load' 'p_str_19_load' <Predicate = (retval_0_i8 == 6)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_7 : Operation 97 [1/1] (0.00ns)   --->   "%p_str_20_addr = getelementptr i8 %p_str_20, i64 0, i64 %j" [main.c:491]   --->   Operation 97 'getelementptr' 'p_str_20_addr' <Predicate = (retval_0_i8 == 5)> <Delay = 0.00>
+ST_7 : Operation 98 [2/2] (2.15ns)   --->   "%p_str_20_load = load i3 %p_str_20_addr" [main.c:491]   --->   Operation 98 'load' 'p_str_20_load' <Predicate = (retval_0_i8 == 5)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_7 : Operation 99 [1/1] (0.00ns)   --->   "%p_str_21_addr = getelementptr i8 %p_str_21, i64 0, i64 %j" [main.c:491]   --->   Operation 99 'getelementptr' 'p_str_21_addr' <Predicate = (retval_0_i8 == 4)> <Delay = 0.00>
+ST_7 : Operation 100 [2/2] (2.15ns)   --->   "%p_str_21_load = load i3 %p_str_21_addr" [main.c:491]   --->   Operation 100 'load' 'p_str_21_load' <Predicate = (retval_0_i8 == 4)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_7 : Operation 101 [1/1] (0.00ns)   --->   "%p_str_22_addr = getelementptr i8 %p_str_22, i64 0, i64 %j" [main.c:491]   --->   Operation 101 'getelementptr' 'p_str_22_addr' <Predicate = (retval_0_i8 == 3)> <Delay = 0.00>
+ST_7 : Operation 102 [2/2] (2.15ns)   --->   "%p_str_22_load = load i3 %p_str_22_addr" [main.c:491]   --->   Operation 102 'load' 'p_str_22_load' <Predicate = (retval_0_i8 == 3)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_7 : Operation 103 [1/1] (0.00ns)   --->   "%p_str_23_addr = getelementptr i8 %p_str_23, i64 0, i64 %j" [main.c:491]   --->   Operation 103 'getelementptr' 'p_str_23_addr' <Predicate = (retval_0_i8 == 2)> <Delay = 0.00>
+ST_7 : Operation 104 [2/2] (2.15ns)   --->   "%p_str_23_load = load i3 %p_str_23_addr" [main.c:491]   --->   Operation 104 'load' 'p_str_23_load' <Predicate = (retval_0_i8 == 2)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_7 : Operation 105 [1/1] (0.00ns)   --->   "%p_str_24_addr = getelementptr i8 %p_str_24, i64 0, i64 %j" [main.c:491]   --->   Operation 105 'getelementptr' 'p_str_24_addr' <Predicate = (retval_0_i8 == 1)> <Delay = 0.00>
+ST_7 : Operation 106 [2/2] (2.15ns)   --->   "%p_str_24_load = load i3 %p_str_24_addr" [main.c:491]   --->   Operation 106 'load' 'p_str_24_load' <Predicate = (retval_0_i8 == 1)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_7 : Operation 107 [1/1] (0.00ns)   --->   "%p_str_25_addr = getelementptr i8 %p_str_25, i64 0, i64 %j" [main.c:491]   --->   Operation 107 'getelementptr' 'p_str_25_addr' <Predicate = (retval_0_i8 == 31) | (retval_0_i8 == 30) | (retval_0_i8 == 29) | (retval_0_i8 == 28) | (retval_0_i8 == 27) | (retval_0_i8 == 26) | (retval_0_i8 == 25) | (retval_0_i8 == 24) | (retval_0_i8 == 23) | (retval_0_i8 == 0)> <Delay = 0.00>
+ST_7 : Operation 108 [2/2] (2.15ns)   --->   "%p_str_25_load = load i3 %p_str_25_addr" [main.c:491]   --->   Operation 108 'load' 'p_str_25_load' <Predicate = (retval_0_i8 == 31) | (retval_0_i8 == 30) | (retval_0_i8 == 29) | (retval_0_i8 == 28) | (retval_0_i8 == 27) | (retval_0_i8 == 26) | (retval_0_i8 == 25) | (retval_0_i8 == 24) | (retval_0_i8 == 23) | (retval_0_i8 == 0)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 6> <ROM>
 
 State 8 <SV = 7> <Delay = 6.64>
-ST_8 : Operation 109 [1/1] (3.56ns)   --->   "%add_ln463 = add i64 %j, i64 1" [main.c:463]   --->   Operation 109 'add' 'add_ln463' <Predicate = true> <Delay = 3.56> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 110 [1/2] (2.15ns)   --->   "%p_str_9_load = load i3 %p_str_9_addr" [main.c:460]   --->   Operation 110 'load' 'p_str_9_load' <Predicate = (retval_0_i8 == 22)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_8 : Operation 111 [1/1] (0.00ns)   --->   "%trunc_ln460_22 = trunc i8 %p_str_9_load" [main.c:460]   --->   Operation 111 'trunc' 'trunc_ln460_22' <Predicate = (retval_0_i8 == 22)> <Delay = 0.00>
-ST_8 : Operation 112 [1/1] (0.00ns)   --->   "%zext_ln460_21 = zext i6 %trunc_ln460_22" [main.c:460]   --->   Operation 112 'zext' 'zext_ln460_21' <Predicate = (retval_0_i8 == 22)> <Delay = 0.00>
-ST_8 : Operation 113 [1/1] (3.02ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 113 'br' 'br_ln460' <Predicate = (retval_0_i8 == 22)> <Delay = 3.02>
-ST_8 : Operation 114 [1/2] (2.15ns)   --->   "%p_str_10_load = load i3 %p_str_10_addr" [main.c:460]   --->   Operation 114 'load' 'p_str_10_load' <Predicate = (retval_0_i8 == 21)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_8 : Operation 115 [1/1] (0.00ns)   --->   "%trunc_ln460_21 = trunc i8 %p_str_10_load" [main.c:460]   --->   Operation 115 'trunc' 'trunc_ln460_21' <Predicate = (retval_0_i8 == 21)> <Delay = 0.00>
-ST_8 : Operation 116 [1/1] (0.00ns)   --->   "%zext_ln460_20 = zext i6 %trunc_ln460_21" [main.c:460]   --->   Operation 116 'zext' 'zext_ln460_20' <Predicate = (retval_0_i8 == 21)> <Delay = 0.00>
-ST_8 : Operation 117 [1/1] (3.02ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 117 'br' 'br_ln460' <Predicate = (retval_0_i8 == 21)> <Delay = 3.02>
-ST_8 : Operation 118 [1/2] (2.15ns)   --->   "%p_str_11_load = load i3 %p_str_11_addr" [main.c:460]   --->   Operation 118 'load' 'p_str_11_load' <Predicate = (retval_0_i8 == 20)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_8 : Operation 119 [1/1] (0.00ns)   --->   "%trunc_ln460_20 = trunc i8 %p_str_11_load" [main.c:460]   --->   Operation 119 'trunc' 'trunc_ln460_20' <Predicate = (retval_0_i8 == 20)> <Delay = 0.00>
-ST_8 : Operation 120 [1/1] (0.00ns)   --->   "%zext_ln460_19 = zext i6 %trunc_ln460_20" [main.c:460]   --->   Operation 120 'zext' 'zext_ln460_19' <Predicate = (retval_0_i8 == 20)> <Delay = 0.00>
-ST_8 : Operation 121 [1/1] (3.02ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 121 'br' 'br_ln460' <Predicate = (retval_0_i8 == 20)> <Delay = 3.02>
-ST_8 : Operation 122 [1/2] (2.15ns)   --->   "%p_str_12_load = load i3 %p_str_12_addr" [main.c:460]   --->   Operation 122 'load' 'p_str_12_load' <Predicate = (retval_0_i8 == 19)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_8 : Operation 123 [1/1] (0.00ns)   --->   "%trunc_ln460_19 = trunc i8 %p_str_12_load" [main.c:460]   --->   Operation 123 'trunc' 'trunc_ln460_19' <Predicate = (retval_0_i8 == 19)> <Delay = 0.00>
-ST_8 : Operation 124 [1/1] (0.00ns)   --->   "%zext_ln460_18 = zext i6 %trunc_ln460_19" [main.c:460]   --->   Operation 124 'zext' 'zext_ln460_18' <Predicate = (retval_0_i8 == 19)> <Delay = 0.00>
-ST_8 : Operation 125 [1/1] (3.02ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 125 'br' 'br_ln460' <Predicate = (retval_0_i8 == 19)> <Delay = 3.02>
-ST_8 : Operation 126 [1/2] (2.15ns)   --->   "%p_str_13_load = load i3 %p_str_13_addr" [main.c:460]   --->   Operation 126 'load' 'p_str_13_load' <Predicate = (retval_0_i8 == 18)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_8 : Operation 127 [1/1] (0.00ns)   --->   "%trunc_ln460_18 = trunc i8 %p_str_13_load" [main.c:460]   --->   Operation 127 'trunc' 'trunc_ln460_18' <Predicate = (retval_0_i8 == 18)> <Delay = 0.00>
-ST_8 : Operation 128 [1/1] (0.00ns)   --->   "%zext_ln460_17 = zext i6 %trunc_ln460_18" [main.c:460]   --->   Operation 128 'zext' 'zext_ln460_17' <Predicate = (retval_0_i8 == 18)> <Delay = 0.00>
-ST_8 : Operation 129 [1/1] (3.02ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 129 'br' 'br_ln460' <Predicate = (retval_0_i8 == 18)> <Delay = 3.02>
-ST_8 : Operation 130 [1/2] (2.15ns)   --->   "%p_str_14_load = load i3 %p_str_14_addr" [main.c:460]   --->   Operation 130 'load' 'p_str_14_load' <Predicate = (retval_0_i8 == 17)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_8 : Operation 131 [1/1] (0.00ns)   --->   "%trunc_ln460_17 = trunc i8 %p_str_14_load" [main.c:460]   --->   Operation 131 'trunc' 'trunc_ln460_17' <Predicate = (retval_0_i8 == 17)> <Delay = 0.00>
-ST_8 : Operation 132 [1/1] (0.00ns)   --->   "%zext_ln460_16 = zext i6 %trunc_ln460_17" [main.c:460]   --->   Operation 132 'zext' 'zext_ln460_16' <Predicate = (retval_0_i8 == 17)> <Delay = 0.00>
-ST_8 : Operation 133 [1/1] (3.02ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 133 'br' 'br_ln460' <Predicate = (retval_0_i8 == 17)> <Delay = 3.02>
-ST_8 : Operation 134 [1/2] (2.15ns)   --->   "%p_str_15_load = load i3 %p_str_15_addr" [main.c:460]   --->   Operation 134 'load' 'p_str_15_load' <Predicate = (retval_0_i8 == 16)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_8 : Operation 135 [1/1] (0.00ns)   --->   "%trunc_ln460_16 = trunc i8 %p_str_15_load" [main.c:460]   --->   Operation 135 'trunc' 'trunc_ln460_16' <Predicate = (retval_0_i8 == 16)> <Delay = 0.00>
-ST_8 : Operation 136 [1/1] (0.00ns)   --->   "%zext_ln460_15 = zext i6 %trunc_ln460_16" [main.c:460]   --->   Operation 136 'zext' 'zext_ln460_15' <Predicate = (retval_0_i8 == 16)> <Delay = 0.00>
-ST_8 : Operation 137 [1/1] (3.02ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 137 'br' 'br_ln460' <Predicate = (retval_0_i8 == 16)> <Delay = 3.02>
-ST_8 : Operation 138 [1/2] (2.15ns)   --->   "%p_str_16_load = load i3 %p_str_16_addr" [main.c:460]   --->   Operation 138 'load' 'p_str_16_load' <Predicate = (retval_0_i8 == 15)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_8 : Operation 139 [1/1] (0.00ns)   --->   "%trunc_ln460_15 = trunc i8 %p_str_16_load" [main.c:460]   --->   Operation 139 'trunc' 'trunc_ln460_15' <Predicate = (retval_0_i8 == 15)> <Delay = 0.00>
-ST_8 : Operation 140 [1/1] (0.00ns)   --->   "%zext_ln460_14 = zext i6 %trunc_ln460_15" [main.c:460]   --->   Operation 140 'zext' 'zext_ln460_14' <Predicate = (retval_0_i8 == 15)> <Delay = 0.00>
-ST_8 : Operation 141 [1/1] (3.02ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 141 'br' 'br_ln460' <Predicate = (retval_0_i8 == 15)> <Delay = 3.02>
-ST_8 : Operation 142 [1/2] (2.15ns)   --->   "%p_str_17_load = load i3 %p_str_17_addr" [main.c:460]   --->   Operation 142 'load' 'p_str_17_load' <Predicate = (retval_0_i8 == 14)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_8 : Operation 143 [1/1] (0.00ns)   --->   "%trunc_ln460_14 = trunc i8 %p_str_17_load" [main.c:460]   --->   Operation 143 'trunc' 'trunc_ln460_14' <Predicate = (retval_0_i8 == 14)> <Delay = 0.00>
-ST_8 : Operation 144 [1/1] (0.00ns)   --->   "%zext_ln460_13 = zext i6 %trunc_ln460_14" [main.c:460]   --->   Operation 144 'zext' 'zext_ln460_13' <Predicate = (retval_0_i8 == 14)> <Delay = 0.00>
-ST_8 : Operation 145 [1/1] (3.02ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 145 'br' 'br_ln460' <Predicate = (retval_0_i8 == 14)> <Delay = 3.02>
-ST_8 : Operation 146 [1/2] (2.15ns)   --->   "%p_str_18_load = load i3 %p_str_18_addr" [main.c:460]   --->   Operation 146 'load' 'p_str_18_load' <Predicate = (retval_0_i8 == 13)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_8 : Operation 147 [1/1] (0.00ns)   --->   "%trunc_ln460_13 = trunc i8 %p_str_18_load" [main.c:460]   --->   Operation 147 'trunc' 'trunc_ln460_13' <Predicate = (retval_0_i8 == 13)> <Delay = 0.00>
-ST_8 : Operation 148 [1/1] (0.00ns)   --->   "%zext_ln460_12 = zext i6 %trunc_ln460_13" [main.c:460]   --->   Operation 148 'zext' 'zext_ln460_12' <Predicate = (retval_0_i8 == 13)> <Delay = 0.00>
-ST_8 : Operation 149 [1/1] (3.02ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 149 'br' 'br_ln460' <Predicate = (retval_0_i8 == 13)> <Delay = 3.02>
-ST_8 : Operation 150 [1/2] (2.15ns)   --->   "%p_str_19_load_1 = load i3 %p_str_19_addr_1" [main.c:460]   --->   Operation 150 'load' 'p_str_19_load_1' <Predicate = (retval_0_i8 == 12)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_8 : Operation 151 [1/1] (0.00ns)   --->   "%trunc_ln460_12 = trunc i8 %p_str_19_load_1" [main.c:460]   --->   Operation 151 'trunc' 'trunc_ln460_12' <Predicate = (retval_0_i8 == 12)> <Delay = 0.00>
-ST_8 : Operation 152 [1/1] (0.00ns)   --->   "%zext_ln460_11 = zext i6 %trunc_ln460_12" [main.c:460]   --->   Operation 152 'zext' 'zext_ln460_11' <Predicate = (retval_0_i8 == 12)> <Delay = 0.00>
-ST_8 : Operation 153 [1/1] (3.02ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 153 'br' 'br_ln460' <Predicate = (retval_0_i8 == 12)> <Delay = 3.02>
-ST_8 : Operation 154 [1/2] (2.15ns)   --->   "%p_str_20_load_1 = load i3 %p_str_20_addr_1" [main.c:460]   --->   Operation 154 'load' 'p_str_20_load_1' <Predicate = (retval_0_i8 == 11)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_8 : Operation 155 [1/1] (0.00ns)   --->   "%trunc_ln460_11 = trunc i8 %p_str_20_load_1" [main.c:460]   --->   Operation 155 'trunc' 'trunc_ln460_11' <Predicate = (retval_0_i8 == 11)> <Delay = 0.00>
-ST_8 : Operation 156 [1/1] (0.00ns)   --->   "%zext_ln460_10 = zext i6 %trunc_ln460_11" [main.c:460]   --->   Operation 156 'zext' 'zext_ln460_10' <Predicate = (retval_0_i8 == 11)> <Delay = 0.00>
-ST_8 : Operation 157 [1/1] (3.02ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 157 'br' 'br_ln460' <Predicate = (retval_0_i8 == 11)> <Delay = 3.02>
-ST_8 : Operation 158 [1/2] (2.15ns)   --->   "%p_str_21_load_1 = load i3 %p_str_21_addr_1" [main.c:460]   --->   Operation 158 'load' 'p_str_21_load_1' <Predicate = (retval_0_i8 == 10)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_8 : Operation 159 [1/1] (0.00ns)   --->   "%trunc_ln460_10 = trunc i8 %p_str_21_load_1" [main.c:460]   --->   Operation 159 'trunc' 'trunc_ln460_10' <Predicate = (retval_0_i8 == 10)> <Delay = 0.00>
-ST_8 : Operation 160 [1/1] (0.00ns)   --->   "%zext_ln460_9 = zext i6 %trunc_ln460_10" [main.c:460]   --->   Operation 160 'zext' 'zext_ln460_9' <Predicate = (retval_0_i8 == 10)> <Delay = 0.00>
-ST_8 : Operation 161 [1/1] (3.02ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 161 'br' 'br_ln460' <Predicate = (retval_0_i8 == 10)> <Delay = 3.02>
-ST_8 : Operation 162 [1/2] (2.15ns)   --->   "%p_str_22_load_1 = load i3 %p_str_22_addr_1" [main.c:460]   --->   Operation 162 'load' 'p_str_22_load_1' <Predicate = (retval_0_i8 == 9)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_8 : Operation 163 [1/1] (0.00ns)   --->   "%trunc_ln460_9 = trunc i8 %p_str_22_load_1" [main.c:460]   --->   Operation 163 'trunc' 'trunc_ln460_9' <Predicate = (retval_0_i8 == 9)> <Delay = 0.00>
-ST_8 : Operation 164 [1/1] (0.00ns)   --->   "%zext_ln460_8 = zext i6 %trunc_ln460_9" [main.c:460]   --->   Operation 164 'zext' 'zext_ln460_8' <Predicate = (retval_0_i8 == 9)> <Delay = 0.00>
-ST_8 : Operation 165 [1/1] (3.02ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 165 'br' 'br_ln460' <Predicate = (retval_0_i8 == 9)> <Delay = 3.02>
-ST_8 : Operation 166 [1/2] (2.15ns)   --->   "%p_str_23_load_1 = load i3 %p_str_23_addr_1" [main.c:460]   --->   Operation 166 'load' 'p_str_23_load_1' <Predicate = (retval_0_i8 == 8)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_8 : Operation 167 [1/1] (0.00ns)   --->   "%trunc_ln460_8 = trunc i8 %p_str_23_load_1" [main.c:460]   --->   Operation 167 'trunc' 'trunc_ln460_8' <Predicate = (retval_0_i8 == 8)> <Delay = 0.00>
-ST_8 : Operation 168 [1/1] (0.00ns)   --->   "%zext_ln460_7 = zext i6 %trunc_ln460_8" [main.c:460]   --->   Operation 168 'zext' 'zext_ln460_7' <Predicate = (retval_0_i8 == 8)> <Delay = 0.00>
-ST_8 : Operation 169 [1/1] (3.02ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 169 'br' 'br_ln460' <Predicate = (retval_0_i8 == 8)> <Delay = 3.02>
-ST_8 : Operation 170 [1/2] (2.15ns)   --->   "%p_str_24_load_1 = load i3 %p_str_24_addr_1" [main.c:460]   --->   Operation 170 'load' 'p_str_24_load_1' <Predicate = (retval_0_i8 == 7)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_8 : Operation 171 [1/1] (0.00ns)   --->   "%trunc_ln460_7 = trunc i8 %p_str_24_load_1" [main.c:460]   --->   Operation 171 'trunc' 'trunc_ln460_7' <Predicate = (retval_0_i8 == 7)> <Delay = 0.00>
-ST_8 : Operation 172 [1/1] (0.00ns)   --->   "%zext_ln460_6 = zext i6 %trunc_ln460_7" [main.c:460]   --->   Operation 172 'zext' 'zext_ln460_6' <Predicate = (retval_0_i8 == 7)> <Delay = 0.00>
-ST_8 : Operation 173 [1/1] (3.02ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 173 'br' 'br_ln460' <Predicate = (retval_0_i8 == 7)> <Delay = 3.02>
-ST_8 : Operation 174 [1/2] (2.15ns)   --->   "%p_str_19_load = load i3 %p_str_19_addr" [main.c:460]   --->   Operation 174 'load' 'p_str_19_load' <Predicate = (retval_0_i8 == 6)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_8 : Operation 175 [1/1] (0.00ns)   --->   "%trunc_ln460_6 = trunc i8 %p_str_19_load" [main.c:460]   --->   Operation 175 'trunc' 'trunc_ln460_6' <Predicate = (retval_0_i8 == 6)> <Delay = 0.00>
-ST_8 : Operation 176 [1/1] (0.00ns)   --->   "%zext_ln460_5 = zext i6 %trunc_ln460_6" [main.c:460]   --->   Operation 176 'zext' 'zext_ln460_5' <Predicate = (retval_0_i8 == 6)> <Delay = 0.00>
-ST_8 : Operation 177 [1/1] (3.02ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 177 'br' 'br_ln460' <Predicate = (retval_0_i8 == 6)> <Delay = 3.02>
-ST_8 : Operation 178 [1/2] (2.15ns)   --->   "%p_str_20_load = load i3 %p_str_20_addr" [main.c:460]   --->   Operation 178 'load' 'p_str_20_load' <Predicate = (retval_0_i8 == 5)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_8 : Operation 179 [1/1] (0.00ns)   --->   "%trunc_ln460_5 = trunc i8 %p_str_20_load" [main.c:460]   --->   Operation 179 'trunc' 'trunc_ln460_5' <Predicate = (retval_0_i8 == 5)> <Delay = 0.00>
-ST_8 : Operation 180 [1/1] (0.00ns)   --->   "%zext_ln460_4 = zext i6 %trunc_ln460_5" [main.c:460]   --->   Operation 180 'zext' 'zext_ln460_4' <Predicate = (retval_0_i8 == 5)> <Delay = 0.00>
-ST_8 : Operation 181 [1/1] (3.02ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 181 'br' 'br_ln460' <Predicate = (retval_0_i8 == 5)> <Delay = 3.02>
-ST_8 : Operation 182 [1/2] (2.15ns)   --->   "%p_str_21_load = load i3 %p_str_21_addr" [main.c:460]   --->   Operation 182 'load' 'p_str_21_load' <Predicate = (retval_0_i8 == 4)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_8 : Operation 183 [1/1] (0.00ns)   --->   "%trunc_ln460_4 = trunc i8 %p_str_21_load" [main.c:460]   --->   Operation 183 'trunc' 'trunc_ln460_4' <Predicate = (retval_0_i8 == 4)> <Delay = 0.00>
-ST_8 : Operation 184 [1/1] (0.00ns)   --->   "%zext_ln460_3 = zext i6 %trunc_ln460_4" [main.c:460]   --->   Operation 184 'zext' 'zext_ln460_3' <Predicate = (retval_0_i8 == 4)> <Delay = 0.00>
-ST_8 : Operation 185 [1/1] (3.02ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 185 'br' 'br_ln460' <Predicate = (retval_0_i8 == 4)> <Delay = 3.02>
-ST_8 : Operation 186 [1/2] (2.15ns)   --->   "%p_str_22_load = load i3 %p_str_22_addr" [main.c:460]   --->   Operation 186 'load' 'p_str_22_load' <Predicate = (retval_0_i8 == 3)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_8 : Operation 187 [1/1] (0.00ns)   --->   "%trunc_ln460_3 = trunc i8 %p_str_22_load" [main.c:460]   --->   Operation 187 'trunc' 'trunc_ln460_3' <Predicate = (retval_0_i8 == 3)> <Delay = 0.00>
-ST_8 : Operation 188 [1/1] (0.00ns)   --->   "%zext_ln460_2 = zext i6 %trunc_ln460_3" [main.c:460]   --->   Operation 188 'zext' 'zext_ln460_2' <Predicate = (retval_0_i8 == 3)> <Delay = 0.00>
-ST_8 : Operation 189 [1/1] (3.02ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 189 'br' 'br_ln460' <Predicate = (retval_0_i8 == 3)> <Delay = 3.02>
-ST_8 : Operation 190 [1/2] (2.15ns)   --->   "%p_str_23_load = load i3 %p_str_23_addr" [main.c:460]   --->   Operation 190 'load' 'p_str_23_load' <Predicate = (retval_0_i8 == 2)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_8 : Operation 191 [1/1] (0.00ns)   --->   "%trunc_ln460_2 = trunc i8 %p_str_23_load" [main.c:460]   --->   Operation 191 'trunc' 'trunc_ln460_2' <Predicate = (retval_0_i8 == 2)> <Delay = 0.00>
-ST_8 : Operation 192 [1/1] (0.00ns)   --->   "%zext_ln460_1 = zext i6 %trunc_ln460_2" [main.c:460]   --->   Operation 192 'zext' 'zext_ln460_1' <Predicate = (retval_0_i8 == 2)> <Delay = 0.00>
-ST_8 : Operation 193 [1/1] (3.02ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 193 'br' 'br_ln460' <Predicate = (retval_0_i8 == 2)> <Delay = 3.02>
-ST_8 : Operation 194 [1/2] (2.15ns)   --->   "%p_str_24_load = load i3 %p_str_24_addr" [main.c:460]   --->   Operation 194 'load' 'p_str_24_load' <Predicate = (retval_0_i8 == 1)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
-ST_8 : Operation 195 [1/1] (0.00ns)   --->   "%trunc_ln460_1 = trunc i8 %p_str_24_load" [main.c:460]   --->   Operation 195 'trunc' 'trunc_ln460_1' <Predicate = (retval_0_i8 == 1)> <Delay = 0.00>
-ST_8 : Operation 196 [1/1] (0.00ns)   --->   "%zext_ln460 = zext i6 %trunc_ln460_1" [main.c:460]   --->   Operation 196 'zext' 'zext_ln460' <Predicate = (retval_0_i8 == 1)> <Delay = 0.00>
-ST_8 : Operation 197 [1/1] (3.02ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 197 'br' 'br_ln460' <Predicate = (retval_0_i8 == 1)> <Delay = 3.02>
-ST_8 : Operation 198 [1/2] (2.15ns)   --->   "%p_str_25_load = load i3 %p_str_25_addr" [main.c:460]   --->   Operation 198 'load' 'p_str_25_load' <Predicate = (retval_0_i8 == 31) | (retval_0_i8 == 30) | (retval_0_i8 == 29) | (retval_0_i8 == 28) | (retval_0_i8 == 27) | (retval_0_i8 == 26) | (retval_0_i8 == 25) | (retval_0_i8 == 24) | (retval_0_i8 == 23) | (retval_0_i8 == 0)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 6> <ROM>
-ST_8 : Operation 199 [1/1] (0.00ns)   --->   "%trunc_ln460 = trunc i8 %p_str_25_load" [main.c:460]   --->   Operation 199 'trunc' 'trunc_ln460' <Predicate = (retval_0_i8 == 31) | (retval_0_i8 == 30) | (retval_0_i8 == 29) | (retval_0_i8 == 28) | (retval_0_i8 == 27) | (retval_0_i8 == 26) | (retval_0_i8 == 25) | (retval_0_i8 == 24) | (retval_0_i8 == 23) | (retval_0_i8 == 0)> <Delay = 0.00>
-ST_8 : Operation 200 [1/1] (3.02ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 200 'br' 'br_ln460' <Predicate = (retval_0_i8 == 31) | (retval_0_i8 == 30) | (retval_0_i8 == 29) | (retval_0_i8 == 28) | (retval_0_i8 == 27) | (retval_0_i8 == 26) | (retval_0_i8 == 25) | (retval_0_i8 == 24) | (retval_0_i8 == 23) | (retval_0_i8 == 0)> <Delay = 3.02>
-ST_8 : Operation 201 [1/1] (0.00ns)   --->   "%empty = phi i7 %trunc_ln460, void, i7 %zext_ln460, void, i7 %zext_ln460_1, void, i7 %zext_ln460_2, void, i7 %zext_ln460_3, void, i7 %zext_ln460_4, void, i7 %zext_ln460_5, void, i7 %zext_ln460_6, void, i7 %zext_ln460_7, void, i7 %zext_ln460_8, void, i7 %zext_ln460_9, void, i7 %zext_ln460_10, void, i7 %zext_ln460_11, void, i7 %zext_ln460_12, void, i7 %zext_ln460_13, void, i7 %zext_ln460_14, void, i7 %zext_ln460_15, void, i7 %zext_ln460_16, void, i7 %zext_ln460_17, void, i7 %zext_ln460_18, void, i7 %zext_ln460_19, void, i7 %zext_ln460_20, void, i7 %zext_ln460_21, void" [main.c:460]   --->   Operation 201 'phi' 'empty' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 202 [1/1] (1.46ns)   --->   "%icmp_ln460 = icmp_eq  i7 %empty, i7 0" [main.c:460]   --->   Operation 202 'icmp' 'icmp_ln460' <Predicate = true> <Delay = 1.46> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.46> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 203 [1/1] (0.00ns)   --->   "%br_ln460 = br i1 %icmp_ln460, void, void %cat.exit.loopexit" [main.c:460]   --->   Operation 203 'br' 'br_ln460' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 109 [1/1] (3.56ns)   --->   "%add_ln494 = add i64 %j, i64 1" [main.c:494]   --->   Operation 109 'add' 'add_ln494' <Predicate = true> <Delay = 3.56> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 110 [1/2] (2.15ns)   --->   "%p_str_9_load = load i3 %p_str_9_addr" [main.c:491]   --->   Operation 110 'load' 'p_str_9_load' <Predicate = (retval_0_i8 == 22)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_8 : Operation 111 [1/1] (0.00ns)   --->   "%trunc_ln491_22 = trunc i8 %p_str_9_load" [main.c:491]   --->   Operation 111 'trunc' 'trunc_ln491_22' <Predicate = (retval_0_i8 == 22)> <Delay = 0.00>
+ST_8 : Operation 112 [1/1] (0.00ns)   --->   "%zext_ln491_21 = zext i6 %trunc_ln491_22" [main.c:491]   --->   Operation 112 'zext' 'zext_ln491_21' <Predicate = (retval_0_i8 == 22)> <Delay = 0.00>
+ST_8 : Operation 113 [1/1] (3.02ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 113 'br' 'br_ln491' <Predicate = (retval_0_i8 == 22)> <Delay = 3.02>
+ST_8 : Operation 114 [1/2] (2.15ns)   --->   "%p_str_10_load = load i3 %p_str_10_addr" [main.c:491]   --->   Operation 114 'load' 'p_str_10_load' <Predicate = (retval_0_i8 == 21)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_8 : Operation 115 [1/1] (0.00ns)   --->   "%trunc_ln491_21 = trunc i8 %p_str_10_load" [main.c:491]   --->   Operation 115 'trunc' 'trunc_ln491_21' <Predicate = (retval_0_i8 == 21)> <Delay = 0.00>
+ST_8 : Operation 116 [1/1] (0.00ns)   --->   "%zext_ln491_20 = zext i6 %trunc_ln491_21" [main.c:491]   --->   Operation 116 'zext' 'zext_ln491_20' <Predicate = (retval_0_i8 == 21)> <Delay = 0.00>
+ST_8 : Operation 117 [1/1] (3.02ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 117 'br' 'br_ln491' <Predicate = (retval_0_i8 == 21)> <Delay = 3.02>
+ST_8 : Operation 118 [1/2] (2.15ns)   --->   "%p_str_11_load = load i3 %p_str_11_addr" [main.c:491]   --->   Operation 118 'load' 'p_str_11_load' <Predicate = (retval_0_i8 == 20)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_8 : Operation 119 [1/1] (0.00ns)   --->   "%trunc_ln491_20 = trunc i8 %p_str_11_load" [main.c:491]   --->   Operation 119 'trunc' 'trunc_ln491_20' <Predicate = (retval_0_i8 == 20)> <Delay = 0.00>
+ST_8 : Operation 120 [1/1] (0.00ns)   --->   "%zext_ln491_19 = zext i6 %trunc_ln491_20" [main.c:491]   --->   Operation 120 'zext' 'zext_ln491_19' <Predicate = (retval_0_i8 == 20)> <Delay = 0.00>
+ST_8 : Operation 121 [1/1] (3.02ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 121 'br' 'br_ln491' <Predicate = (retval_0_i8 == 20)> <Delay = 3.02>
+ST_8 : Operation 122 [1/2] (2.15ns)   --->   "%p_str_12_load = load i3 %p_str_12_addr" [main.c:491]   --->   Operation 122 'load' 'p_str_12_load' <Predicate = (retval_0_i8 == 19)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_8 : Operation 123 [1/1] (0.00ns)   --->   "%trunc_ln491_19 = trunc i8 %p_str_12_load" [main.c:491]   --->   Operation 123 'trunc' 'trunc_ln491_19' <Predicate = (retval_0_i8 == 19)> <Delay = 0.00>
+ST_8 : Operation 124 [1/1] (0.00ns)   --->   "%zext_ln491_18 = zext i6 %trunc_ln491_19" [main.c:491]   --->   Operation 124 'zext' 'zext_ln491_18' <Predicate = (retval_0_i8 == 19)> <Delay = 0.00>
+ST_8 : Operation 125 [1/1] (3.02ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 125 'br' 'br_ln491' <Predicate = (retval_0_i8 == 19)> <Delay = 3.02>
+ST_8 : Operation 126 [1/2] (2.15ns)   --->   "%p_str_13_load = load i3 %p_str_13_addr" [main.c:491]   --->   Operation 126 'load' 'p_str_13_load' <Predicate = (retval_0_i8 == 18)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_8 : Operation 127 [1/1] (0.00ns)   --->   "%trunc_ln491_18 = trunc i8 %p_str_13_load" [main.c:491]   --->   Operation 127 'trunc' 'trunc_ln491_18' <Predicate = (retval_0_i8 == 18)> <Delay = 0.00>
+ST_8 : Operation 128 [1/1] (0.00ns)   --->   "%zext_ln491_17 = zext i6 %trunc_ln491_18" [main.c:491]   --->   Operation 128 'zext' 'zext_ln491_17' <Predicate = (retval_0_i8 == 18)> <Delay = 0.00>
+ST_8 : Operation 129 [1/1] (3.02ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 129 'br' 'br_ln491' <Predicate = (retval_0_i8 == 18)> <Delay = 3.02>
+ST_8 : Operation 130 [1/2] (2.15ns)   --->   "%p_str_14_load = load i3 %p_str_14_addr" [main.c:491]   --->   Operation 130 'load' 'p_str_14_load' <Predicate = (retval_0_i8 == 17)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_8 : Operation 131 [1/1] (0.00ns)   --->   "%trunc_ln491_17 = trunc i8 %p_str_14_load" [main.c:491]   --->   Operation 131 'trunc' 'trunc_ln491_17' <Predicate = (retval_0_i8 == 17)> <Delay = 0.00>
+ST_8 : Operation 132 [1/1] (0.00ns)   --->   "%zext_ln491_16 = zext i6 %trunc_ln491_17" [main.c:491]   --->   Operation 132 'zext' 'zext_ln491_16' <Predicate = (retval_0_i8 == 17)> <Delay = 0.00>
+ST_8 : Operation 133 [1/1] (3.02ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 133 'br' 'br_ln491' <Predicate = (retval_0_i8 == 17)> <Delay = 3.02>
+ST_8 : Operation 134 [1/2] (2.15ns)   --->   "%p_str_15_load = load i3 %p_str_15_addr" [main.c:491]   --->   Operation 134 'load' 'p_str_15_load' <Predicate = (retval_0_i8 == 16)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_8 : Operation 135 [1/1] (0.00ns)   --->   "%trunc_ln491_16 = trunc i8 %p_str_15_load" [main.c:491]   --->   Operation 135 'trunc' 'trunc_ln491_16' <Predicate = (retval_0_i8 == 16)> <Delay = 0.00>
+ST_8 : Operation 136 [1/1] (0.00ns)   --->   "%zext_ln491_15 = zext i6 %trunc_ln491_16" [main.c:491]   --->   Operation 136 'zext' 'zext_ln491_15' <Predicate = (retval_0_i8 == 16)> <Delay = 0.00>
+ST_8 : Operation 137 [1/1] (3.02ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 137 'br' 'br_ln491' <Predicate = (retval_0_i8 == 16)> <Delay = 3.02>
+ST_8 : Operation 138 [1/2] (2.15ns)   --->   "%p_str_16_load = load i3 %p_str_16_addr" [main.c:491]   --->   Operation 138 'load' 'p_str_16_load' <Predicate = (retval_0_i8 == 15)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_8 : Operation 139 [1/1] (0.00ns)   --->   "%trunc_ln491_15 = trunc i8 %p_str_16_load" [main.c:491]   --->   Operation 139 'trunc' 'trunc_ln491_15' <Predicate = (retval_0_i8 == 15)> <Delay = 0.00>
+ST_8 : Operation 140 [1/1] (0.00ns)   --->   "%zext_ln491_14 = zext i6 %trunc_ln491_15" [main.c:491]   --->   Operation 140 'zext' 'zext_ln491_14' <Predicate = (retval_0_i8 == 15)> <Delay = 0.00>
+ST_8 : Operation 141 [1/1] (3.02ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 141 'br' 'br_ln491' <Predicate = (retval_0_i8 == 15)> <Delay = 3.02>
+ST_8 : Operation 142 [1/2] (2.15ns)   --->   "%p_str_17_load = load i3 %p_str_17_addr" [main.c:491]   --->   Operation 142 'load' 'p_str_17_load' <Predicate = (retval_0_i8 == 14)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_8 : Operation 143 [1/1] (0.00ns)   --->   "%trunc_ln491_14 = trunc i8 %p_str_17_load" [main.c:491]   --->   Operation 143 'trunc' 'trunc_ln491_14' <Predicate = (retval_0_i8 == 14)> <Delay = 0.00>
+ST_8 : Operation 144 [1/1] (0.00ns)   --->   "%zext_ln491_13 = zext i6 %trunc_ln491_14" [main.c:491]   --->   Operation 144 'zext' 'zext_ln491_13' <Predicate = (retval_0_i8 == 14)> <Delay = 0.00>
+ST_8 : Operation 145 [1/1] (3.02ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 145 'br' 'br_ln491' <Predicate = (retval_0_i8 == 14)> <Delay = 3.02>
+ST_8 : Operation 146 [1/2] (2.15ns)   --->   "%p_str_18_load = load i3 %p_str_18_addr" [main.c:491]   --->   Operation 146 'load' 'p_str_18_load' <Predicate = (retval_0_i8 == 13)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_8 : Operation 147 [1/1] (0.00ns)   --->   "%trunc_ln491_13 = trunc i8 %p_str_18_load" [main.c:491]   --->   Operation 147 'trunc' 'trunc_ln491_13' <Predicate = (retval_0_i8 == 13)> <Delay = 0.00>
+ST_8 : Operation 148 [1/1] (0.00ns)   --->   "%zext_ln491_12 = zext i6 %trunc_ln491_13" [main.c:491]   --->   Operation 148 'zext' 'zext_ln491_12' <Predicate = (retval_0_i8 == 13)> <Delay = 0.00>
+ST_8 : Operation 149 [1/1] (3.02ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 149 'br' 'br_ln491' <Predicate = (retval_0_i8 == 13)> <Delay = 3.02>
+ST_8 : Operation 150 [1/2] (2.15ns)   --->   "%p_str_19_load_1 = load i3 %p_str_19_addr_1" [main.c:491]   --->   Operation 150 'load' 'p_str_19_load_1' <Predicate = (retval_0_i8 == 12)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_8 : Operation 151 [1/1] (0.00ns)   --->   "%trunc_ln491_12 = trunc i8 %p_str_19_load_1" [main.c:491]   --->   Operation 151 'trunc' 'trunc_ln491_12' <Predicate = (retval_0_i8 == 12)> <Delay = 0.00>
+ST_8 : Operation 152 [1/1] (0.00ns)   --->   "%zext_ln491_11 = zext i6 %trunc_ln491_12" [main.c:491]   --->   Operation 152 'zext' 'zext_ln491_11' <Predicate = (retval_0_i8 == 12)> <Delay = 0.00>
+ST_8 : Operation 153 [1/1] (3.02ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 153 'br' 'br_ln491' <Predicate = (retval_0_i8 == 12)> <Delay = 3.02>
+ST_8 : Operation 154 [1/2] (2.15ns)   --->   "%p_str_20_load_1 = load i3 %p_str_20_addr_1" [main.c:491]   --->   Operation 154 'load' 'p_str_20_load_1' <Predicate = (retval_0_i8 == 11)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_8 : Operation 155 [1/1] (0.00ns)   --->   "%trunc_ln491_11 = trunc i8 %p_str_20_load_1" [main.c:491]   --->   Operation 155 'trunc' 'trunc_ln491_11' <Predicate = (retval_0_i8 == 11)> <Delay = 0.00>
+ST_8 : Operation 156 [1/1] (0.00ns)   --->   "%zext_ln491_10 = zext i6 %trunc_ln491_11" [main.c:491]   --->   Operation 156 'zext' 'zext_ln491_10' <Predicate = (retval_0_i8 == 11)> <Delay = 0.00>
+ST_8 : Operation 157 [1/1] (3.02ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 157 'br' 'br_ln491' <Predicate = (retval_0_i8 == 11)> <Delay = 3.02>
+ST_8 : Operation 158 [1/2] (2.15ns)   --->   "%p_str_21_load_1 = load i3 %p_str_21_addr_1" [main.c:491]   --->   Operation 158 'load' 'p_str_21_load_1' <Predicate = (retval_0_i8 == 10)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_8 : Operation 159 [1/1] (0.00ns)   --->   "%trunc_ln491_10 = trunc i8 %p_str_21_load_1" [main.c:491]   --->   Operation 159 'trunc' 'trunc_ln491_10' <Predicate = (retval_0_i8 == 10)> <Delay = 0.00>
+ST_8 : Operation 160 [1/1] (0.00ns)   --->   "%zext_ln491_9 = zext i6 %trunc_ln491_10" [main.c:491]   --->   Operation 160 'zext' 'zext_ln491_9' <Predicate = (retval_0_i8 == 10)> <Delay = 0.00>
+ST_8 : Operation 161 [1/1] (3.02ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 161 'br' 'br_ln491' <Predicate = (retval_0_i8 == 10)> <Delay = 3.02>
+ST_8 : Operation 162 [1/2] (2.15ns)   --->   "%p_str_22_load_1 = load i3 %p_str_22_addr_1" [main.c:491]   --->   Operation 162 'load' 'p_str_22_load_1' <Predicate = (retval_0_i8 == 9)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_8 : Operation 163 [1/1] (0.00ns)   --->   "%trunc_ln491_9 = trunc i8 %p_str_22_load_1" [main.c:491]   --->   Operation 163 'trunc' 'trunc_ln491_9' <Predicate = (retval_0_i8 == 9)> <Delay = 0.00>
+ST_8 : Operation 164 [1/1] (0.00ns)   --->   "%zext_ln491_8 = zext i6 %trunc_ln491_9" [main.c:491]   --->   Operation 164 'zext' 'zext_ln491_8' <Predicate = (retval_0_i8 == 9)> <Delay = 0.00>
+ST_8 : Operation 165 [1/1] (3.02ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 165 'br' 'br_ln491' <Predicate = (retval_0_i8 == 9)> <Delay = 3.02>
+ST_8 : Operation 166 [1/2] (2.15ns)   --->   "%p_str_23_load_1 = load i3 %p_str_23_addr_1" [main.c:491]   --->   Operation 166 'load' 'p_str_23_load_1' <Predicate = (retval_0_i8 == 8)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_8 : Operation 167 [1/1] (0.00ns)   --->   "%trunc_ln491_8 = trunc i8 %p_str_23_load_1" [main.c:491]   --->   Operation 167 'trunc' 'trunc_ln491_8' <Predicate = (retval_0_i8 == 8)> <Delay = 0.00>
+ST_8 : Operation 168 [1/1] (0.00ns)   --->   "%zext_ln491_7 = zext i6 %trunc_ln491_8" [main.c:491]   --->   Operation 168 'zext' 'zext_ln491_7' <Predicate = (retval_0_i8 == 8)> <Delay = 0.00>
+ST_8 : Operation 169 [1/1] (3.02ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 169 'br' 'br_ln491' <Predicate = (retval_0_i8 == 8)> <Delay = 3.02>
+ST_8 : Operation 170 [1/2] (2.15ns)   --->   "%p_str_24_load_1 = load i3 %p_str_24_addr_1" [main.c:491]   --->   Operation 170 'load' 'p_str_24_load_1' <Predicate = (retval_0_i8 == 7)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_8 : Operation 171 [1/1] (0.00ns)   --->   "%trunc_ln491_7 = trunc i8 %p_str_24_load_1" [main.c:491]   --->   Operation 171 'trunc' 'trunc_ln491_7' <Predicate = (retval_0_i8 == 7)> <Delay = 0.00>
+ST_8 : Operation 172 [1/1] (0.00ns)   --->   "%zext_ln491_6 = zext i6 %trunc_ln491_7" [main.c:491]   --->   Operation 172 'zext' 'zext_ln491_6' <Predicate = (retval_0_i8 == 7)> <Delay = 0.00>
+ST_8 : Operation 173 [1/1] (3.02ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 173 'br' 'br_ln491' <Predicate = (retval_0_i8 == 7)> <Delay = 3.02>
+ST_8 : Operation 174 [1/2] (2.15ns)   --->   "%p_str_19_load = load i3 %p_str_19_addr" [main.c:491]   --->   Operation 174 'load' 'p_str_19_load' <Predicate = (retval_0_i8 == 6)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_8 : Operation 175 [1/1] (0.00ns)   --->   "%trunc_ln491_6 = trunc i8 %p_str_19_load" [main.c:491]   --->   Operation 175 'trunc' 'trunc_ln491_6' <Predicate = (retval_0_i8 == 6)> <Delay = 0.00>
+ST_8 : Operation 176 [1/1] (0.00ns)   --->   "%zext_ln491_5 = zext i6 %trunc_ln491_6" [main.c:491]   --->   Operation 176 'zext' 'zext_ln491_5' <Predicate = (retval_0_i8 == 6)> <Delay = 0.00>
+ST_8 : Operation 177 [1/1] (3.02ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 177 'br' 'br_ln491' <Predicate = (retval_0_i8 == 6)> <Delay = 3.02>
+ST_8 : Operation 178 [1/2] (2.15ns)   --->   "%p_str_20_load = load i3 %p_str_20_addr" [main.c:491]   --->   Operation 178 'load' 'p_str_20_load' <Predicate = (retval_0_i8 == 5)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_8 : Operation 179 [1/1] (0.00ns)   --->   "%trunc_ln491_5 = trunc i8 %p_str_20_load" [main.c:491]   --->   Operation 179 'trunc' 'trunc_ln491_5' <Predicate = (retval_0_i8 == 5)> <Delay = 0.00>
+ST_8 : Operation 180 [1/1] (0.00ns)   --->   "%zext_ln491_4 = zext i6 %trunc_ln491_5" [main.c:491]   --->   Operation 180 'zext' 'zext_ln491_4' <Predicate = (retval_0_i8 == 5)> <Delay = 0.00>
+ST_8 : Operation 181 [1/1] (3.02ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 181 'br' 'br_ln491' <Predicate = (retval_0_i8 == 5)> <Delay = 3.02>
+ST_8 : Operation 182 [1/2] (2.15ns)   --->   "%p_str_21_load = load i3 %p_str_21_addr" [main.c:491]   --->   Operation 182 'load' 'p_str_21_load' <Predicate = (retval_0_i8 == 4)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_8 : Operation 183 [1/1] (0.00ns)   --->   "%trunc_ln491_4 = trunc i8 %p_str_21_load" [main.c:491]   --->   Operation 183 'trunc' 'trunc_ln491_4' <Predicate = (retval_0_i8 == 4)> <Delay = 0.00>
+ST_8 : Operation 184 [1/1] (0.00ns)   --->   "%zext_ln491_3 = zext i6 %trunc_ln491_4" [main.c:491]   --->   Operation 184 'zext' 'zext_ln491_3' <Predicate = (retval_0_i8 == 4)> <Delay = 0.00>
+ST_8 : Operation 185 [1/1] (3.02ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 185 'br' 'br_ln491' <Predicate = (retval_0_i8 == 4)> <Delay = 3.02>
+ST_8 : Operation 186 [1/2] (2.15ns)   --->   "%p_str_22_load = load i3 %p_str_22_addr" [main.c:491]   --->   Operation 186 'load' 'p_str_22_load' <Predicate = (retval_0_i8 == 3)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_8 : Operation 187 [1/1] (0.00ns)   --->   "%trunc_ln491_3 = trunc i8 %p_str_22_load" [main.c:491]   --->   Operation 187 'trunc' 'trunc_ln491_3' <Predicate = (retval_0_i8 == 3)> <Delay = 0.00>
+ST_8 : Operation 188 [1/1] (0.00ns)   --->   "%zext_ln491_2 = zext i6 %trunc_ln491_3" [main.c:491]   --->   Operation 188 'zext' 'zext_ln491_2' <Predicate = (retval_0_i8 == 3)> <Delay = 0.00>
+ST_8 : Operation 189 [1/1] (3.02ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 189 'br' 'br_ln491' <Predicate = (retval_0_i8 == 3)> <Delay = 3.02>
+ST_8 : Operation 190 [1/2] (2.15ns)   --->   "%p_str_23_load = load i3 %p_str_23_addr" [main.c:491]   --->   Operation 190 'load' 'p_str_23_load' <Predicate = (retval_0_i8 == 2)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_8 : Operation 191 [1/1] (0.00ns)   --->   "%trunc_ln491_2 = trunc i8 %p_str_23_load" [main.c:491]   --->   Operation 191 'trunc' 'trunc_ln491_2' <Predicate = (retval_0_i8 == 2)> <Delay = 0.00>
+ST_8 : Operation 192 [1/1] (0.00ns)   --->   "%zext_ln491_1 = zext i6 %trunc_ln491_2" [main.c:491]   --->   Operation 192 'zext' 'zext_ln491_1' <Predicate = (retval_0_i8 == 2)> <Delay = 0.00>
+ST_8 : Operation 193 [1/1] (3.02ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 193 'br' 'br_ln491' <Predicate = (retval_0_i8 == 2)> <Delay = 3.02>
+ST_8 : Operation 194 [1/2] (2.15ns)   --->   "%p_str_24_load = load i3 %p_str_24_addr" [main.c:491]   --->   Operation 194 'load' 'p_str_24_load' <Predicate = (retval_0_i8 == 1)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 5> <ROM>
+ST_8 : Operation 195 [1/1] (0.00ns)   --->   "%trunc_ln491_1 = trunc i8 %p_str_24_load" [main.c:491]   --->   Operation 195 'trunc' 'trunc_ln491_1' <Predicate = (retval_0_i8 == 1)> <Delay = 0.00>
+ST_8 : Operation 196 [1/1] (0.00ns)   --->   "%zext_ln491 = zext i6 %trunc_ln491_1" [main.c:491]   --->   Operation 196 'zext' 'zext_ln491' <Predicate = (retval_0_i8 == 1)> <Delay = 0.00>
+ST_8 : Operation 197 [1/1] (3.02ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 197 'br' 'br_ln491' <Predicate = (retval_0_i8 == 1)> <Delay = 3.02>
+ST_8 : Operation 198 [1/2] (2.15ns)   --->   "%p_str_25_load = load i3 %p_str_25_addr" [main.c:491]   --->   Operation 198 'load' 'p_str_25_load' <Predicate = (retval_0_i8 == 31) | (retval_0_i8 == 30) | (retval_0_i8 == 29) | (retval_0_i8 == 28) | (retval_0_i8 == 27) | (retval_0_i8 == 26) | (retval_0_i8 == 25) | (retval_0_i8 == 24) | (retval_0_i8 == 23) | (retval_0_i8 == 0)> <Delay = 2.15> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 6> <ROM>
+ST_8 : Operation 199 [1/1] (0.00ns)   --->   "%trunc_ln491 = trunc i8 %p_str_25_load" [main.c:491]   --->   Operation 199 'trunc' 'trunc_ln491' <Predicate = (retval_0_i8 == 31) | (retval_0_i8 == 30) | (retval_0_i8 == 29) | (retval_0_i8 == 28) | (retval_0_i8 == 27) | (retval_0_i8 == 26) | (retval_0_i8 == 25) | (retval_0_i8 == 24) | (retval_0_i8 == 23) | (retval_0_i8 == 0)> <Delay = 0.00>
+ST_8 : Operation 200 [1/1] (3.02ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 200 'br' 'br_ln491' <Predicate = (retval_0_i8 == 31) | (retval_0_i8 == 30) | (retval_0_i8 == 29) | (retval_0_i8 == 28) | (retval_0_i8 == 27) | (retval_0_i8 == 26) | (retval_0_i8 == 25) | (retval_0_i8 == 24) | (retval_0_i8 == 23) | (retval_0_i8 == 0)> <Delay = 3.02>
+ST_8 : Operation 201 [1/1] (0.00ns)   --->   "%empty = phi i7 %trunc_ln491, void, i7 %zext_ln491, void, i7 %zext_ln491_1, void, i7 %zext_ln491_2, void, i7 %zext_ln491_3, void, i7 %zext_ln491_4, void, i7 %zext_ln491_5, void, i7 %zext_ln491_6, void, i7 %zext_ln491_7, void, i7 %zext_ln491_8, void, i7 %zext_ln491_9, void, i7 %zext_ln491_10, void, i7 %zext_ln491_11, void, i7 %zext_ln491_12, void, i7 %zext_ln491_13, void, i7 %zext_ln491_14, void, i7 %zext_ln491_15, void, i7 %zext_ln491_16, void, i7 %zext_ln491_17, void, i7 %zext_ln491_18, void, i7 %zext_ln491_19, void, i7 %zext_ln491_20, void, i7 %zext_ln491_21, void" [main.c:491]   --->   Operation 201 'phi' 'empty' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 202 [1/1] (1.46ns)   --->   "%icmp_ln491 = icmp_eq  i7 %empty, i7 0" [main.c:491]   --->   Operation 202 'icmp' 'icmp_ln491' <Predicate = true> <Delay = 1.46> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.46> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 203 [1/1] (0.00ns)   --->   "%br_ln491 = br i1 %icmp_ln491, void, void %cat.exit.loopexit" [main.c:491]   --->   Operation 203 'br' 'br_ln491' <Predicate = true> <Delay = 0.00>
 
 State 9 <SV = 8> <Delay = 2.15>
-ST_9 : Operation 204 [1/1] (0.00ns)   --->   "%i_2 = phi i4 %add_ln462, void, i4 %trunc_ln457, void %len.exit.i" [main.c:462]   --->   Operation 204 'phi' 'i_2' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 204 [1/1] (0.00ns)   --->   "%i_2 = phi i4 %add_ln493, void, i4 %trunc_ln488, void %len.exit.i" [main.c:493]   --->   Operation 204 'phi' 'i_2' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 205 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str5"   --->   Operation 205 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_9 : Operation 206 [1/1] (0.00ns)   --->   "%specloopname_ln458 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9" [main.c:458]   --->   Operation 206 'specloopname' 'specloopname_ln458' <Predicate = true> <Delay = 0.00>
-ST_9 : Operation 207 [1/1] (0.00ns)   --->   "%i_2_cast1 = zext i4 %i_2" [main.c:462]   --->   Operation 207 'zext' 'i_2_cast1' <Predicate = (!icmp_ln460)> <Delay = 0.00>
-ST_9 : Operation 208 [1/1] (0.00ns)   --->   "%bits_addr_1 = getelementptr i7 %bits, i64 0, i64 %i_2_cast1" [main.c:461]   --->   Operation 208 'getelementptr' 'bits_addr_1' <Predicate = (!icmp_ln460)> <Delay = 0.00>
-ST_9 : Operation 209 [1/1] (2.15ns)   --->   "%store_ln461 = store i7 %empty, i4 %bits_addr_1" [main.c:461]   --->   Operation 209 'store' 'store_ln461' <Predicate = (!icmp_ln460)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 7> <Depth = 12> <RAM>
-ST_9 : Operation 210 [1/1] (1.77ns)   --->   "%add_ln462 = add i4 %i_2, i4 1" [main.c:462]   --->   Operation 210 'add' 'add_ln462' <Predicate = (!icmp_ln460)> <Delay = 1.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 211 [1/1] (0.00ns)   --->   "%br_ln460 = br void" [main.c:460]   --->   Operation 211 'br' 'br_ln460' <Predicate = (!icmp_ln460)> <Delay = 0.00>
+ST_9 : Operation 206 [1/1] (0.00ns)   --->   "%specloopname_ln489 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9" [main.c:489]   --->   Operation 206 'specloopname' 'specloopname_ln489' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 207 [1/1] (0.00ns)   --->   "%i_2_cast1 = zext i4 %i_2" [main.c:493]   --->   Operation 207 'zext' 'i_2_cast1' <Predicate = (!icmp_ln491)> <Delay = 0.00>
+ST_9 : Operation 208 [1/1] (0.00ns)   --->   "%bits_addr_1 = getelementptr i7 %bits, i64 0, i64 %i_2_cast1" [main.c:492]   --->   Operation 208 'getelementptr' 'bits_addr_1' <Predicate = (!icmp_ln491)> <Delay = 0.00>
+ST_9 : Operation 209 [1/1] (2.15ns)   --->   "%store_ln492 = store i7 %empty, i4 %bits_addr_1" [main.c:492]   --->   Operation 209 'store' 'store_ln492' <Predicate = (!icmp_ln491)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 7> <Depth = 12> <RAM>
+ST_9 : Operation 210 [1/1] (1.77ns)   --->   "%add_ln493 = add i4 %i_2, i4 1" [main.c:493]   --->   Operation 210 'add' 'add_ln493' <Predicate = (!icmp_ln491)> <Delay = 1.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 211 [1/1] (0.00ns)   --->   "%br_ln491 = br void" [main.c:491]   --->   Operation 211 'br' 'br_ln491' <Predicate = (!icmp_ln491)> <Delay = 0.00>
 
 State 10 <SV = 8> <Delay = 0.00>
 ST_10 : Operation 212 [1/1] (0.00ns)   --->   "%br_ln0 = br void %cat.exit"   --->   Operation 212 'br' 'br_ln0' <Predicate = (icmp_ln319)> <Delay = 0.00>
@@ -542,21 +542,21 @@ br_ln337           (br           ) [ 00000000000]
 br_ln335           (br           ) [ 00000000000]
 br_ln377           (br           ) [ 00000000000]
 retval_0_i8        (phi          ) [ 00001111110]
-br_ln449           (br           ) [ 00111111111]
+br_ln480           (br           ) [ 00111111111]
 ret_ln0            (ret          ) [ 00000000000]
 i_1                (phi          ) [ 00001110000]
 bits_addr          (getelementptr) [ 00000100000]
-add_ln450          (add          ) [ 00111111111]
+add_ln481          (add          ) [ 00111111111]
 specpipeline_ln0   (specpipeline ) [ 00000000000]
 bits_load          (load         ) [ 00000000000]
-icmp_ln449         (icmp         ) [ 00111111111]
-br_ln449           (br           ) [ 00000000000]
-specloopname_ln450 (specloopname ) [ 00000000000]
-br_ln449           (br           ) [ 00111111111]
-trunc_ln457        (trunc        ) [ 00111111111]
-br_ln460           (br           ) [ 00111111111]
+icmp_ln480         (icmp         ) [ 00111111111]
+br_ln480           (br           ) [ 00000000000]
+specloopname_ln481 (specloopname ) [ 00000000000]
+br_ln480           (br           ) [ 00111111111]
+trunc_ln488        (trunc        ) [ 00111111111]
+br_ln491           (br           ) [ 00111111111]
 j                  (phi          ) [ 00000001100]
-switch_ln460       (switch       ) [ 00000000000]
+switch_ln491       (switch       ) [ 00000000000]
 p_str_9_addr       (getelementptr) [ 00000000100]
 p_str_10_addr      (getelementptr) [ 00000000100]
 p_str_11_addr      (getelementptr) [ 00000000100]
@@ -580,109 +580,109 @@ p_str_22_addr      (getelementptr) [ 00000000100]
 p_str_23_addr      (getelementptr) [ 00000000100]
 p_str_24_addr      (getelementptr) [ 00000000100]
 p_str_25_addr      (getelementptr) [ 00000000100]
-add_ln463          (add          ) [ 00111111011]
+add_ln494          (add          ) [ 00111111011]
 p_str_9_load       (load         ) [ 00000000000]
-trunc_ln460_22     (trunc        ) [ 00000000000]
-zext_ln460_21      (zext         ) [ 00000000000]
-br_ln460           (br           ) [ 00000000000]
+trunc_ln491_22     (trunc        ) [ 00000000000]
+zext_ln491_21      (zext         ) [ 00000000000]
+br_ln491           (br           ) [ 00000000000]
 p_str_10_load      (load         ) [ 00000000000]
-trunc_ln460_21     (trunc        ) [ 00000000000]
-zext_ln460_20      (zext         ) [ 00000000000]
-br_ln460           (br           ) [ 00000000000]
+trunc_ln491_21     (trunc        ) [ 00000000000]
+zext_ln491_20      (zext         ) [ 00000000000]
+br_ln491           (br           ) [ 00000000000]
 p_str_11_load      (load         ) [ 00000000000]
-trunc_ln460_20     (trunc        ) [ 00000000000]
-zext_ln460_19      (zext         ) [ 00000000000]
-br_ln460           (br           ) [ 00000000000]
+trunc_ln491_20     (trunc        ) [ 00000000000]
+zext_ln491_19      (zext         ) [ 00000000000]
+br_ln491           (br           ) [ 00000000000]
 p_str_12_load      (load         ) [ 00000000000]
-trunc_ln460_19     (trunc        ) [ 00000000000]
-zext_ln460_18      (zext         ) [ 00000000000]
-br_ln460           (br           ) [ 00000000000]
+trunc_ln491_19     (trunc        ) [ 00000000000]
+zext_ln491_18      (zext         ) [ 00000000000]
+br_ln491           (br           ) [ 00000000000]
 p_str_13_load      (load         ) [ 00000000000]
-trunc_ln460_18     (trunc        ) [ 00000000000]
-zext_ln460_17      (zext         ) [ 00000000000]
-br_ln460           (br           ) [ 00000000000]
+trunc_ln491_18     (trunc        ) [ 00000000000]
+zext_ln491_17      (zext         ) [ 00000000000]
+br_ln491           (br           ) [ 00000000000]
 p_str_14_load      (load         ) [ 00000000000]
-trunc_ln460_17     (trunc        ) [ 00000000000]
-zext_ln460_16      (zext         ) [ 00000000000]
-br_ln460           (br           ) [ 00000000000]
+trunc_ln491_17     (trunc        ) [ 00000000000]
+zext_ln491_16      (zext         ) [ 00000000000]
+br_ln491           (br           ) [ 00000000000]
 p_str_15_load      (load         ) [ 00000000000]
-trunc_ln460_16     (trunc        ) [ 00000000000]
-zext_ln460_15      (zext         ) [ 00000000000]
-br_ln460           (br           ) [ 00000000000]
+trunc_ln491_16     (trunc        ) [ 00000000000]
+zext_ln491_15      (zext         ) [ 00000000000]
+br_ln491           (br           ) [ 00000000000]
 p_str_16_load      (load         ) [ 00000000000]
-trunc_ln460_15     (trunc        ) [ 00000000000]
-zext_ln460_14      (zext         ) [ 00000000000]
-br_ln460           (br           ) [ 00000000000]
+trunc_ln491_15     (trunc        ) [ 00000000000]
+zext_ln491_14      (zext         ) [ 00000000000]
+br_ln491           (br           ) [ 00000000000]
 p_str_17_load      (load         ) [ 00000000000]
-trunc_ln460_14     (trunc        ) [ 00000000000]
-zext_ln460_13      (zext         ) [ 00000000000]
-br_ln460           (br           ) [ 00000000000]
+trunc_ln491_14     (trunc        ) [ 00000000000]
+zext_ln491_13      (zext         ) [ 00000000000]
+br_ln491           (br           ) [ 00000000000]
 p_str_18_load      (load         ) [ 00000000000]
-trunc_ln460_13     (trunc        ) [ 00000000000]
-zext_ln460_12      (zext         ) [ 00000000000]
-br_ln460           (br           ) [ 00000000000]
+trunc_ln491_13     (trunc        ) [ 00000000000]
+zext_ln491_12      (zext         ) [ 00000000000]
+br_ln491           (br           ) [ 00000000000]
 p_str_19_load_1    (load         ) [ 00000000000]
-trunc_ln460_12     (trunc        ) [ 00000000000]
-zext_ln460_11      (zext         ) [ 00000000000]
-br_ln460           (br           ) [ 00000000000]
+trunc_ln491_12     (trunc        ) [ 00000000000]
+zext_ln491_11      (zext         ) [ 00000000000]
+br_ln491           (br           ) [ 00000000000]
 p_str_20_load_1    (load         ) [ 00000000000]
-trunc_ln460_11     (trunc        ) [ 00000000000]
-zext_ln460_10      (zext         ) [ 00000000000]
-br_ln460           (br           ) [ 00000000000]
+trunc_ln491_11     (trunc        ) [ 00000000000]
+zext_ln491_10      (zext         ) [ 00000000000]
+br_ln491           (br           ) [ 00000000000]
 p_str_21_load_1    (load         ) [ 00000000000]
-trunc_ln460_10     (trunc        ) [ 00000000000]
-zext_ln460_9       (zext         ) [ 00000000000]
-br_ln460           (br           ) [ 00000000000]
+trunc_ln491_10     (trunc        ) [ 00000000000]
+zext_ln491_9       (zext         ) [ 00000000000]
+br_ln491           (br           ) [ 00000000000]
 p_str_22_load_1    (load         ) [ 00000000000]
-trunc_ln460_9      (trunc        ) [ 00000000000]
-zext_ln460_8       (zext         ) [ 00000000000]
-br_ln460           (br           ) [ 00000000000]
+trunc_ln491_9      (trunc        ) [ 00000000000]
+zext_ln491_8       (zext         ) [ 00000000000]
+br_ln491           (br           ) [ 00000000000]
 p_str_23_load_1    (load         ) [ 00000000000]
-trunc_ln460_8      (trunc        ) [ 00000000000]
-zext_ln460_7       (zext         ) [ 00000000000]
-br_ln460           (br           ) [ 00000000000]
+trunc_ln491_8      (trunc        ) [ 00000000000]
+zext_ln491_7       (zext         ) [ 00000000000]
+br_ln491           (br           ) [ 00000000000]
 p_str_24_load_1    (load         ) [ 00000000000]
-trunc_ln460_7      (trunc        ) [ 00000000000]
-zext_ln460_6       (zext         ) [ 00000000000]
-br_ln460           (br           ) [ 00000000000]
+trunc_ln491_7      (trunc        ) [ 00000000000]
+zext_ln491_6       (zext         ) [ 00000000000]
+br_ln491           (br           ) [ 00000000000]
 p_str_19_load      (load         ) [ 00000000000]
-trunc_ln460_6      (trunc        ) [ 00000000000]
-zext_ln460_5       (zext         ) [ 00000000000]
-br_ln460           (br           ) [ 00000000000]
+trunc_ln491_6      (trunc        ) [ 00000000000]
+zext_ln491_5       (zext         ) [ 00000000000]
+br_ln491           (br           ) [ 00000000000]
 p_str_20_load      (load         ) [ 00000000000]
-trunc_ln460_5      (trunc        ) [ 00000000000]
-zext_ln460_4       (zext         ) [ 00000000000]
-br_ln460           (br           ) [ 00000000000]
+trunc_ln491_5      (trunc        ) [ 00000000000]
+zext_ln491_4       (zext         ) [ 00000000000]
+br_ln491           (br           ) [ 00000000000]
 p_str_21_load      (load         ) [ 00000000000]
-trunc_ln460_4      (trunc        ) [ 00000000000]
-zext_ln460_3       (zext         ) [ 00000000000]
-br_ln460           (br           ) [ 00000000000]
+trunc_ln491_4      (trunc        ) [ 00000000000]
+zext_ln491_3       (zext         ) [ 00000000000]
+br_ln491           (br           ) [ 00000000000]
 p_str_22_load      (load         ) [ 00000000000]
-trunc_ln460_3      (trunc        ) [ 00000000000]
-zext_ln460_2       (zext         ) [ 00000000000]
-br_ln460           (br           ) [ 00000000000]
+trunc_ln491_3      (trunc        ) [ 00000000000]
+zext_ln491_2       (zext         ) [ 00000000000]
+br_ln491           (br           ) [ 00000000000]
 p_str_23_load      (load         ) [ 00000000000]
-trunc_ln460_2      (trunc        ) [ 00000000000]
-zext_ln460_1       (zext         ) [ 00000000000]
-br_ln460           (br           ) [ 00000000000]
+trunc_ln491_2      (trunc        ) [ 00000000000]
+zext_ln491_1       (zext         ) [ 00000000000]
+br_ln491           (br           ) [ 00000000000]
 p_str_24_load      (load         ) [ 00000000000]
-trunc_ln460_1      (trunc        ) [ 00000000000]
-zext_ln460         (zext         ) [ 00000000000]
-br_ln460           (br           ) [ 00000000000]
+trunc_ln491_1      (trunc        ) [ 00000000000]
+zext_ln491         (zext         ) [ 00000000000]
+br_ln491           (br           ) [ 00000000000]
 p_str_25_load      (load         ) [ 00000000000]
-trunc_ln460        (trunc        ) [ 00000000000]
-br_ln460           (br           ) [ 00000000000]
+trunc_ln491        (trunc        ) [ 00000000000]
+br_ln491           (br           ) [ 00000000000]
 empty              (phi          ) [ 00000001010]
-icmp_ln460         (icmp         ) [ 00000001010]
-br_ln460           (br           ) [ 00000000000]
+icmp_ln491         (icmp         ) [ 00000001010]
+br_ln491           (br           ) [ 00000000000]
 i_2                (phi          ) [ 00000001110]
 specpipeline_ln0   (specpipeline ) [ 00000000000]
-specloopname_ln458 (specloopname ) [ 00000000000]
+specloopname_ln489 (specloopname ) [ 00000000000]
 i_2_cast1          (zext         ) [ 00000000000]
 bits_addr_1        (getelementptr) [ 00000000000]
-store_ln461        (store        ) [ 00000000000]
-add_ln462          (add          ) [ 00111111111]
-br_ln460           (br           ) [ 00111111111]
+store_ln492        (store        ) [ 00000000000]
+add_ln493          (add          ) [ 00111111111]
+br_ln491           (br           ) [ 00111111111]
 br_ln0             (br           ) [ 00000000000]
 br_ln318           (br           ) [ 01111111111]
 </LifeTime>
@@ -1495,7 +1495,7 @@ br_ln318           (br           ) [ 01111111111]
 </pin_list>
 <bind>
 <opcode="load(27) store(28) " fcode="store"/>
-<opset="bits_load/4 store_ln461/9 "/>
+<opset="bits_load/4 store_ln492/9 "/>
 </bind>
 </comp>
 
@@ -2310,7 +2310,7 @@ br_ln318           (br           ) [ 01111111111]
 </bind>
 </comp>
 
-<comp id="693" class="1004" name="add_ln450_fu_693">
+<comp id="693" class="1004" name="add_ln481_fu_693">
 <pin_list>
 <pin id="694" dir="0" index="0" bw="64" slack="1"/>
 <pin id="695" dir="0" index="1" bw="1" slack="0"/>
@@ -2318,11 +2318,11 @@ br_ln318           (br           ) [ 01111111111]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln450/5 "/>
+<opset="add_ln481/5 "/>
 </bind>
 </comp>
 
-<comp id="699" class="1004" name="icmp_ln449_fu_699">
+<comp id="699" class="1004" name="icmp_ln480_fu_699">
 <pin_list>
 <pin id="700" dir="0" index="0" bw="7" slack="0"/>
 <pin id="701" dir="0" index="1" bw="7" slack="0"/>
@@ -2330,22 +2330,22 @@ br_ln318           (br           ) [ 01111111111]
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="icmp_ln449/5 "/>
+<opset="icmp_ln480/5 "/>
 </bind>
 </comp>
 
-<comp id="705" class="1004" name="trunc_ln457_fu_705">
+<comp id="705" class="1004" name="trunc_ln488_fu_705">
 <pin_list>
 <pin id="706" dir="0" index="0" bw="64" slack="2"/>
 <pin id="707" dir="1" index="1" bw="4" slack="3"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln457/6 "/>
+<opset="trunc_ln488/6 "/>
 </bind>
 </comp>
 
-<comp id="709" class="1004" name="add_ln463_fu_709">
+<comp id="709" class="1004" name="add_ln494_fu_709">
 <pin_list>
 <pin id="710" dir="0" index="0" bw="64" slack="1"/>
 <pin id="711" dir="0" index="1" bw="1" slack="0"/>
@@ -2353,506 +2353,506 @@ br_ln318           (br           ) [ 01111111111]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln463/8 "/>
+<opset="add_ln494/8 "/>
 </bind>
 </comp>
 
-<comp id="715" class="1004" name="trunc_ln460_22_fu_715">
+<comp id="715" class="1004" name="trunc_ln491_22_fu_715">
 <pin_list>
 <pin id="716" dir="0" index="0" bw="8" slack="0"/>
 <pin id="717" dir="1" index="1" bw="6" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln460_22/8 "/>
+<opset="trunc_ln491_22/8 "/>
 </bind>
 </comp>
 
-<comp id="719" class="1004" name="zext_ln460_21_fu_719">
+<comp id="719" class="1004" name="zext_ln491_21_fu_719">
 <pin_list>
 <pin id="720" dir="0" index="0" bw="6" slack="0"/>
 <pin id="721" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln460_21/8 "/>
+<opset="zext_ln491_21/8 "/>
 </bind>
 </comp>
 
-<comp id="724" class="1004" name="trunc_ln460_21_fu_724">
+<comp id="724" class="1004" name="trunc_ln491_21_fu_724">
 <pin_list>
 <pin id="725" dir="0" index="0" bw="8" slack="0"/>
 <pin id="726" dir="1" index="1" bw="6" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln460_21/8 "/>
+<opset="trunc_ln491_21/8 "/>
 </bind>
 </comp>
 
-<comp id="728" class="1004" name="zext_ln460_20_fu_728">
+<comp id="728" class="1004" name="zext_ln491_20_fu_728">
 <pin_list>
 <pin id="729" dir="0" index="0" bw="6" slack="0"/>
 <pin id="730" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln460_20/8 "/>
+<opset="zext_ln491_20/8 "/>
 </bind>
 </comp>
 
-<comp id="733" class="1004" name="trunc_ln460_20_fu_733">
+<comp id="733" class="1004" name="trunc_ln491_20_fu_733">
 <pin_list>
 <pin id="734" dir="0" index="0" bw="8" slack="0"/>
 <pin id="735" dir="1" index="1" bw="6" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln460_20/8 "/>
+<opset="trunc_ln491_20/8 "/>
 </bind>
 </comp>
 
-<comp id="737" class="1004" name="zext_ln460_19_fu_737">
+<comp id="737" class="1004" name="zext_ln491_19_fu_737">
 <pin_list>
 <pin id="738" dir="0" index="0" bw="6" slack="0"/>
 <pin id="739" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln460_19/8 "/>
+<opset="zext_ln491_19/8 "/>
 </bind>
 </comp>
 
-<comp id="742" class="1004" name="trunc_ln460_19_fu_742">
+<comp id="742" class="1004" name="trunc_ln491_19_fu_742">
 <pin_list>
 <pin id="743" dir="0" index="0" bw="8" slack="0"/>
 <pin id="744" dir="1" index="1" bw="6" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln460_19/8 "/>
+<opset="trunc_ln491_19/8 "/>
 </bind>
 </comp>
 
-<comp id="746" class="1004" name="zext_ln460_18_fu_746">
+<comp id="746" class="1004" name="zext_ln491_18_fu_746">
 <pin_list>
 <pin id="747" dir="0" index="0" bw="6" slack="0"/>
 <pin id="748" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln460_18/8 "/>
+<opset="zext_ln491_18/8 "/>
 </bind>
 </comp>
 
-<comp id="751" class="1004" name="trunc_ln460_18_fu_751">
+<comp id="751" class="1004" name="trunc_ln491_18_fu_751">
 <pin_list>
 <pin id="752" dir="0" index="0" bw="8" slack="0"/>
 <pin id="753" dir="1" index="1" bw="6" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln460_18/8 "/>
+<opset="trunc_ln491_18/8 "/>
 </bind>
 </comp>
 
-<comp id="755" class="1004" name="zext_ln460_17_fu_755">
+<comp id="755" class="1004" name="zext_ln491_17_fu_755">
 <pin_list>
 <pin id="756" dir="0" index="0" bw="6" slack="0"/>
 <pin id="757" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln460_17/8 "/>
+<opset="zext_ln491_17/8 "/>
 </bind>
 </comp>
 
-<comp id="760" class="1004" name="trunc_ln460_17_fu_760">
+<comp id="760" class="1004" name="trunc_ln491_17_fu_760">
 <pin_list>
 <pin id="761" dir="0" index="0" bw="8" slack="0"/>
 <pin id="762" dir="1" index="1" bw="6" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln460_17/8 "/>
+<opset="trunc_ln491_17/8 "/>
 </bind>
 </comp>
 
-<comp id="764" class="1004" name="zext_ln460_16_fu_764">
+<comp id="764" class="1004" name="zext_ln491_16_fu_764">
 <pin_list>
 <pin id="765" dir="0" index="0" bw="6" slack="0"/>
 <pin id="766" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln460_16/8 "/>
+<opset="zext_ln491_16/8 "/>
 </bind>
 </comp>
 
-<comp id="769" class="1004" name="trunc_ln460_16_fu_769">
+<comp id="769" class="1004" name="trunc_ln491_16_fu_769">
 <pin_list>
 <pin id="770" dir="0" index="0" bw="8" slack="0"/>
 <pin id="771" dir="1" index="1" bw="6" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln460_16/8 "/>
+<opset="trunc_ln491_16/8 "/>
 </bind>
 </comp>
 
-<comp id="773" class="1004" name="zext_ln460_15_fu_773">
+<comp id="773" class="1004" name="zext_ln491_15_fu_773">
 <pin_list>
 <pin id="774" dir="0" index="0" bw="6" slack="0"/>
 <pin id="775" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln460_15/8 "/>
+<opset="zext_ln491_15/8 "/>
 </bind>
 </comp>
 
-<comp id="778" class="1004" name="trunc_ln460_15_fu_778">
+<comp id="778" class="1004" name="trunc_ln491_15_fu_778">
 <pin_list>
 <pin id="779" dir="0" index="0" bw="8" slack="0"/>
 <pin id="780" dir="1" index="1" bw="6" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln460_15/8 "/>
+<opset="trunc_ln491_15/8 "/>
 </bind>
 </comp>
 
-<comp id="782" class="1004" name="zext_ln460_14_fu_782">
+<comp id="782" class="1004" name="zext_ln491_14_fu_782">
 <pin_list>
 <pin id="783" dir="0" index="0" bw="6" slack="0"/>
 <pin id="784" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln460_14/8 "/>
+<opset="zext_ln491_14/8 "/>
 </bind>
 </comp>
 
-<comp id="787" class="1004" name="trunc_ln460_14_fu_787">
+<comp id="787" class="1004" name="trunc_ln491_14_fu_787">
 <pin_list>
 <pin id="788" dir="0" index="0" bw="8" slack="0"/>
 <pin id="789" dir="1" index="1" bw="6" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln460_14/8 "/>
+<opset="trunc_ln491_14/8 "/>
 </bind>
 </comp>
 
-<comp id="791" class="1004" name="zext_ln460_13_fu_791">
+<comp id="791" class="1004" name="zext_ln491_13_fu_791">
 <pin_list>
 <pin id="792" dir="0" index="0" bw="6" slack="0"/>
 <pin id="793" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln460_13/8 "/>
+<opset="zext_ln491_13/8 "/>
 </bind>
 </comp>
 
-<comp id="796" class="1004" name="trunc_ln460_13_fu_796">
+<comp id="796" class="1004" name="trunc_ln491_13_fu_796">
 <pin_list>
 <pin id="797" dir="0" index="0" bw="8" slack="0"/>
 <pin id="798" dir="1" index="1" bw="6" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln460_13/8 "/>
+<opset="trunc_ln491_13/8 "/>
 </bind>
 </comp>
 
-<comp id="800" class="1004" name="zext_ln460_12_fu_800">
+<comp id="800" class="1004" name="zext_ln491_12_fu_800">
 <pin_list>
 <pin id="801" dir="0" index="0" bw="6" slack="0"/>
 <pin id="802" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln460_12/8 "/>
+<opset="zext_ln491_12/8 "/>
 </bind>
 </comp>
 
-<comp id="805" class="1004" name="trunc_ln460_12_fu_805">
+<comp id="805" class="1004" name="trunc_ln491_12_fu_805">
 <pin_list>
 <pin id="806" dir="0" index="0" bw="8" slack="0"/>
 <pin id="807" dir="1" index="1" bw="6" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln460_12/8 "/>
+<opset="trunc_ln491_12/8 "/>
 </bind>
 </comp>
 
-<comp id="809" class="1004" name="zext_ln460_11_fu_809">
+<comp id="809" class="1004" name="zext_ln491_11_fu_809">
 <pin_list>
 <pin id="810" dir="0" index="0" bw="6" slack="0"/>
 <pin id="811" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln460_11/8 "/>
+<opset="zext_ln491_11/8 "/>
 </bind>
 </comp>
 
-<comp id="814" class="1004" name="trunc_ln460_11_fu_814">
+<comp id="814" class="1004" name="trunc_ln491_11_fu_814">
 <pin_list>
 <pin id="815" dir="0" index="0" bw="8" slack="0"/>
 <pin id="816" dir="1" index="1" bw="6" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln460_11/8 "/>
+<opset="trunc_ln491_11/8 "/>
 </bind>
 </comp>
 
-<comp id="818" class="1004" name="zext_ln460_10_fu_818">
+<comp id="818" class="1004" name="zext_ln491_10_fu_818">
 <pin_list>
 <pin id="819" dir="0" index="0" bw="6" slack="0"/>
 <pin id="820" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln460_10/8 "/>
+<opset="zext_ln491_10/8 "/>
 </bind>
 </comp>
 
-<comp id="823" class="1004" name="trunc_ln460_10_fu_823">
+<comp id="823" class="1004" name="trunc_ln491_10_fu_823">
 <pin_list>
 <pin id="824" dir="0" index="0" bw="8" slack="0"/>
 <pin id="825" dir="1" index="1" bw="6" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln460_10/8 "/>
+<opset="trunc_ln491_10/8 "/>
 </bind>
 </comp>
 
-<comp id="827" class="1004" name="zext_ln460_9_fu_827">
+<comp id="827" class="1004" name="zext_ln491_9_fu_827">
 <pin_list>
 <pin id="828" dir="0" index="0" bw="6" slack="0"/>
 <pin id="829" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln460_9/8 "/>
+<opset="zext_ln491_9/8 "/>
 </bind>
 </comp>
 
-<comp id="832" class="1004" name="trunc_ln460_9_fu_832">
+<comp id="832" class="1004" name="trunc_ln491_9_fu_832">
 <pin_list>
 <pin id="833" dir="0" index="0" bw="8" slack="0"/>
 <pin id="834" dir="1" index="1" bw="6" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln460_9/8 "/>
+<opset="trunc_ln491_9/8 "/>
 </bind>
 </comp>
 
-<comp id="836" class="1004" name="zext_ln460_8_fu_836">
+<comp id="836" class="1004" name="zext_ln491_8_fu_836">
 <pin_list>
 <pin id="837" dir="0" index="0" bw="6" slack="0"/>
 <pin id="838" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln460_8/8 "/>
+<opset="zext_ln491_8/8 "/>
 </bind>
 </comp>
 
-<comp id="841" class="1004" name="trunc_ln460_8_fu_841">
+<comp id="841" class="1004" name="trunc_ln491_8_fu_841">
 <pin_list>
 <pin id="842" dir="0" index="0" bw="8" slack="0"/>
 <pin id="843" dir="1" index="1" bw="6" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln460_8/8 "/>
+<opset="trunc_ln491_8/8 "/>
 </bind>
 </comp>
 
-<comp id="845" class="1004" name="zext_ln460_7_fu_845">
+<comp id="845" class="1004" name="zext_ln491_7_fu_845">
 <pin_list>
 <pin id="846" dir="0" index="0" bw="6" slack="0"/>
 <pin id="847" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln460_7/8 "/>
+<opset="zext_ln491_7/8 "/>
 </bind>
 </comp>
 
-<comp id="850" class="1004" name="trunc_ln460_7_fu_850">
+<comp id="850" class="1004" name="trunc_ln491_7_fu_850">
 <pin_list>
 <pin id="851" dir="0" index="0" bw="8" slack="0"/>
 <pin id="852" dir="1" index="1" bw="6" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln460_7/8 "/>
+<opset="trunc_ln491_7/8 "/>
 </bind>
 </comp>
 
-<comp id="854" class="1004" name="zext_ln460_6_fu_854">
+<comp id="854" class="1004" name="zext_ln491_6_fu_854">
 <pin_list>
 <pin id="855" dir="0" index="0" bw="6" slack="0"/>
 <pin id="856" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln460_6/8 "/>
+<opset="zext_ln491_6/8 "/>
 </bind>
 </comp>
 
-<comp id="859" class="1004" name="trunc_ln460_6_fu_859">
+<comp id="859" class="1004" name="trunc_ln491_6_fu_859">
 <pin_list>
 <pin id="860" dir="0" index="0" bw="8" slack="0"/>
 <pin id="861" dir="1" index="1" bw="6" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln460_6/8 "/>
+<opset="trunc_ln491_6/8 "/>
 </bind>
 </comp>
 
-<comp id="863" class="1004" name="zext_ln460_5_fu_863">
+<comp id="863" class="1004" name="zext_ln491_5_fu_863">
 <pin_list>
 <pin id="864" dir="0" index="0" bw="6" slack="0"/>
 <pin id="865" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln460_5/8 "/>
+<opset="zext_ln491_5/8 "/>
 </bind>
 </comp>
 
-<comp id="868" class="1004" name="trunc_ln460_5_fu_868">
+<comp id="868" class="1004" name="trunc_ln491_5_fu_868">
 <pin_list>
 <pin id="869" dir="0" index="0" bw="8" slack="0"/>
 <pin id="870" dir="1" index="1" bw="6" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln460_5/8 "/>
+<opset="trunc_ln491_5/8 "/>
 </bind>
 </comp>
 
-<comp id="872" class="1004" name="zext_ln460_4_fu_872">
+<comp id="872" class="1004" name="zext_ln491_4_fu_872">
 <pin_list>
 <pin id="873" dir="0" index="0" bw="6" slack="0"/>
 <pin id="874" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln460_4/8 "/>
+<opset="zext_ln491_4/8 "/>
 </bind>
 </comp>
 
-<comp id="877" class="1004" name="trunc_ln460_4_fu_877">
+<comp id="877" class="1004" name="trunc_ln491_4_fu_877">
 <pin_list>
 <pin id="878" dir="0" index="0" bw="8" slack="0"/>
 <pin id="879" dir="1" index="1" bw="6" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln460_4/8 "/>
+<opset="trunc_ln491_4/8 "/>
 </bind>
 </comp>
 
-<comp id="881" class="1004" name="zext_ln460_3_fu_881">
+<comp id="881" class="1004" name="zext_ln491_3_fu_881">
 <pin_list>
 <pin id="882" dir="0" index="0" bw="6" slack="0"/>
 <pin id="883" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln460_3/8 "/>
+<opset="zext_ln491_3/8 "/>
 </bind>
 </comp>
 
-<comp id="886" class="1004" name="trunc_ln460_3_fu_886">
+<comp id="886" class="1004" name="trunc_ln491_3_fu_886">
 <pin_list>
 <pin id="887" dir="0" index="0" bw="8" slack="0"/>
 <pin id="888" dir="1" index="1" bw="6" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln460_3/8 "/>
+<opset="trunc_ln491_3/8 "/>
 </bind>
 </comp>
 
-<comp id="890" class="1004" name="zext_ln460_2_fu_890">
+<comp id="890" class="1004" name="zext_ln491_2_fu_890">
 <pin_list>
 <pin id="891" dir="0" index="0" bw="6" slack="0"/>
 <pin id="892" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln460_2/8 "/>
+<opset="zext_ln491_2/8 "/>
 </bind>
 </comp>
 
-<comp id="895" class="1004" name="trunc_ln460_2_fu_895">
+<comp id="895" class="1004" name="trunc_ln491_2_fu_895">
 <pin_list>
 <pin id="896" dir="0" index="0" bw="8" slack="0"/>
 <pin id="897" dir="1" index="1" bw="6" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln460_2/8 "/>
+<opset="trunc_ln491_2/8 "/>
 </bind>
 </comp>
 
-<comp id="899" class="1004" name="zext_ln460_1_fu_899">
+<comp id="899" class="1004" name="zext_ln491_1_fu_899">
 <pin_list>
 <pin id="900" dir="0" index="0" bw="6" slack="0"/>
 <pin id="901" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln460_1/8 "/>
+<opset="zext_ln491_1/8 "/>
 </bind>
 </comp>
 
-<comp id="904" class="1004" name="trunc_ln460_1_fu_904">
+<comp id="904" class="1004" name="trunc_ln491_1_fu_904">
 <pin_list>
 <pin id="905" dir="0" index="0" bw="8" slack="0"/>
 <pin id="906" dir="1" index="1" bw="6" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln460_1/8 "/>
+<opset="trunc_ln491_1/8 "/>
 </bind>
 </comp>
 
-<comp id="908" class="1004" name="zext_ln460_fu_908">
+<comp id="908" class="1004" name="zext_ln491_fu_908">
 <pin_list>
 <pin id="909" dir="0" index="0" bw="6" slack="0"/>
 <pin id="910" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln460/8 "/>
+<opset="zext_ln491/8 "/>
 </bind>
 </comp>
 
-<comp id="913" class="1004" name="trunc_ln460_fu_913">
+<comp id="913" class="1004" name="trunc_ln491_fu_913">
 <pin_list>
 <pin id="914" dir="0" index="0" bw="8" slack="0"/>
 <pin id="915" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln460/8 "/>
+<opset="trunc_ln491/8 "/>
 </bind>
 </comp>
 
-<comp id="918" class="1004" name="icmp_ln460_fu_918">
+<comp id="918" class="1004" name="icmp_ln491_fu_918">
 <pin_list>
 <pin id="919" dir="0" index="0" bw="7" slack="0"/>
 <pin id="920" dir="0" index="1" bw="7" slack="0"/>
@@ -2860,7 +2860,7 @@ br_ln318           (br           ) [ 01111111111]
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="icmp_ln460/8 "/>
+<opset="icmp_ln491/8 "/>
 </bind>
 </comp>
 
@@ -2875,7 +2875,7 @@ br_ln318           (br           ) [ 01111111111]
 </bind>
 </comp>
 
-<comp id="929" class="1004" name="add_ln462_fu_929">
+<comp id="929" class="1004" name="add_ln493_fu_929">
 <pin_list>
 <pin id="930" dir="0" index="0" bw="4" slack="0"/>
 <pin id="931" dir="0" index="1" bw="1" slack="0"/>
@@ -2883,7 +2883,7 @@ br_ln318           (br           ) [ 01111111111]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln462/9 "/>
+<opset="add_ln493/9 "/>
 </bind>
 </comp>
 
@@ -2937,23 +2937,23 @@ br_ln318           (br           ) [ 01111111111]
 </bind>
 </comp>
 
-<comp id="961" class="1005" name="add_ln450_reg_961">
+<comp id="961" class="1005" name="add_ln481_reg_961">
 <pin_list>
 <pin id="962" dir="0" index="0" bw="64" slack="1"/>
 <pin id="963" dir="1" index="1" bw="64" slack="1"/>
 </pin_list>
 <bind>
-<opset="add_ln450 "/>
+<opset="add_ln481 "/>
 </bind>
 </comp>
 
-<comp id="969" class="1005" name="trunc_ln457_reg_969">
+<comp id="969" class="1005" name="trunc_ln488_reg_969">
 <pin_list>
 <pin id="970" dir="0" index="0" bw="4" slack="3"/>
 <pin id="971" dir="1" index="1" bw="4" slack="3"/>
 </pin_list>
 <bind>
-<opset="trunc_ln457 "/>
+<opset="trunc_ln488 "/>
 </bind>
 </comp>
 
@@ -3187,33 +3187,33 @@ br_ln318           (br           ) [ 01111111111]
 </bind>
 </comp>
 
-<comp id="1089" class="1005" name="add_ln463_reg_1089">
+<comp id="1089" class="1005" name="add_ln494_reg_1089">
 <pin_list>
 <pin id="1090" dir="0" index="0" bw="64" slack="1"/>
 <pin id="1091" dir="1" index="1" bw="64" slack="1"/>
 </pin_list>
 <bind>
-<opset="add_ln463 "/>
+<opset="add_ln494 "/>
 </bind>
 </comp>
 
-<comp id="1094" class="1005" name="icmp_ln460_reg_1094">
+<comp id="1094" class="1005" name="icmp_ln491_reg_1094">
 <pin_list>
 <pin id="1095" dir="0" index="0" bw="1" slack="1"/>
 <pin id="1096" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<opset="icmp_ln460 "/>
+<opset="icmp_ln491 "/>
 </bind>
 </comp>
 
-<comp id="1098" class="1005" name="add_ln462_reg_1098">
+<comp id="1098" class="1005" name="add_ln493_reg_1098">
 <pin_list>
 <pin id="1099" dir="0" index="0" bw="4" slack="0"/>
 <pin id="1100" dir="1" index="1" bw="4" slack="0"/>
 </pin_list>
 <bind>
-<opset="add_ln462 "/>
+<opset="add_ln493 "/>
 </bind>
 </comp>
 
@@ -3867,8 +3867,8 @@ br_ln318           (br           ) [ 01111111111]
 		bits_addr : 1
 		bits_load : 2
 	State 5
-		icmp_ln449 : 1
-		br_ln449 : 2
+		icmp_ln480 : 1
+		br_ln480 : 2
 	State 6
 	State 7
 		p_str_9_addr : 1
@@ -3918,59 +3918,59 @@ br_ln318           (br           ) [ 01111111111]
 		p_str_25_addr : 1
 		p_str_25_load : 2
 	State 8
-		trunc_ln460_22 : 1
-		zext_ln460_21 : 2
-		trunc_ln460_21 : 1
-		zext_ln460_20 : 2
-		trunc_ln460_20 : 1
-		zext_ln460_19 : 2
-		trunc_ln460_19 : 1
-		zext_ln460_18 : 2
-		trunc_ln460_18 : 1
-		zext_ln460_17 : 2
-		trunc_ln460_17 : 1
-		zext_ln460_16 : 2
-		trunc_ln460_16 : 1
-		zext_ln460_15 : 2
-		trunc_ln460_15 : 1
-		zext_ln460_14 : 2
-		trunc_ln460_14 : 1
-		zext_ln460_13 : 2
-		trunc_ln460_13 : 1
-		zext_ln460_12 : 2
-		trunc_ln460_12 : 1
-		zext_ln460_11 : 2
-		trunc_ln460_11 : 1
-		zext_ln460_10 : 2
-		trunc_ln460_10 : 1
-		zext_ln460_9 : 2
-		trunc_ln460_9 : 1
-		zext_ln460_8 : 2
-		trunc_ln460_8 : 1
-		zext_ln460_7 : 2
-		trunc_ln460_7 : 1
-		zext_ln460_6 : 2
-		trunc_ln460_6 : 1
-		zext_ln460_5 : 2
-		trunc_ln460_5 : 1
-		zext_ln460_4 : 2
-		trunc_ln460_4 : 1
-		zext_ln460_3 : 2
-		trunc_ln460_3 : 1
-		zext_ln460_2 : 2
-		trunc_ln460_2 : 1
-		zext_ln460_1 : 2
-		trunc_ln460_1 : 1
-		zext_ln460 : 2
-		trunc_ln460 : 1
+		trunc_ln491_22 : 1
+		zext_ln491_21 : 2
+		trunc_ln491_21 : 1
+		zext_ln491_20 : 2
+		trunc_ln491_20 : 1
+		zext_ln491_19 : 2
+		trunc_ln491_19 : 1
+		zext_ln491_18 : 2
+		trunc_ln491_18 : 1
+		zext_ln491_17 : 2
+		trunc_ln491_17 : 1
+		zext_ln491_16 : 2
+		trunc_ln491_16 : 1
+		zext_ln491_15 : 2
+		trunc_ln491_15 : 1
+		zext_ln491_14 : 2
+		trunc_ln491_14 : 1
+		zext_ln491_13 : 2
+		trunc_ln491_13 : 1
+		zext_ln491_12 : 2
+		trunc_ln491_12 : 1
+		zext_ln491_11 : 2
+		trunc_ln491_11 : 1
+		zext_ln491_10 : 2
+		trunc_ln491_10 : 1
+		zext_ln491_9 : 2
+		trunc_ln491_9 : 1
+		zext_ln491_8 : 2
+		trunc_ln491_8 : 1
+		zext_ln491_7 : 2
+		trunc_ln491_7 : 1
+		zext_ln491_6 : 2
+		trunc_ln491_6 : 1
+		zext_ln491_5 : 2
+		trunc_ln491_5 : 1
+		zext_ln491_4 : 2
+		trunc_ln491_4 : 1
+		zext_ln491_3 : 2
+		trunc_ln491_3 : 1
+		zext_ln491_2 : 2
+		trunc_ln491_2 : 1
+		zext_ln491_1 : 2
+		trunc_ln491_1 : 1
+		zext_ln491 : 2
+		trunc_ln491 : 1
 		empty : 3
-		icmp_ln460 : 4
-		br_ln460 : 5
+		icmp_ln491 : 4
+		br_ln491 : 5
 	State 9
 		i_2_cast1 : 1
 		bits_addr_1 : 2
-		store_ln461 : 3
-		add_ln462 : 1
+		store_ln492 : 3
+		add_ln493 : 1
 	State 10
 
 
@@ -3983,64 +3983,64 @@ br_ln318           (br           ) [ 01111111111]
 | Operation|    Functional Unit    |    FF   |   LUT   |
 |----------|-----------------------|---------|---------|
 |          |    add_ln322_fu_665   |    0    |    71   |
-|    add   |    add_ln450_fu_693   |    0    |    71   |
-|          |    add_ln463_fu_709   |    0    |    71   |
-|          |    add_ln462_fu_929   |    0    |    13   |
+|    add   |    add_ln481_fu_693   |    0    |    71   |
+|          |    add_ln494_fu_709   |    0    |    71   |
+|          |    add_ln493_fu_929   |    0    |    13   |
 |----------|-----------------------|---------|---------|
 |          |   icmp_ln318_fu_671   |    0    |    11   |
 |   icmp   |   icmp_ln319_fu_687   |    0    |    28   |
-|          |   icmp_ln449_fu_699   |    0    |    10   |
-|          |   icmp_ln460_fu_918   |    0    |    10   |
+|          |   icmp_ln480_fu_699   |    0    |    10   |
+|          |   icmp_ln491_fu_918   |    0    |    10   |
 |----------|-----------------------|---------|---------|
 |partselect|       tmp_fu_677      |    0    |    0    |
 |----------|-----------------------|---------|---------|
-|          |   trunc_ln457_fu_705  |    0    |    0    |
-|          | trunc_ln460_22_fu_715 |    0    |    0    |
-|          | trunc_ln460_21_fu_724 |    0    |    0    |
-|          | trunc_ln460_20_fu_733 |    0    |    0    |
-|          | trunc_ln460_19_fu_742 |    0    |    0    |
-|          | trunc_ln460_18_fu_751 |    0    |    0    |
-|          | trunc_ln460_17_fu_760 |    0    |    0    |
-|          | trunc_ln460_16_fu_769 |    0    |    0    |
-|          | trunc_ln460_15_fu_778 |    0    |    0    |
-|          | trunc_ln460_14_fu_787 |    0    |    0    |
-|          | trunc_ln460_13_fu_796 |    0    |    0    |
-|   trunc  | trunc_ln460_12_fu_805 |    0    |    0    |
-|          | trunc_ln460_11_fu_814 |    0    |    0    |
-|          | trunc_ln460_10_fu_823 |    0    |    0    |
-|          |  trunc_ln460_9_fu_832 |    0    |    0    |
-|          |  trunc_ln460_8_fu_841 |    0    |    0    |
-|          |  trunc_ln460_7_fu_850 |    0    |    0    |
-|          |  trunc_ln460_6_fu_859 |    0    |    0    |
-|          |  trunc_ln460_5_fu_868 |    0    |    0    |
-|          |  trunc_ln460_4_fu_877 |    0    |    0    |
-|          |  trunc_ln460_3_fu_886 |    0    |    0    |
-|          |  trunc_ln460_2_fu_895 |    0    |    0    |
-|          |  trunc_ln460_1_fu_904 |    0    |    0    |
-|          |   trunc_ln460_fu_913  |    0    |    0    |
+|          |   trunc_ln488_fu_705  |    0    |    0    |
+|          | trunc_ln491_22_fu_715 |    0    |    0    |
+|          | trunc_ln491_21_fu_724 |    0    |    0    |
+|          | trunc_ln491_20_fu_733 |    0    |    0    |
+|          | trunc_ln491_19_fu_742 |    0    |    0    |
+|          | trunc_ln491_18_fu_751 |    0    |    0    |
+|          | trunc_ln491_17_fu_760 |    0    |    0    |
+|          | trunc_ln491_16_fu_769 |    0    |    0    |
+|          | trunc_ln491_15_fu_778 |    0    |    0    |
+|          | trunc_ln491_14_fu_787 |    0    |    0    |
+|          | trunc_ln491_13_fu_796 |    0    |    0    |
+|   trunc  | trunc_ln491_12_fu_805 |    0    |    0    |
+|          | trunc_ln491_11_fu_814 |    0    |    0    |
+|          | trunc_ln491_10_fu_823 |    0    |    0    |
+|          |  trunc_ln491_9_fu_832 |    0    |    0    |
+|          |  trunc_ln491_8_fu_841 |    0    |    0    |
+|          |  trunc_ln491_7_fu_850 |    0    |    0    |
+|          |  trunc_ln491_6_fu_859 |    0    |    0    |
+|          |  trunc_ln491_5_fu_868 |    0    |    0    |
+|          |  trunc_ln491_4_fu_877 |    0    |    0    |
+|          |  trunc_ln491_3_fu_886 |    0    |    0    |
+|          |  trunc_ln491_2_fu_895 |    0    |    0    |
+|          |  trunc_ln491_1_fu_904 |    0    |    0    |
+|          |   trunc_ln491_fu_913  |    0    |    0    |
 |----------|-----------------------|---------|---------|
-|          |  zext_ln460_21_fu_719 |    0    |    0    |
-|          |  zext_ln460_20_fu_728 |    0    |    0    |
-|          |  zext_ln460_19_fu_737 |    0    |    0    |
-|          |  zext_ln460_18_fu_746 |    0    |    0    |
-|          |  zext_ln460_17_fu_755 |    0    |    0    |
-|          |  zext_ln460_16_fu_764 |    0    |    0    |
-|          |  zext_ln460_15_fu_773 |    0    |    0    |
-|          |  zext_ln460_14_fu_782 |    0    |    0    |
-|          |  zext_ln460_13_fu_791 |    0    |    0    |
-|          |  zext_ln460_12_fu_800 |    0    |    0    |
-|          |  zext_ln460_11_fu_809 |    0    |    0    |
-|   zext   |  zext_ln460_10_fu_818 |    0    |    0    |
-|          |  zext_ln460_9_fu_827  |    0    |    0    |
-|          |  zext_ln460_8_fu_836  |    0    |    0    |
-|          |  zext_ln460_7_fu_845  |    0    |    0    |
-|          |  zext_ln460_6_fu_854  |    0    |    0    |
-|          |  zext_ln460_5_fu_863  |    0    |    0    |
-|          |  zext_ln460_4_fu_872  |    0    |    0    |
-|          |  zext_ln460_3_fu_881  |    0    |    0    |
-|          |  zext_ln460_2_fu_890  |    0    |    0    |
-|          |  zext_ln460_1_fu_899  |    0    |    0    |
-|          |   zext_ln460_fu_908   |    0    |    0    |
+|          |  zext_ln491_21_fu_719 |    0    |    0    |
+|          |  zext_ln491_20_fu_728 |    0    |    0    |
+|          |  zext_ln491_19_fu_737 |    0    |    0    |
+|          |  zext_ln491_18_fu_746 |    0    |    0    |
+|          |  zext_ln491_17_fu_755 |    0    |    0    |
+|          |  zext_ln491_16_fu_764 |    0    |    0    |
+|          |  zext_ln491_15_fu_773 |    0    |    0    |
+|          |  zext_ln491_14_fu_782 |    0    |    0    |
+|          |  zext_ln491_13_fu_791 |    0    |    0    |
+|          |  zext_ln491_12_fu_800 |    0    |    0    |
+|          |  zext_ln491_11_fu_809 |    0    |    0    |
+|   zext   |  zext_ln491_10_fu_818 |    0    |    0    |
+|          |  zext_ln491_9_fu_827  |    0    |    0    |
+|          |  zext_ln491_8_fu_836  |    0    |    0    |
+|          |  zext_ln491_7_fu_845  |    0    |    0    |
+|          |  zext_ln491_6_fu_854  |    0    |    0    |
+|          |  zext_ln491_5_fu_863  |    0    |    0    |
+|          |  zext_ln491_4_fu_872  |    0    |    0    |
+|          |  zext_ln491_3_fu_881  |    0    |    0    |
+|          |  zext_ln491_2_fu_890  |    0    |    0    |
+|          |  zext_ln491_1_fu_899  |    0    |    0    |
+|          |   zext_ln491_fu_908   |    0    |    0    |
 |          |    i_2_cast1_fu_924   |    0    |    0    |
 |----------|-----------------------|---------|---------|
 |   Total  |                       |    0    |   285   |
@@ -4054,9 +4054,9 @@ N/A
 |                        |   FF   |
 +------------------------+--------+
 |    add_ln322_reg_935   |   64   |
-|    add_ln450_reg_961   |   64   |
-|   add_ln462_reg_1098   |    4   |
-|   add_ln463_reg_1089   |   64   |
+|    add_ln481_reg_961   |   64   |
+|   add_ln493_reg_1098   |    4   |
+|   add_ln494_reg_1089   |   64   |
 |    bits_addr_reg_956   |    4   |
 |      empty_reg_603     |    7   |
 |       i_1_reg_555      |   64   |
@@ -4064,7 +4064,7 @@ N/A
 |        i_reg_467       |   64   |
 |   icmp_ln318_reg_948   |    1   |
 |   icmp_ln319_reg_952   |    1   |
-|   icmp_ln460_reg_1094  |    1   |
+|   icmp_ln491_reg_1094  |    1   |
 |        j_reg_568       |   64   |
 |  p_str_10_addr_reg_979 |    3   |
 |  p_str_11_addr_reg_984 |    3   |
@@ -4091,7 +4091,7 @@ N/A
 |  p_str_9_addr_reg_974  |    3   |
 |   retval_0_i8_reg_480  |    5   |
 |   string_addr_reg_940  |    4   |
-|   trunc_ln457_reg_969  |    4   |
+|   trunc_ln488_reg_969  |    4   |
 +------------------------+--------+
 |          Total         |   488  |
 +------------------------+--------+

@@ -9,7 +9,7 @@
 char* SHA256(char* input,char* hash);
 
 //step 1
-char* textToBinary(char* string,char* hash);
+void textToBinary(char* string,char* hash);
 char* append_f (char *input);
 
 

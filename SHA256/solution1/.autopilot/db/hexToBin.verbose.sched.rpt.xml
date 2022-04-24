@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'hexToBin'" level="0">
-<item name = "Date">Sat Apr 23 18:59:38 2022
+<item name = "Date">Sun Apr 24 14:36:19 2022
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)</item>
 <item name = "Project">SHA256</item>
@@ -36,8 +36,8 @@
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
 <column name="- VITIS_LOOP_318_1">?, ?, ?, -, -, ?, no</column>
-<column name=" + VITIS_LOOP_449_1">?, ?, 2, 2, 1, ?, yes</column>
-<column name=" + VITIS_LOOP_460_1">?, ?, 3, 2, 1, ?, yes</column>
+<column name=" + VITIS_LOOP_480_1">?, ?, 2, 2, 1, ?, yes</column>
+<column name=" + VITIS_LOOP_491_1">?, ?, 3, 2, 1, ?, yes</column>
 </table>
 </item>
 </section>

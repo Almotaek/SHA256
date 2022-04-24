@@ -44,7 +44,7 @@ set SCTraceOption all
 set TargetInfo xc7a100t:-csg324:-1
 set SourceFiles {sc {} c ../../main.c}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile C:/Users/almotaek/Desktop/ECE/SHA256/solution1/solution1.directive
+set DirectiveFile C:/Users/almotaek/Desktop/ECE2/SHA256/SHA256/solution1/solution1.directive
 set TBFiles {verilog ../../test.c bc ../../test.c vhdl ../../test.c sc ../../test.c cas ../../test.c c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

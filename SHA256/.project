@@ -29,47 +29,47 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>C:/Users/almotaek/Desktop/ECE/SHA256/.apc/.src</location>
+			<location>C:/Users/almotaek/Desktop/ECE2/SHA256/SHA256/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>C:/Users/almotaek/Desktop/ECE/SHA256/.apc/.tb</location>
+			<location>C:/Users/almotaek/Desktop/ECE2/SHA256/SHA256/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>C:/Users/almotaek/Desktop/ECE/SHA256/solution1/.tcls</location>
+			<location>C:/Users/almotaek/Desktop/ECE2/SHA256/SHA256/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>source/main.c</name>
 			<type>1</type>
-			<location>C:/Users/almotaek/Desktop/ECE/main.c</location>
+			<location>C:/Users/almotaek/Desktop/ECE2/SHA256/main.c</location>
 		</link>
 		<link>
 			<name>source/main.h</name>
 			<type>1</type>
-			<location>C:/Users/almotaek/Desktop/ECE/main.h</location>
+			<location>C:/Users/almotaek/Desktop/ECE2/SHA256/main.h</location>
 		</link>
 		<link>
 			<name>testbench/test.c</name>
 			<type>1</type>
-			<location>C:/Users/almotaek/Desktop/ECE/test.c</location>
+			<location>C:/Users/almotaek/Desktop/ECE2/SHA256/test.c</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>C:/Users/almotaek/Desktop/ECE/SHA256/solution1/solution1.directive</location>
+			<location>C:/Users/almotaek/Desktop/ECE2/SHA256/SHA256/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>C:/Users/almotaek/Desktop/ECE/SHA256/solution1/directives.tcl</location>
+			<location>C:/Users/almotaek/Desktop/ECE2/SHA256/SHA256/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>C:/Users/almotaek/Desktop/ECE/SHA256/solution1/script.tcl</location>
+			<location>C:/Users/almotaek/Desktop/ECE2/SHA256/SHA256/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

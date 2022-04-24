@@ -1840,9 +1840,12 @@ char* hexToBin(char* string, char* bits);
 char* hToB(char oneHex);
 
 
-void makeArrayOfBitStrings(char* bitsString, char[16][34] );
 int createMessageScheduling(char* bitsString, uint32_t* bitArray);
-uint32_t sToB(char *);
+void makeArrayOfBitStrings(char* bitsString, char[64][34] );
+void makeArrayOfBitInts (char[64][34],uint32_t * bitArray);
+uint32_t bitsTo32Ints(char *);
+void add48Ints(uint32_t* bitArray);
+
 
 
 
@@ -1979,47 +1982,78 @@ char* hToB(char oneHex){
 
 
 int createMessageScheduling(char* bitsString, uint32_t* bitArray){
-   char stringBitArray[16][34];
+   char stringBitArray[64][34];
    makeArrayOfBitStrings (bitsString, stringBitArray);
+
+   makeArrayOfBitInts(stringBitArray,bitArray);
+
+   add48Ints(bitArray);
+
    return 0;
 }
 
-void makeArrayOfBitStrings (char *bitsString, char stringBitArray[16][34]){
+void makeArrayOfBitInts (char stringBitArray[64][34],uint32_t * bitArray){
+    int i = 0;
+    VITIS_LOOP_396_1: for(i=0; i<32; i++){
+
+        bitArray[i] = bitsTo32Ints(stringBitArray[i]);
+    }
+}
+
+void makeArrayOfBitStrings (char *bitsString, char stringBitArray[64][34])
+{
   int i = 0;
   int c = 0;
   int index = 0;
   char currentInt[99] = "";
-  VITIS_LOOP_394_1: while (bitsString[i] != '\0')
+  VITIS_LOOP_408_1: while (bitsString[i] != '\0')
     {
+
+
       catc (currentInt, bitsString[i]);
+
       if (c == 31)
  {
-
-   currentInt[c] = '\0';;
+   currentInt[c+1] = '\0';
+   stringBitArray[index][c+1] = '\0';
    cpy (stringBitArray[index], currentInt);
+
    c = 0;
    currentInt[0] = '\0';
    index++;
+ }else{
+     c++;
  }
-      else
- {
+
    i++;
-   c++;
- }
+
 
     }
 }
 
+void add48Ints(uint32_t * bitArray){
+    int i = 33;
+    VITIS_LOOP_435_1: for(i = 33; i<64; i ++){
+        bitArray[i] = 0;
+    }
+}
 
-uint32_t sToB(char * string){
+
+uint32_t bitsTo32Ints(char * string){
  uint32_t x = 0;
     int i =0;
+    uint32_t t = 1;
+    uint32_t total = 0;
+    VITIS_LOOP_446_1: for(i=31; i>=0; i--){
 
+        int oz = string[i]-48;
 
-
-
-
-    return x;
+        if(oz==1){
+            total = total + t;
+        }
+        t=t*2;
+    }
+    return total;
 }
 
 
@@ -2036,7 +2070,7 @@ char* catc(char* dest, char new){
 
 void cpy(char* dest, char* source){
  int i = 0;
- VITIS_LOOP_441_1: while(source[i]!='\0'){
+ VITIS_LOOP_472_1: while(source[i]!='\0'){
   dest[i] = source[i];
   i = i + 1;
  }
@@ -2044,7 +2078,7 @@ void cpy(char* dest, char* source){
 
 int len(char* txt){
  int i = 0;
- VITIS_LOOP_449_1: while(txt[i]!='\0'){
+ VITIS_LOOP_480_1: while(txt[i]!='\0'){
   i++;
  }
  return i;
@@ -2055,7 +2089,7 @@ void cat(char* dest, char*new){
  int i = 0;
  int j =0;
  i = len(dest);
- VITIS_LOOP_460_1: while(new[j] != '\0'){
+ VITIS_LOOP_491_1: while(new[j] != '\0'){
   dest[i] = new[j];
   i++;
   j++;
