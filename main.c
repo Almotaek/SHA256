@@ -383,6 +383,33 @@ char* hToB(char oneHex){
     }
 }
 
+//step 4
+void rounds(char *fullPaddedMessage)
+{
+  int i = 0;
+  int c = 0;
+  int index = 0;
+  char currentInt[513] = "";
+  uint32_t * bitArray[63];
+  while (fullPaddedMessage[i] != '\0')
+    {
+      catc (currentInt, fullPaddedMessage[i]);
+      if (c == 511)
+	{
+	  currentInt[c + 1] = '\0';
+	  printf("%s\n",currentInt);
+// 	  createMessageScheduling (currentInt, bitArray);
+	  c = 0;
+	  currentInt[0] = '\0';
+	}
+      else
+	{
+	  c++;
+	}
+      i++;
+    }
+}
+
 //step 5
 
 int createMessageScheduling(char* bitsString, uint32_t* bitArray){

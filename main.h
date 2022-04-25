@@ -17,6 +17,10 @@ char* append_f (char *input);
 char* hexToBin(char* string, char* bits);
 char* hToB(char oneHex);
 
+//step4
+void rounds(char *fullPaddedMessage);
+
+
 //step5
 int createMessageScheduling(char* bitsString, uint32_t* bitArray);
 void makeArrayOfBitStrings(char* bitsString, char[64][34] );
