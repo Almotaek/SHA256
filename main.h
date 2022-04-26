@@ -5,6 +5,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include <stdbool.h>
+
 
 char* SHA256(char* input,char* hash);
 
@@ -22,14 +24,23 @@ void rounds(char *fullPaddedMessage);
 
 
 //step5
-int createMessageScheduling(char* bitsString, uint32_t* bitArray);
+int createMessageScheduling(char* bitsString, uint32_t bitArray[64]);
 void makeArrayOfBitStrings(char* bitsString, char[64][34] );
-void makeArrayOfBitInts (char[64][34],uint32_t * bitArray);
+void makeArrayOfBitInts (char[64][34],uint32_t bitArray[64]);
 uint32_t bitsTo32Ints(char *);
-void add48Ints(uint32_t* bitArray);
-void modify(uint32_t* ints);
+void add48Ints(uint32_t bitArray[64]);
+void modify(uint32_t bitArray[64]);
 
+//step6
+void step6(uint32_t* w);
 
+//step7
+char * binaryRep (uint32_t  n, char * binary);
+
+//step8
+char* BToh(char* input, char * output);
+char* finalHash(char * input);
+bool equivalent(char * Str1, char * Str2);
 
 //helper functions
 uint32_t right_rotate(uint32_t num, int n);

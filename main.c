@@ -1,8 +1,18 @@
 #include "main.h"
 
+//creating hash values 0..7
+   char h0[32] = "";
+   char h1[32] = "";
+   char h2[32] = "";
+   char h3[32] = "";
+   char h4[32] = "";
+   char h5[32] = "";
+   char h6[32] = "";
+   char h7[32] = "";
+
 //creating k-constants
 //initializing hash values 0..63
-char k[64][32]={""};
+  char k[64][32]={""};
 
 //the fractions of the square roots of the 1st 64 prime numbers.
   char* K0 = "0x428a2f98";
@@ -68,7 +78,17 @@ char k[64][32]={""};
   char* K60 = "0x90befffa";
   char* K61 = "0xa4506ceb";
   char* K62 = "0xbef9a3f";
-  char* K63 = "0xbef9a3f";
+  char* K63 = "0xc67178f2";
+
+  //initializing variables
+  uint32_t a;
+  uint32_t b;
+  uint32_t c;
+  uint32_t d;
+  uint32_t e;
+  uint32_t f;
+  uint32_t g;
+  uint32_t h;
 
 
 
@@ -86,16 +106,6 @@ char* SHA256(char* input,char* hash) {
 
 
 	//STEP2:
-
-    //initlizing hash values 0..7
-    char h0[64] = "";
-    char h1[64] = "";
-    char h2[64] = "";
-    char h3[64] = "";
-    char h4[64] = "";
-    char h5[64] = "";
-    char h6[64] = "";
-    char h7[64] = "";
 
 
     //the fractions of the sqaure roots of the 1st 8 prime numbers.
@@ -276,7 +286,7 @@ void rounds(char *fullPaddedMessage)
 
 //step 5
 
-int createMessageScheduling(char* bitsString, uint32_t* bitArray){
+int createMessageScheduling(char* bitsString, uint32_t bitArray[64]){
 	  char stringBitArray[64][34];
 	  makeArrayOfBitStrings (bitsString, stringBitArray);
       //call a function that populates the bitArray with the values of int value of stringBitArray using bitsTo32Ints
@@ -288,9 +298,9 @@ int createMessageScheduling(char* bitsString, uint32_t* bitArray){
 	  return 0;
 }
 
-void makeArrayOfBitInts (char stringBitArray[64][34],uint32_t * bitArray){
+void makeArrayOfBitInts (char stringBitArray[64][34],uint32_t bitArray[64]){
     int i = 0;
-    for(i=0; i<32; i++){
+    for(i=0; i<16; i++){
         // printf ("%s\n", stringBitArray[i]);
         bitArray[i] = bitsTo32Ints(stringBitArray[i]);
     }
@@ -327,16 +337,16 @@ void makeArrayOfBitStrings (char *bitsString, char stringBitArray[64][34])
     }
 }
 
-void add48Ints(uint32_t * bitArray){
-    int i = 33;
-    for(i = 33; i<64; i ++){
+void add48Ints(uint32_t bitArray[64]){
+    int i = 16;
+    for(i = 16; i<64; i ++){
         bitArray[i] = 0;
     }
 }
 
-void modify(uint32_t* ints){
+void modify(uint32_t ints[64]){
     int i = 0;
-    for(i=16; i<64; i++){
+    for(i=16; i<64; i++){//fix
         uint32_t s0  = xor(xor(right_rotate(ints[i-15], 7), right_rotate(ints[i-15], 8)),  right_shift(ints[i-15], 8));
         uint32_t s1  = xor(xor(right_rotate(ints[i-2], 17), right_rotate(ints[i-2], 19)),  right_shift(ints[i-2], 10));
         ints[i] = ints[i-16] + s0 + ints[i-7] + s1;
@@ -361,6 +371,193 @@ uint32_t bitsTo32Ints(char * string){
     }
     return total;
 }
+
+//step 6 functions
+
+void step6(uint32_t* w) {
+   a= bitsTo32Ints(h0);
+   b= bitsTo32Ints(h1);
+   c= bitsTo32Ints(h2);
+   d= bitsTo32Ints(h3);
+   e= bitsTo32Ints(h4);
+   f= bitsTo32Ints(h5);
+   g= bitsTo32Ints(h6);
+   h= bitsTo32Ints(h7);
+  int i =0;
+  for(i=0; i<64; i++){
+
+   uint32_t S1=(right_rotate(e, 6)) ^ (right_rotate(e, 11)) ^ (right_rotate(e, 25));
+
+   uint32_t ch = xor((e & f), ((~e) & g));
+
+   uint32_t kint= bitsTo32Ints(hexToBin(K0,k[i]));
+   uint32_t temp1=h+ S1+ ch+ kint+ w[i];
+
+   uint32_t S0 = (right_rotate(a, 2)) ^ (right_rotate (a, 13)) ^ (right_rotate(a,22));
+
+   uint32_t maj=(a & b) ^ (a & c) ^ (b & c);
+
+   uint32_t temp2 = S0 + maj;
+
+   h=g;
+   g=f;
+   f=e;
+   e=d+temp1;
+   d=c;
+   c=b;
+   b=a;
+   a = temp1 + temp2;
+  }
+}
+
+//step7
+char * binaryRep (uint32_t  n, char * binary)
+{
+
+
+   uint32_t mask = 0x80000000;
+   while(mask) {
+     char a = (n&mask)?'1':'0';
+     catc(binary, a);
+
+     mask = mask >> 1;
+   }
+
+   return binary;
+}
+
+
+//step8
+char* BToh(char* input, char * output){
+
+
+
+    for (int i=0; i < 32; i=i+4){
+
+        // char append = '';
+        char test[5] = "";
+
+        catc(test, input[i]);
+        catc(test, input[i+1]);
+        catc(test, input[i+2]);
+        catc(test, input[i+3]);
+
+
+
+        char * zero = "0000";
+        char * one = "0001";
+        char * two = "0010";
+        char * three = "0011";
+        char * four = "0100";
+        char * five = "0101";
+        char * six = "0110";
+        char * seven = "0111";
+        char * eight = "1000";
+        char * nine = "1001";
+        char * A = "1010";
+        char * B = "1011";
+        char * C = "1100";
+        char * D = "1101";
+        char * E = "1110";
+        char * F = "1111";
+
+        if (equivalent(zero,test)){
+             catc(output, '0');
+        } else if (equivalent(one,test)){
+            catc(output, '1');
+        } else if (equivalent(two,test)){
+            catc(output, '2');
+        }else if (equivalent(three,test)){
+            catc(output, '3');
+        }else if (equivalent(four,test)){
+            catc(output, '4');
+        }else if (equivalent(five,test)){
+            catc(output, '5');
+        }else if (equivalent(six,test)){
+            catc(output, '6');
+        }else if (equivalent(seven,test)){
+            catc(output, '7');}
+        else if (equivalent(eight,test)){
+            catc(output, '8');}
+        else if (equivalent(nine,test)){
+            catc(output, '9');}
+        else if (equivalent(A,test)){
+            catc(output, 'A');}
+        else if (equivalent(B,test)){
+            catc(output, 'B');}
+        else if (equivalent(C,test)){
+            catc(output, 'C');}
+        else if (equivalent(D,test)){
+            catc(output, 'D');}
+        else if (equivalent(E,test)){
+            catc(output, 'E');}
+        else if (equivalent(F,test)){
+            catc(output, 'F');}
+        else{
+
+        }
+
+    }
+
+    return output;
+}
+
+bool equivalent(char * Str1, char * Str2){
+   int result, i;
+   i = 0;
+   while(Str1[i] == Str2[i] && Str1[i] == '\0'){
+       i++;
+
+   if(Str1[i] != Str2[i])
+   {
+       return false;
+   }
+   }
+   return true;
+}
+
+
+
+
+char* finalHash (char* input){
+    char finalH0[9]="";
+    BToh(h0,finalH0);
+    cat(input,finalH0);
+
+    char finalH1[9]="";
+    BToh(h1,finalH1);
+    cat(input,finalH1);
+
+    char finalH2[9]="";
+    BToh(h2,finalH2);
+    cat(input,finalH2);
+
+    char finalH3[9]="";
+    BToh(h3,finalH3);
+    cat(input,finalH3);
+
+    char finalH4[9]="";
+    BToh(h4,finalH4);
+    cat(input,finalH4);
+
+    char finalH5[9]="";
+    BToh(h5,finalH5);
+    cat(input,finalH5);
+
+    char finalH6[9]="";
+    BToh(h6,finalH6);
+    cat(input,finalH6);
+
+    char finalH7[9]="";
+    BToh(h7,finalH7);
+    cat(input,finalH7);
+
+
+    return input;
+
+
+}
+
 
 
 //helper functions
