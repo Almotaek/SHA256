@@ -20,7 +20,7 @@ char* hexToBin(char* string, char* bits);
 char* hToB(char oneHex);
 
 //step4
-void rounds(char *fullPaddedMessage);
+char*rounds(char *fullPaddedMessage);
 
 
 //step5
@@ -32,15 +32,18 @@ void add48Ints(uint32_t bitArray[64]);
 void modify(uint32_t bitArray[64]);
 
 //step6
-void step6(uint32_t* w);
+void step6(uint32_t w[64]);
 
 //step7
+void step7();
 char * binaryRep (uint32_t  n, char * binary);
+char * binaryRep64 (uint64_t  n, char * binary);
 
 //step8
 char* BToh(char* input, char * output);
 char* finalHash(char * input);
 bool equivalent(char * Str1, char * Str2);
+bool equivalent1(char * dest, char * neww);
 
 //helper functions
 uint32_t right_rotate(uint32_t num, int n);

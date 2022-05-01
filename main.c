@@ -1,18 +1,18 @@
 #include "main.h"
 
 //creating hash values 0..7
-   char h0[32] = "";
-   char h1[32] = "";
-   char h2[32] = "";
-   char h3[32] = "";
-   char h4[32] = "";
-   char h5[32] = "";
-   char h6[32] = "";
-   char h7[32] = "";
+   char h0[33] = "";
+   char h1[33] = "";
+   char h2[33] = "";
+   char h3[33] = "";
+   char h4[33] = "";
+   char h5[33] = "";
+   char h6[33] = "";
+   char h7[33] = "";
 
 //creating k-constants
 //initializing hash values 0..63
-  char k[64][32]={""};
+  char k[64][33]={""};
 
 //the fractions of the square roots of the 1st 64 prime numbers.
   char* K0 = "0x428a2f98";
@@ -92,21 +92,18 @@
 
 
 
-char* SHA256(char* input,char* hash) {
+char* SHA256(char* input,char* hash){
 	#pragma HLS INTERFACe s_axilite port=return bundle=CRTLS
 	#pragma HLS INTERFACe s_axilite port=input bundle=CRTLS
 	#pragma HLS INTERFACe s_axilite port=hash bundle=CRTLS
 
 
 	//STEP 1:
-	//textToBinary(input);
+	textToBinary(input,hash);
 
-//	append_f(input);
+	append_f(hash);
 
-
-
-	//STEP2:
-
+	//STEP2&3:
 
     //the fractions of the sqaure roots of the 1st 8 prime numbers.
     char* H0 = "0x6a09e667";
@@ -131,20 +128,21 @@ char* SHA256(char* input,char* hash) {
 
     //end of h value creation
 
-	//STEP 3:
-    //k values are created globally
+    //steps4&5&6&7
+    rounds(hash);
+    printf("Final H values:\n");
+    printf("h0: %s\n",h0);
+    printf("h1: %s\n",h1);
+    printf("h2: %s\n",h2);
+    printf("h3: %s\n",h3);
+    printf("h4: %s\n",h4);
+    printf("h5: %s\n",h5);
+    printf("h6: %s\n",h6);
+    printf("h7: %s\n",h7);
+    //step8
+    finalHash(hash);
 
-
-    //step5
-
-
-
-
-
-
-
-    //hash/test results:
-	return input;
+	return hash;
 
 
  }
@@ -183,11 +181,38 @@ void append_f (char *input)
  char message_block [new_length];
 
  catc(input, '1');
-
- for (int i = length+1; i < new_length-64; i++)
-   {
+ int i = length+1;
+ for (i = length+1; i < new_length-64; i++){
      input[i] = '0';
    }
+//    printf("Length: %d\n",i);
+   uint64_t l =  length;
+   char leng[65]; 
+   char leng2[65];
+   binaryRep64(l,leng);
+   leng[64] = '\0';
+   int k =0;
+   while(k<32){
+       catc(leng2,'0');
+       k++;
+   }
+   leng[32] = '\0';
+   int b = 0;
+   while(k<64){
+       leng2[k] = leng[b];
+       k++;
+       b++;
+   }
+   leng2[64] = '\0';
+   int j = 0;
+   while(leng2[j]!='\0'){
+        input[i] = leng2[j];
+        i++;
+        j++;
+   }
+   input[i] ='\0';
+//    printf("Length: %d\n",i);
+//    printf("%s\n",input);
 }
 
 
@@ -258,21 +283,32 @@ char* hToB(char oneHex){
 }
 
 //step 4
-void rounds(char *fullPaddedMessage)
+char*rounds(char *fullPaddedMessage)
 {
   int i = 0;
   int c = 0;
   int index = 0;
   char currentInt[513] = "";
-  uint32_t * bitArray[63];
+  uint32_t  bitArray[64];
   while (fullPaddedMessage[i] != '\0')
     {
       catc (currentInt, fullPaddedMessage[i]);
+    //   printf("%d\n",i);
       if (c == 511)
 	{
 	  currentInt[c + 1] = '\0';
-	  printf("%s\n",currentInt);
-// 	  createMessageScheduling (currentInt, bitArray);
+	//   printf("%s\n",currentInt);
+ 	  createMessageScheduling (currentInt, bitArray);
+ 	  step6(bitArray);
+      int l = 0;
+    //   while(l<64){
+    //     //  char b[33];
+    //     //  binaryRep(bitArray[l],b);
+    //     //  printf("%s\n",b);
+    //     printf("%u\n",bitArray[l]);
+    //     l++;
+    //   }
+ 	  step7();
 	  c = 0;
 	  currentInt[0] = '\0';
 	}
@@ -282,6 +318,8 @@ void rounds(char *fullPaddedMessage)
 	}
       i++;
     }
+//   finalHash(fullPaddedMessage);
+  return fullPaddedMessage;
 }
 
 //step 5
@@ -347,9 +385,23 @@ void add48Ints(uint32_t bitArray[64]){
 void modify(uint32_t ints[64]){
     int i = 0;
     for(i=16; i<64; i++){//fix
-        uint32_t s0  = xor(xor(right_rotate(ints[i-15], 7), right_rotate(ints[i-15], 8)),  right_shift(ints[i-15], 8));
-        uint32_t s1  = xor(xor(right_rotate(ints[i-2], 17), right_rotate(ints[i-2], 19)),  right_shift(ints[i-2], 10));
-        ints[i] = ints[i-16] + s0 + ints[i-7] + s1;
+        uint32_t w1rr7 = ints[i-15];
+        uint32_t w1rr18 = ints[i-15];
+        uint32_t w1rs3 = ints[i-15];
+        w1rr7 = right_rotate(w1rr7, 7);
+        w1rr18 = right_rotate(w1rr18, 18);
+        w1rs3 = right_shift(w1rs3, 3);
+
+        uint32_t w14rr17 = ints[i-2];
+        uint32_t w14rr19 = ints[i-2];
+        uint32_t w14rs10 = ints[i-2];
+        w14rr17 = right_rotate(w14rr17, 17);
+        w14rr19 = right_rotate(w14rr19, 19);
+        w14rs10 = right_shift(w14rs10, 10);
+
+        uint32_t s0  = xor(xor(w1rr7,w1rr18),  w1rs3);
+        uint32_t s1  = xor(xor(w14rr17,w14rr19),  w14rs10);
+        ints[i] = ints[i-16] + s0 + ints[i-7]+s1;
     }
 }
 
@@ -374,7 +426,7 @@ uint32_t bitsTo32Ints(char * string){
 
 //step 6 functions
 
-void step6(uint32_t* w) {
+void step6(uint32_t w[64]){
    a= bitsTo32Ints(h0);
    b= bitsTo32Ints(h1);
    c= bitsTo32Ints(h2);
@@ -411,11 +463,11 @@ void step6(uint32_t* w) {
 }
 
 //step7
+//32 bits
 char * binaryRep (uint32_t  n, char * binary)
 {
-
-
    uint32_t mask = 0x80000000;
+   binary[0] = '\0';
    while(mask) {
      char a = (n&mask)?'1':'0';
      catc(binary, a);
@@ -424,6 +476,49 @@ char * binaryRep (uint32_t  n, char * binary)
    }
 
    return binary;
+}
+//64 bits
+char * binaryRep64 (uint64_t  n, char * binary)
+{
+   uint32_t mask = 0x80000000;
+   binary[0] = '\0';
+   while(mask) {
+     char a = (n&mask)?'1':'0';
+     catc(binary, a);
+
+     mask = mask >> 1;
+   }
+
+   return binary;
+}
+
+
+
+void addstep7 (char* hex, uint32_t x){
+
+  uint32_t temp = bitsTo32Ints(hex) + x;
+  binaryRep(temp, hex);
+
+
+}
+
+void step7(){
+   addstep7 (h0, a);
+   addstep7 (h1, b);
+   addstep7 (h2, c);
+   addstep7 (h3, d);
+   addstep7 (h4, e);
+   addstep7 (h5, f);
+   addstep7 (h6, g);
+   addstep7 (h7, h);
+//    printf ("%s\n", h0);
+//    printf ("%s\n", h1);
+//    printf ("%s\n", h2);
+//    printf ("%s\n", h3);
+//    printf ("%s\n", h4);
+//    printf ("%s\n", h5);
+//    printf ("%s\n", h6);
+//    printf ("%s\n", h7);
 }
 
 
@@ -461,42 +556,41 @@ char* BToh(char* input, char * output){
         char * E = "1110";
         char * F = "1111";
 
-        if (equivalent(zero,test)){
+        if (equivalent1(zero,test)){
              catc(output, '0');
-        } else if (equivalent(one,test)){
+        } else if (equivalent1(one,test)){
             catc(output, '1');
-        } else if (equivalent(two,test)){
+        } else if (equivalent1(two,test)){
             catc(output, '2');
-        }else if (equivalent(three,test)){
+        }else if (equivalent1(three,test)){
             catc(output, '3');
-        }else if (equivalent(four,test)){
+        }else if (equivalent1(four,test)){
             catc(output, '4');
-        }else if (equivalent(five,test)){
+        }else if (equivalent1(five,test)){
             catc(output, '5');
-        }else if (equivalent(six,test)){
+        }else if (equivalent1(six,test)){
             catc(output, '6');
-        }else if (equivalent(seven,test)){
+        }else if (equivalent1(seven,test)){
             catc(output, '7');}
-        else if (equivalent(eight,test)){
+        else if (equivalent1(eight,test)){
             catc(output, '8');}
-        else if (equivalent(nine,test)){
+        else if (equivalent1(nine,test)){
             catc(output, '9');}
-        else if (equivalent(A,test)){
+        else if (equivalent1(A,test)){
             catc(output, 'A');}
-        else if (equivalent(B,test)){
+        else if (equivalent1(B,test)){
             catc(output, 'B');}
-        else if (equivalent(C,test)){
+        else if (equivalent1(C,test)){
             catc(output, 'C');}
-        else if (equivalent(D,test)){
+        else if (equivalent1(D,test)){
             catc(output, 'D');}
-        else if (equivalent(E,test)){
+        else if (equivalent1(E,test)){
             catc(output, 'E');}
-        else if (equivalent(F,test)){
+        else if (equivalent1(F,test)){
             catc(output, 'F');}
         else{
 
         }
-
     }
 
     return output;
@@ -516,41 +610,82 @@ bool equivalent(char * Str1, char * Str2){
    return true;
 }
 
+bool equivalent1(char * dest, char * neww){
+    for (int i=0; i < 4; i++){
+        if (dest[i]!= neww[i]){
+            return false;
+        }
+    }
+   
+    return true;
+}
+
 
 
 
 char* finalHash (char* input){
+	input[0]='\0';
+    // printf("h0: %s\n",h7);
+    // printf("Initial Input %s\n",input);
     char finalH0[9]="";
     BToh(h0,finalH0);
+    finalH0[8]='\0';
+    // printf("H0: %s\n",finalH0);
     cat(input,finalH0);
+    input[8]='\0';
+    // printf("Final Input %s\n",input);
 
+
+
+    // printf("Initial Input %s\n",input);
     char finalH1[9]="";
     BToh(h1,finalH1);
+    finalH1[8]='\0';
+    // printf("H1: %s\n",finalH1);
     cat(input,finalH1);
+    input[16]='\0';
+    // printf("Final Input %s\n",input);
 
+    // printf("Initial Input %s\n",input);
     char finalH2[9]="";
     BToh(h2,finalH2);
+    finalH2[8]='\0';
+    // printf("H2: %s\n",finalH2);
     cat(input,finalH2);
+    input[24]='\0';
+    // printf("Final Input %s\n",input);
 
     char finalH3[9]="";
     BToh(h3,finalH3);
+    finalH3[8]='\0';
     cat(input,finalH3);
+    input[32]='\0';
 
     char finalH4[9]="";
     BToh(h4,finalH4);
+    finalH4[8]='\0';
     cat(input,finalH4);
+    input[40]='\0';
 
     char finalH5[9]="";
     BToh(h5,finalH5);
+    finalH5[8]='\0';
     cat(input,finalH5);
+    input[48]='\0';
 
     char finalH6[9]="";
     BToh(h6,finalH6);
+    finalH6[8]='\0';
     cat(input,finalH6);
+    input[56]='\0';
 
     char finalH7[9]="";
     BToh(h7,finalH7);
+    finalH7[8]='\0';
     cat(input,finalH7);
+    input[64]='\0';
+
+    // printf("Out put%s\n",input);
 
 
     return input;
