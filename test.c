@@ -7,10 +7,10 @@
 
 
 int main() {
-	char input[511] = "hello world";
-	char hash[513] = "";
-	SHA256(input,hash);
-	printf("Hash: %s\n",hash);
+	char input[511] = "hello world"; //Input
+	char hash[513] = ""; //Hash
+	SHA256(input,hash); // Calling the top function
+	printf("Hash: %s\n",hash); 
     return 0;
  }
 
