@@ -1,5 +1,6 @@
 # SHA256
 Objective
+
 The team’s goal is to implement the cryptography hash algorithm, SHA-256, on an FPGA board using a C programming language. Since FPGA boards have the ability to implement reconfigurable hardware logic, they have an advantage over custom hardware when designing complex algorithms such as the SHA 256. We use the software program VITIS HLS to perform high-level synthesis to convert the C code into RTL (register transfer level) which can then be implemented on the FPGA board.  
 
 The hash function should have the following properties, which would be checked either manually or through automated tests:
