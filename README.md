@@ -1,17 +1,18 @@
 # SHA256
-Objective 
-
+Objective
 The team’s goal is to implement the cryptography hash algorithm, SHA-256, on an FPGA board using a C programming language. Since FPGA boards have the ability to implement reconfigurable hardware logic, they have an advantage over custom hardware when designing complex algorithms such as the SHA 256. We use the software program VITIS HLS to perform high-level synthesis to convert the C code into RTL (register transfer level) which can then be implemented on the FPGA board.  
 
 The hash function should have the following properties, which would be checked either manually or through automated tests:
 
 It is easy (but not necessarily quick) to compute the hash value for any given message. 
-
 It is infeasible to generate a message that has a given hash. 
-
 It is infeasible to modify a message without changing the hash. 
+It is infeasible to find two different messages with the same hash.
 
-It is infeasible to find two different messages with the same hash. 
+This report expands on the interim report. Ninety-Five of the functionality of the SHA-256 algorithm was achieved when the interim report was submitted i.e all the component's functions were tested for correctness. 
+
+This report mainly focuses on the top-level function that acts as a wrapper/black box for all the constituent functions. Essentially, this top-level function takes in a string input and then produces a fixed-length hash in the hexadecimal representation of length 64. The hash produced is irreversible and there’s no way to reproduce the input that was provided to the function that produced it. Our tests show that this implementation is 100% equivalent to the official SHA256 algorithm.
+
 
 Explanation of the steps
 Step1: this step converts the user input into its equivalent binary value. Next, these binary bits are appended in a manner where the total length of the message block is some multiple of 512. The last 64 bits, however, are used to indicate the length of the original message.
