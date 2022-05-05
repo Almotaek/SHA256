@@ -78,7 +78,7 @@ char K[64][12] = {
   "0x8cc70208",
   "0x90befffa",
   "0xa4506ceb",
-  "0xbef9a3f",
+  "0xbef9a3f7",
   "0xc67178f2"
 };
 
@@ -417,14 +417,6 @@ void step6(uint32_t w[64]) {
   f = bitsTo32Ints(h5);
   g = bitsTo32Ints(h6);
   h = bitsTo32Ints(h7);
-//   printf("%u\n",a);
-//   printf("%u\n",b);
-//   printf("%u\n",c);
-//   printf("%u\n",d);
-//   printf("%u\n",e);
-//   printf("%u\n",f);
-//   printf("%u\n",g);
-//   printf("%u\n",h);
 
 
   int i = 0;
@@ -470,30 +462,7 @@ void step6(uint32_t w[64]) {
     b = a;
     a = temp1 + temp2;
 
-    //    if(i==0){
-    //    printf("First round: \n"); 
-    //    printf("Vars: %u\n",a);
-    //    printf("Vars: %u\n",b);
-    //    printf("Vars: %u\n",c);
-    //    printf("Vars: %u\n",d);
-    //    printf("Vars: %u\n",e);
-    //    printf("Vars: %u\n",f);
-    //    printf("Vars: %u\n",g);
-    //    printf("Vars: %u\n",h);
-    //    }
-
   }
-     printf("Last round: \n"); 
-    //  char b1[32];
-    //  printf("Vars: %s\n",binaryRep(a,b1));
-     printf("Vars: %u\n",a);
-     printf("Vars: %u\n",b);
-     printf("Vars: %u\n",c);
-     printf("Vars: %u\n",d);
-     printf("Vars: %u\n",e);
-     printf("Vars: %u\n",f);
-     printf("Vars: %u\n",g);
-     printf("Vars: %u\n",h);
 }
 
 //step7
@@ -652,10 +621,7 @@ char * finalHash(char * input) {
   finalH0[8] = '\0';
   // printf("H0: %s\n",finalH0);
   cat(input, finalH0);
-  input[8] = '\0';
-  // printf("Final Input %s\n",input);
-
-  // printf("Initial Input %s\n",input);
+//   input[8] = '\0';
   char finalH1[9] = "";
   BToh(h1, finalH1);
   finalH1[8] = '\0';
